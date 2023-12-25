@@ -20,6 +20,7 @@ namespace Database.Entitys
         public string Size { get; set; }
         public string ContentHeader { get; set; }
         public string ContentBody{ get; set; }
+        public bool IsPromote{ get; set; }
 
         [ForeignKey("ProductGroupId")]
         public int ProductGroupId { get; set; }

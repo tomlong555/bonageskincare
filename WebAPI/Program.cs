@@ -1,5 +1,8 @@
 using Database.Entitys;
 using Microsoft.EntityFrameworkCore;
+using Service.Services;
+using Service.Services.Product;
+using Service.Services.ProductGroup;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,7 +14,10 @@ builder.Services.AddDbContext<DBContext>(options =>
 });
 
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+
+builder.Services.AddScoped<IProductService, ProductService>();
+builder.Services.AddScoped<IProductGroupService, ProductGroupService>();
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
