@@ -68,5 +68,12 @@ namespace WebAPI.Controllers
             return Ok(result);
         }
 
+        [HttpPost("files")]
+        [RequestSizeLimit(5 * 1024 * 1024)]
+        public async Task<ActionResult<bool>> CrateProductFile([FromForm] List<IFormFile> input)
+        {
+            var result = await _productService.CrateProductFile(input);
+            return Ok(result);
+        }
     }
 }

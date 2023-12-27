@@ -1,4 +1,6 @@
-﻿using Service.Models.ProductGroupModels;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Service.Models.ProductGroupModels;
 using Service.Models.ProductModels;
 using System;
 using System.Collections.Generic;
@@ -17,5 +19,7 @@ namespace Service.Services.Product
         public Task<bool> CrateProduct(ProductInputModel input);
         public Task<bool> UpdateProduct(int productId, ProductInputModel input);
         public Task<bool> DeleteProduct(int productId);
+        public Task<string> CrateProductFile( List<IFormFile> input);
+
     }
 }

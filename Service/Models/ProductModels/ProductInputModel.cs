@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,5 @@ namespace Service.Models.ProductModels
         public string ContentHeader { get; set; }
         public string ContentBody { get; set; }
         public int ProductGroupId { get; set; }
-
     }
 }

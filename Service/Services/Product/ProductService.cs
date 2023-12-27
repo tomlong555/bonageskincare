@@ -1,7 +1,10 @@
 ﻿using Database.Entitys;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Service.Models.ProductGroupModels;
 using Service.Models.ProductModels;
+using Service.Services.Base;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,11 +16,15 @@ namespace Service.Services.Product
     public class ProductService : IProductService
     {
         private readonly DBContext _dBContext;
+        private readonly IBaseService _baseService;
+
         public ProductService(
             DBContext dBContext
+           , IBaseService baseService
             )
         {
             _dBContext = dBContext;
+            _baseService = baseService;
         }
         public async Task<ProductModel> GetProduct(int productId)
         {
@@ -112,6 +119,9 @@ namespace Service.Services.Product
 
         public async Task<bool> CrateProduct(ProductInputModel input)
         {
+           
+          
+
             var newData = new TbProduct()
             {
                 ProductName = input.ProductName,
@@ -124,6 +134,8 @@ namespace Service.Services.Product
                 CreateBy = 1,
                 CreateDate = DateTime.UtcNow,
             };
+
+            //newData.TbFileProducts
 
             await _dBContext.TbProduct.AddAsync(newData);
             await _dBContext.SaveChangesAsync();
@@ -170,6 +182,16 @@ namespace Service.Services.Product
             await _dBContext.SaveChangesAsync();
 
             return true;
+        }
+
+        public async Task<string> CrateProductFile( List<IFormFile> input)
+        {
+            var result = "";
+            foreach (var image in input)
+            {
+                var a = await _baseService.SaveImage(image);
+            }
+            return result;
         }
     }
 }

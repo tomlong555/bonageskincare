@@ -1,12 +1,15 @@
 using Database.Entitys;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Http.Features;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.FileProviders;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Service.Models.BaseModels;
 using Service.Services;
 using Service.Services.Authen;
+using Service.Services.Base;
 using Service.Services.Product;
 using Service.Services.ProductGroup;
 using System.Text;
@@ -51,6 +54,7 @@ builder.Services.AddAuthentication(options =>
 builder.Services.AddScoped<IAuthenService, AuthenService>();
 builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<IProductGroupService, ProductGroupService>();
+builder.Services.AddScoped<IBaseService, BaseService>();
 
 builder.Services.Configure<JwtOptionModel>(builder.Configuration.GetSection(JwtOptionModel.JwtOptionSection));
 
@@ -82,6 +86,14 @@ builder.Services.AddSwaggerGen(option =>
         }
     });
 });
+
+builder.Services.Configure<FormOptions>(o =>
+{
+    o.ValueLengthLimit = int.MaxValue;
+    o.MultipartBodyLengthLimit = int.MaxValue;
+    o.MemoryBufferThreshold = int.MaxValue;
+});
+
 builder.Services.AddAuthorization();
 
 var app = builder.Build();
@@ -99,5 +111,12 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.UseStaticFiles();
+app.UseStaticFiles(new StaticFileOptions()
+{
+    FileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), @"Resources")),
+    RequestPath = new PathString("/Resources")
+});
 
 app.Run();
