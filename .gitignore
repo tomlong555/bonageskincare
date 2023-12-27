@@ -3,3 +3,12 @@
 ################################################################################
 
 /WebAPI/bin/Debug/net6.0/appsettings.Development.json
+/WebAPI/.vs
+/WebAPI/bin
+/WebAPI/obj
+
+/Database/bin
+/Database/obj
+
+/Service/bin
+/Service/obj
