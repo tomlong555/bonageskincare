@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Service.Models.ProductGroupModels;
 using Service.Services.Product;
 using Service.Services.ProductGroup;
@@ -33,6 +34,7 @@ namespace WebAPI.Controllers
         }
 
         [HttpPost]
+        [Authorize]
         public async Task<ActionResult<bool>> CrateProductGroup([FromBody] ProductGroupInputModel input)
         {
             var result = await _productGroupService.CrateProductGroup(input);
@@ -40,6 +42,7 @@ namespace WebAPI.Controllers
         }
 
         [HttpPut("{productGroupId}")]
+        [Authorize]
         public async Task<ActionResult<bool>> UpdateProductGroup(int productGroupId, [FromBody] ProductGroupInputModel input)
         {
             var result = await _productGroupService.UpdateProductGroup(productGroupId, input);
@@ -47,6 +50,7 @@ namespace WebAPI.Controllers
         }
 
         [HttpDelete("{productGroupId}")]
+        [Authorize]
         public async Task<ActionResult<bool>> DeleteProductGroup(int productGroupId)
         {
             var result = await _productGroupService.DeleteProductGroup(productGroupId);
