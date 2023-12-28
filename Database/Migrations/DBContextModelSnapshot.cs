@@ -52,17 +52,11 @@ namespace Database.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("CreateBy")
-                        .HasColumnType("int");
-
                     b.Property<DateTime>("CreateDate")
                         .HasColumnType("datetime2");
 
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
-
-                    b.Property<int?>("UpdateBy")
-                        .HasColumnType("int");
 
                     b.Property<DateTime?>("UpdateDate")
                         .HasColumnType("datetime2");
@@ -80,13 +74,794 @@ namespace Database.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("FileId"), 1L, 1);
 
+                    b.Property<DateTime>("CreateDate")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("FileName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("UpdateDate")
+                        .HasColumnType("datetime2");
+
                     b.HasKey("FileId");
 
                     b.ToTable("TbFile");
+
+                    b.HasData(
+                        new
+                        {
+                            FileId = 1,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//BG_main_29_AHA-and-BHA-2__c-max_w-530_h-480_q-100.jpg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 2,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//main_28_BC2NEW__c-max_w-530_h-480_q-100.jpeg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 3,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//BG_main_12_BC2-BOX__c-max_w-530_h-480_q-100.jpeg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 4,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//BG_main_8_Flawless-Facial-Toner-2__c-max_w-530_h-480_q-100.jpg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 5,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//BG_main_18_bc1-box__c-max_w-530_h-480_q-100.jpeg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 6,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//BG_main_30_BC3-GOOD__c-max_w-530_h-480_q-100.jpg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 7,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//BG_main_58_BC3-box__c-max_w-530_h-480_q-100.jpg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 8,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//main_19_BU6Goldfusioncleansingoil__c-max_w-530_h-480_q-100.jpg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 9,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//main_65_BC8NEW__c-max_w-530_h-480_q-100.jpg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 10,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//BG_main_123_BC8-NEW-BOX-2023__c-max_w-530_h-480_q-100.jpg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 11,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//BG_main_4_BN3__c-max_w-530_h-480_q-100.jpg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 12,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//BG_main_43_BN3-box__c-max_w-530_h-480_q-100.jpg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 13,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//BG_main_5_Collagen-Infused-Day-Cream__c-max_w-530_h-480_q-100.jpg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 14,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//BG_main_60_BN1-box__c-max_w-530_h-480_q-100.jpg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 15,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//BG_main_6_BN7__c-max_w-530_h-480_q-100.jpg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 16,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//BG_main_111_BN6-TRANSFORMED-FROM-BN7-BOX-RUTH__c-max_w-530_h-480_q-100.jpeg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 17,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//BG_main_22_Collage-Restore-Night-Cream-2__c-max_w-530_h-480_q-100.jpg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 18,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//BG_main_41_BN2-box__c-max_w-530_h-480_q-100.jpg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 19,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//BG_main_30_BC3-GOOD__c-max_w-530_h-480_q-100-1.jpg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 20,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//BG_main_58_BC3-box__c-max_w-530_h-480_q-100-1.jpg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 21,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//BG_main_23_BN5__c-max_w-530_h-480_q-100.jpg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 22,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//BG_main_61_BN5-box__c-max_w-530_h-480_q-100.jpg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 23,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//BG_main_24_Moisture-Boost-Eye-Serum__c-max_w-530_h-480_q-100.jpg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 24,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//BG_main_42_BN4-box__c-max_w-530_h-480_q-100.jpg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 25,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//BG_main_4_BN3__c-max_w-530_h-480_q-100-1.jpg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 26,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//BG_main_43_BN3-box__c-max_w-530_h-480_q-100-1.jpg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 27,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//BG_main_89_Bonage-Laboratories-Wrinkle-Correct__c-max_w-530_h-480_q-100.jpg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 28,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//BG_main_32_BV1__c-max_w-530_h-480_q-100.jpg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 29,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//BG_main_54_Flash-Lift-Cream__c-max_w-530_h-480_q-100.jpg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 30,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//BG_main_50_NEW-BU7-BOX__c-max_w-530_h-480_q-100.jpg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 31,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//BG_main_102_NEW-BU7-FOR-WEBSITE__c-max_w-530_h-480_q-100.jpg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 32,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//BG_main_55_BG1-IMAGE-FOR-WEBSITE-GOOD__c-max_w-530_h-480_q-100.jpg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 33,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//BG_main_36_BG1-box__c-max_w-530_h-480_q-100.jpg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 34,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//BG_main_101_BG1-HOW-TO-OPEN__c-max_w-530_h-480_q-100.jpeg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 35,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//BG_main_24_Moisture-Boost-Eye-Serum__c-max_w-530_h-480_q-100-1.jpg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 36,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//BG_main_42_BN4-box__c-max_w-530_h-480_q-100-1.jpg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 37,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//BG_main_50_Multi-Action-Instant-Lift-Solution-__c-max_w-530_h-480_q-100.jpg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 38,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//BG_main_46_-73A5233__c-max_w-530_h-480_q-100.jpg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 39,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//BG_main_103_BR3-HOW-TO-OPEN__c-max_w-530_h-480_q-100.jpeg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 40,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//BG_main_39_Sculpting-Eye-Cream-2__c-max_w-530_h-480_q-100.jpg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 41,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//BG_main_44_BR1-box__c-max_w-530_h-480_q-100.jpg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 42,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//BG_main_37_Volumizing-Eye-Cream-2__c-max_w-530_h-480_q-100.jpg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 43,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//BG_main_45_BR2-box__c-max_w-530_h-480_q-100.jpg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 44,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//BG_main_66_Active-Repair-Beauty-Capsules-2__c-max_w-530_h-480_q-100.jpg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 45,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//BG_main_57_BU8-box__c-max_w-530_h-480_q-100.jpg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 46,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//BG_main_112_Capsules4__c-max_w-530_h-480_q-100.jpg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 47,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//BG_main_113_Capsules5-480-480__c-max_w-530_h-480_q-100.jpg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 48,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//BG_main_117_BU8-WEBIMAGE1__c-max_w-530_h-480_q-100.jpeg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 49,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//BG_main_2_Age-Control-Firming-Cream-2__c-max_w-530_h-480_q-100.jpg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 50,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//BG_main_35_BU3-box__c-max_w-530_h-480_q-100.jpg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 51,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//BG_main_3_Age-Control-Firming-Serum-2__c-max_w-530_h-480_q-100.jpg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 52,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//BG_main_49_BU4-box__c-max_w-530_h-480_q-100.jpg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 53,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//BG_main_18_BU5__c-max_w-530_h-480_q-100.jpg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 54,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//BG_main_59_BU5-box__c-max_w-530_h-480_q-100.jpg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 55,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//BG_main_54_Flash-Lift-Cream__c-max_w-530_h-480_q-100-1.jpg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 56,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//BG_main_50_NEW-BU7-BOX__c-max_w-530_h-480_q-100-1.jpg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 57,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//BG_main_102_NEW-BU7-FOR-WEBSITE__c-max_w-530_h-480_q-100-1.jpg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 58,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//main_19_BU6Goldfusioncleansingoil__c-max_w-530_h-480_q-100-1.jpg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 59,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//BG_main_16_BU1__c-max_w-530_h-480_q-100.jpg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 60,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//BG_main_47_BU1-box__c-max_w-530_h-480_q-100.jpg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 61,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//BG_main_17_BU2__c-max_w-530_h-480_q-100.jpg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 62,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//BG_main_48_BU2-box__c-max_w-530_h-480_q-100.jpg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 63,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//BG_main_35_75and-HYALURONIC-2__c-max_w-530_h-480_q-100.jpg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 64,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//BG_main_38_BL2-box__c-max_w-530_h-480_q-100.jpg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 65,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//BG_main_36_Boosting-Vitamin-Nectar-2__c-max_w-530_h-480_q-100.jpg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 66,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//BG_main_37_BL1-box__c-max_w-530_h-480_q-100.jpg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 67,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//BG_main_34_LINE-REDUCING-2__c-max_w-530_h-480_q-100.jpg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 68,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//BG_main_40_BL4-box__c-max_w-530_h-480_q-100.jpg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 69,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//BG_main_33_REPAIRING-HYALURONIC-ACID-2__c-max_w-530_h-480_q-100.jpg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 70,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//BG_main_39_BL3-box__c-max_w-530_h-480_q-100.jpg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 71,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//BG_main_50_Multi-Action-Instant-Lift-Solution-__c-max_w-530_h-480_q-100-1.jpg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 72,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//BG_main_46_-73A5233__c-max_w-530_h-480_q-100-1.jpg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 73,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//BG_main_103_BR3-HOW-TO-OPEN__c-max_w-530_h-480_q-100-1.jpeg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 74,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//BG_main_39_Sculpting-Eye-Cream-2__c-max_w-530_h-480_q-100-1.jpg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 75,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//BG_main_44_BR1-box__c-max_w-530_h-480_q-100-1.jpg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 76,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//BG_main_37_Volumizing-Eye-Cream-2__c-max_w-530_h-480_q-100-1.jpg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 77,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//BG_main_45_BR2-box__c-max_w-530_h-480_q-100-1.jpg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 78,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//BG_main_55_BG1-IMAGE-FOR-WEBSITE-GOOD__c-max_w-530_h-480_q-100-1.jpg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 79,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//BG_main_36_BG1-box__c-max_w-530_h-480_q-100-1.jpg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 80,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//BG_main_101_BG1-HOW-TO-OPEN__c-max_w-530_h-480_q-100-1.jpeg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 81,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//main_10_BB1bHydraBoostBodybutter__c-max_w-530_h-480_q-100.jpg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 82,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//BG_main_133_BONAGE-NAIL-KIT-BB5-NEW-2023-MARCH__c-max_w-530_h-480_q-100.jpg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 83,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//BG_main_9_main-9-BB1ahydraboostbodybutterb__c-max_w-530_h-480_q-100.jpg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 84,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//main_7_main7BB2bdualactionsaltscrub__c-max_w-530_h-480_q-100.jpg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 85,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//BG_main_9_main-9-BB1ahydraboostbodybutterb__c-max_w-288_h-288_q-100.jpg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 86,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//main_13_handcream1__c-max_w-530_h-480_q-100.jpg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 87,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//main_13_handcream1__c-max_w-288_h-288_q-100.jpg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 88,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//main_1_main1BM2AftershaveCalmingcream__c-max_w-530_h-480_q-100.jpg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 89,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//main_62_Homme__c-max_w-530_h-480_q-100.jpeg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 90,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//main_20_BM1Mineralrestorefaceandeye__c-max_w-530_h-480_q-100.jpg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 91,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//main_49_73A9401__c-max_w-530_h-480_q-100.jpg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 92,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//main_48_73A9377__c-max_w-530_h-480_q-100.jpg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 93,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//main_43_73A9334__c-max_w-530_h-480_q-100.jpg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 94,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//main_42_73A9332__c-max_w-530_h-480_q-100.jpg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 95,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//main_41_73A9337__c-max_w-530_h-480_q-100.jpg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 96,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//main_40_73A9316__c-max_w-530_h-480_q-100.jpg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 97,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//main_45_73A9340__c-max_w-530_h-480_q-100.jpg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 98,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//main_44_73A9352__c-max_w-530_h-480_q-100.jpg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 99,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//main_47_73A9369__c-max_w-530_h-480_q-100.jpg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 100,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//main_46_73A9363__c-max_w-530_h-480_q-100.jpg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 101,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//main_62_Homme__c-max_w-530_h-480_q-1001.jpeg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 102,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//BG_main_133_BONAGE-NAIL-KIT-BB5-NEW-2023-MARCH__c-max_w-530_h-480_q-1001.jpg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 103,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//BG_main_64_EYE-AND-NECK-2__c-max_w-530_h-480_q-100.jpeg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 104,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//BG_main_93_EYE-AND-NECK-1__c-max_w-530_h-480_q-100.jpeg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 105,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//BG_main_63_RESIZED-FOR-WEBSITE-1__c-max_w-530_h-480_q-100.jpeg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 106,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//BG_main_89_FACE-EYE-and-NECK-DEVICE-5__c-max_w-530_h-480_q-100.jpeg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 107,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//BG_main_90_FACE-EYE-and-NECK-DEVICE-6__c-max_w-530_h-480_q-100.jpeg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 108,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//main_61_WEBWHITENEW__c-max_w-530_h-480_q-100.jpeg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 109,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//main_58_WEBGREYNEW__c-max_w-530_h-480_q-100.jpeg",
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            FileId = 110,
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FileName = "Resources//main_57_WEBPINKNEW__c-max_w-530_h-480_q-100.jpeg",
+                            IsDeleted = false
+                        });
                 });
 
             modelBuilder.Entity("Database.Entitys.TbFileProduct", b =>
@@ -103,19 +878,675 @@ namespace Database.Migrations
                     b.Property<int>("ProductId")
                         .HasColumnType("int");
 
-                    b.Property<int>("TbFileFileId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("TbProductProductId")
-                        .HasColumnType("int");
-
                     b.HasKey("FileProductId");
 
-                    b.HasIndex("TbFileFileId");
+                    b.HasIndex("FileId");
 
-                    b.HasIndex("TbProductProductId");
+                    b.HasIndex("ProductId");
 
                     b.ToTable("TbFileProduct");
+
+                    b.HasData(
+                        new
+                        {
+                            FileProductId = 1,
+                            FileId = 1,
+                            ProductId = 1
+                        },
+                        new
+                        {
+                            FileProductId = 2,
+                            FileId = 2,
+                            ProductId = 2
+                        },
+                        new
+                        {
+                            FileProductId = 3,
+                            FileId = 3,
+                            ProductId = 2
+                        },
+                        new
+                        {
+                            FileProductId = 4,
+                            FileId = 4,
+                            ProductId = 3
+                        },
+                        new
+                        {
+                            FileProductId = 5,
+                            FileId = 5,
+                            ProductId = 3
+                        },
+                        new
+                        {
+                            FileProductId = 6,
+                            FileId = 6,
+                            ProductId = 4
+                        },
+                        new
+                        {
+                            FileProductId = 7,
+                            FileId = 7,
+                            ProductId = 4
+                        },
+                        new
+                        {
+                            FileProductId = 8,
+                            FileId = 8,
+                            ProductId = 5
+                        },
+                        new
+                        {
+                            FileProductId = 9,
+                            FileId = 9,
+                            ProductId = 6
+                        },
+                        new
+                        {
+                            FileProductId = 10,
+                            FileId = 10,
+                            ProductId = 6
+                        },
+                        new
+                        {
+                            FileProductId = 11,
+                            FileId = 11,
+                            ProductId = 7
+                        },
+                        new
+                        {
+                            FileProductId = 12,
+                            FileId = 12,
+                            ProductId = 7
+                        },
+                        new
+                        {
+                            FileProductId = 13,
+                            FileId = 13,
+                            ProductId = 8
+                        },
+                        new
+                        {
+                            FileProductId = 14,
+                            FileId = 14,
+                            ProductId = 8
+                        },
+                        new
+                        {
+                            FileProductId = 15,
+                            FileId = 15,
+                            ProductId = 9
+                        },
+                        new
+                        {
+                            FileProductId = 16,
+                            FileId = 16,
+                            ProductId = 9
+                        },
+                        new
+                        {
+                            FileProductId = 17,
+                            FileId = 17,
+                            ProductId = 10
+                        },
+                        new
+                        {
+                            FileProductId = 18,
+                            FileId = 18,
+                            ProductId = 10
+                        },
+                        new
+                        {
+                            FileProductId = 19,
+                            FileId = 19,
+                            ProductId = 11
+                        },
+                        new
+                        {
+                            FileProductId = 20,
+                            FileId = 20,
+                            ProductId = 11
+                        },
+                        new
+                        {
+                            FileProductId = 21,
+                            FileId = 21,
+                            ProductId = 12
+                        },
+                        new
+                        {
+                            FileProductId = 22,
+                            FileId = 22,
+                            ProductId = 12
+                        },
+                        new
+                        {
+                            FileProductId = 23,
+                            FileId = 23,
+                            ProductId = 13
+                        },
+                        new
+                        {
+                            FileProductId = 24,
+                            FileId = 24,
+                            ProductId = 13
+                        },
+                        new
+                        {
+                            FileProductId = 25,
+                            FileId = 25,
+                            ProductId = 14
+                        },
+                        new
+                        {
+                            FileProductId = 26,
+                            FileId = 26,
+                            ProductId = 14
+                        },
+                        new
+                        {
+                            FileProductId = 27,
+                            FileId = 27,
+                            ProductId = 15
+                        },
+                        new
+                        {
+                            FileProductId = 28,
+                            FileId = 28,
+                            ProductId = 15
+                        },
+                        new
+                        {
+                            FileProductId = 29,
+                            FileId = 29,
+                            ProductId = 16
+                        },
+                        new
+                        {
+                            FileProductId = 30,
+                            FileId = 30,
+                            ProductId = 16
+                        },
+                        new
+                        {
+                            FileProductId = 31,
+                            FileId = 31,
+                            ProductId = 16
+                        },
+                        new
+                        {
+                            FileProductId = 32,
+                            FileId = 32,
+                            ProductId = 17
+                        },
+                        new
+                        {
+                            FileProductId = 33,
+                            FileId = 33,
+                            ProductId = 17
+                        },
+                        new
+                        {
+                            FileProductId = 34,
+                            FileId = 34,
+                            ProductId = 17
+                        },
+                        new
+                        {
+                            FileProductId = 35,
+                            FileId = 35,
+                            ProductId = 18
+                        },
+                        new
+                        {
+                            FileProductId = 36,
+                            FileId = 36,
+                            ProductId = 18
+                        },
+                        new
+                        {
+                            FileProductId = 37,
+                            FileId = 37,
+                            ProductId = 19
+                        },
+                        new
+                        {
+                            FileProductId = 38,
+                            FileId = 38,
+                            ProductId = 19
+                        },
+                        new
+                        {
+                            FileProductId = 39,
+                            FileId = 39,
+                            ProductId = 19
+                        },
+                        new
+                        {
+                            FileProductId = 40,
+                            FileId = 40,
+                            ProductId = 20
+                        },
+                        new
+                        {
+                            FileProductId = 41,
+                            FileId = 41,
+                            ProductId = 20
+                        },
+                        new
+                        {
+                            FileProductId = 42,
+                            FileId = 42,
+                            ProductId = 21
+                        },
+                        new
+                        {
+                            FileProductId = 43,
+                            FileId = 43,
+                            ProductId = 21
+                        },
+                        new
+                        {
+                            FileProductId = 44,
+                            FileId = 44,
+                            ProductId = 22
+                        },
+                        new
+                        {
+                            FileProductId = 45,
+                            FileId = 45,
+                            ProductId = 22
+                        },
+                        new
+                        {
+                            FileProductId = 46,
+                            FileId = 46,
+                            ProductId = 22
+                        },
+                        new
+                        {
+                            FileProductId = 47,
+                            FileId = 47,
+                            ProductId = 22
+                        },
+                        new
+                        {
+                            FileProductId = 48,
+                            FileId = 48,
+                            ProductId = 22
+                        },
+                        new
+                        {
+                            FileProductId = 49,
+                            FileId = 49,
+                            ProductId = 23
+                        },
+                        new
+                        {
+                            FileProductId = 50,
+                            FileId = 50,
+                            ProductId = 23
+                        },
+                        new
+                        {
+                            FileProductId = 51,
+                            FileId = 51,
+                            ProductId = 24
+                        },
+                        new
+                        {
+                            FileProductId = 52,
+                            FileId = 52,
+                            ProductId = 24
+                        },
+                        new
+                        {
+                            FileProductId = 53,
+                            FileId = 53,
+                            ProductId = 25
+                        },
+                        new
+                        {
+                            FileProductId = 54,
+                            FileId = 54,
+                            ProductId = 25
+                        },
+                        new
+                        {
+                            FileProductId = 55,
+                            FileId = 55,
+                            ProductId = 26
+                        },
+                        new
+                        {
+                            FileProductId = 56,
+                            FileId = 56,
+                            ProductId = 26
+                        },
+                        new
+                        {
+                            FileProductId = 57,
+                            FileId = 57,
+                            ProductId = 26
+                        },
+                        new
+                        {
+                            FileProductId = 58,
+                            FileId = 58,
+                            ProductId = 27
+                        },
+                        new
+                        {
+                            FileProductId = 59,
+                            FileId = 59,
+                            ProductId = 28
+                        },
+                        new
+                        {
+                            FileProductId = 60,
+                            FileId = 60,
+                            ProductId = 28
+                        },
+                        new
+                        {
+                            FileProductId = 61,
+                            FileId = 61,
+                            ProductId = 29
+                        },
+                        new
+                        {
+                            FileProductId = 62,
+                            FileId = 62,
+                            ProductId = 29
+                        },
+                        new
+                        {
+                            FileProductId = 63,
+                            FileId = 63,
+                            ProductId = 30
+                        },
+                        new
+                        {
+                            FileProductId = 64,
+                            FileId = 64,
+                            ProductId = 30
+                        },
+                        new
+                        {
+                            FileProductId = 65,
+                            FileId = 65,
+                            ProductId = 31
+                        },
+                        new
+                        {
+                            FileProductId = 66,
+                            FileId = 66,
+                            ProductId = 31
+                        },
+                        new
+                        {
+                            FileProductId = 67,
+                            FileId = 67,
+                            ProductId = 32
+                        },
+                        new
+                        {
+                            FileProductId = 68,
+                            FileId = 68,
+                            ProductId = 32
+                        },
+                        new
+                        {
+                            FileProductId = 69,
+                            FileId = 69,
+                            ProductId = 33
+                        },
+                        new
+                        {
+                            FileProductId = 70,
+                            FileId = 70,
+                            ProductId = 33
+                        },
+                        new
+                        {
+                            FileProductId = 71,
+                            FileId = 71,
+                            ProductId = 34
+                        },
+                        new
+                        {
+                            FileProductId = 72,
+                            FileId = 72,
+                            ProductId = 34
+                        },
+                        new
+                        {
+                            FileProductId = 73,
+                            FileId = 73,
+                            ProductId = 34
+                        },
+                        new
+                        {
+                            FileProductId = 74,
+                            FileId = 74,
+                            ProductId = 35
+                        },
+                        new
+                        {
+                            FileProductId = 75,
+                            FileId = 75,
+                            ProductId = 35
+                        },
+                        new
+                        {
+                            FileProductId = 76,
+                            FileId = 76,
+                            ProductId = 36
+                        },
+                        new
+                        {
+                            FileProductId = 77,
+                            FileId = 77,
+                            ProductId = 36
+                        },
+                        new
+                        {
+                            FileProductId = 78,
+                            FileId = 78,
+                            ProductId = 37
+                        },
+                        new
+                        {
+                            FileProductId = 79,
+                            FileId = 79,
+                            ProductId = 37
+                        },
+                        new
+                        {
+                            FileProductId = 80,
+                            FileId = 80,
+                            ProductId = 37
+                        },
+                        new
+                        {
+                            FileProductId = 81,
+                            FileId = 81,
+                            ProductId = 38
+                        },
+                        new
+                        {
+                            FileProductId = 82,
+                            FileId = 82,
+                            ProductId = 39
+                        },
+                        new
+                        {
+                            FileProductId = 83,
+                            FileId = 83,
+                            ProductId = 40
+                        },
+                        new
+                        {
+                            FileProductId = 84,
+                            FileId = 84,
+                            ProductId = 41
+                        },
+                        new
+                        {
+                            FileProductId = 85,
+                            FileId = 85,
+                            ProductId = 42
+                        },
+                        new
+                        {
+                            FileProductId = 86,
+                            FileId = 86,
+                            ProductId = 43
+                        },
+                        new
+                        {
+                            FileProductId = 87,
+                            FileId = 87,
+                            ProductId = 44
+                        },
+                        new
+                        {
+                            FileProductId = 88,
+                            FileId = 88,
+                            ProductId = 45
+                        },
+                        new
+                        {
+                            FileProductId = 89,
+                            FileId = 89,
+                            ProductId = 46
+                        },
+                        new
+                        {
+                            FileProductId = 90,
+                            FileId = 90,
+                            ProductId = 47
+                        },
+                        new
+                        {
+                            FileProductId = 91,
+                            FileId = 91,
+                            ProductId = 48
+                        },
+                        new
+                        {
+                            FileProductId = 92,
+                            FileId = 92,
+                            ProductId = 49
+                        },
+                        new
+                        {
+                            FileProductId = 93,
+                            FileId = 93,
+                            ProductId = 50
+                        },
+                        new
+                        {
+                            FileProductId = 94,
+                            FileId = 94,
+                            ProductId = 51
+                        },
+                        new
+                        {
+                            FileProductId = 95,
+                            FileId = 95,
+                            ProductId = 52
+                        },
+                        new
+                        {
+                            FileProductId = 96,
+                            FileId = 96,
+                            ProductId = 53
+                        },
+                        new
+                        {
+                            FileProductId = 97,
+                            FileId = 97,
+                            ProductId = 54
+                        },
+                        new
+                        {
+                            FileProductId = 98,
+                            FileId = 98,
+                            ProductId = 55
+                        },
+                        new
+                        {
+                            FileProductId = 99,
+                            FileId = 99,
+                            ProductId = 56
+                        },
+                        new
+                        {
+                            FileProductId = 100,
+                            FileId = 100,
+                            ProductId = 57
+                        },
+                        new
+                        {
+                            FileProductId = 101,
+                            FileId = 101,
+                            ProductId = 58
+                        },
+                        new
+                        {
+                            FileProductId = 102,
+                            FileId = 102,
+                            ProductId = 59
+                        },
+                        new
+                        {
+                            FileProductId = 103,
+                            FileId = 103,
+                            ProductId = 60
+                        },
+                        new
+                        {
+                            FileProductId = 104,
+                            FileId = 104,
+                            ProductId = 60
+                        },
+                        new
+                        {
+                            FileProductId = 105,
+                            FileId = 105,
+                            ProductId = 61
+                        },
+                        new
+                        {
+                            FileProductId = 106,
+                            FileId = 106,
+                            ProductId = 61
+                        },
+                        new
+                        {
+                            FileProductId = 107,
+                            FileId = 107,
+                            ProductId = 61
+                        },
+                        new
+                        {
+                            FileProductId = 108,
+                            FileId = 108,
+                            ProductId = 62
+                        },
+                        new
+                        {
+                            FileProductId = 109,
+                            FileId = 109,
+                            ProductId = 63
+                        },
+                        new
+                        {
+                            FileProductId = 110,
+                            FileId = 110,
+                            ProductId = 64
+                        });
                 });
 
             modelBuilder.Entity("Database.Entitys.TbProduct", b =>
@@ -134,9 +1565,6 @@ namespace Database.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("CreateBy")
-                        .HasColumnType("int");
-
                     b.Property<DateTime>("CreateDate")
                         .HasColumnType("datetime2");
 
@@ -144,6 +1572,9 @@ namespace Database.Migrations
                         .HasColumnType("bit");
 
                     b.Property<bool>("IsPromote")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsVegan")
                         .HasColumnType("bit");
 
                     b.Property<decimal>("Price")
@@ -160,13 +1591,7 @@ namespace Database.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("TbProductGroupProductGroupId")
-                        .HasColumnType("int");
-
                     b.Property<int>("Unit")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("UpdateBy")
                         .HasColumnType("int");
 
                     b.Property<DateTime?>("UpdateDate")
@@ -174,9 +1599,971 @@ namespace Database.Migrations
 
                     b.HasKey("ProductId");
 
-                    b.HasIndex("TbProductGroupProductGroupId");
+                    b.HasIndex("ProductGroupId");
 
                     b.ToTable("TbProduct");
+
+                    b.HasData(
+                        new
+                        {
+                            ProductId = 1,
+                            ContentBody = " <p> FREE WORLDWIDE DELIVERY ON ALL ORDERS </p><br><p> We will dispatch your order as soon as the payment has been authorised.Products are sent via courier service on the same business day for orders placed before 2 pm.After dispatching your order, we will send you your individual order tracking number, and the details of how you can track it.</p> ",
+                            ContentHeader = "<p>Reveal radiant and youthful skin with this double action exfoliating cleanser.</p><br><p> Containing a blend of Alpha Hydroxy(AHA) & Beta Hydroxy(BHA) acids and further enriched with antioxidants such as Green Tea, Papaya and Coffee seed extract, this gentle facial purifying mousse will smooth away dead skin cells, dirt, excess oil, make - up traces and all other impurities without drying the skin, to leave it silky soft, totally cleansed and refreshed.</p><br><p><strong> Application:</strong> Wet face and neck with lukewarm water and then massage the mousse gently into the skin in a circular motion until a lather forms, then rinse thoroughly with lukewarm water.  </p><br><p><strong> NOTE: This product has been changed in packaging and content. </strong></p> ",
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            IsPromote = true,
+                            IsVegan = true,
+                            Price = 89.99m,
+                            ProductGroupId = 1,
+                            ProductName = "AHA & BHA Purifying Mousse",
+                            Size = "150ml",
+                            Unit = 0
+                        },
+                        new
+                        {
+                            ProductId = 2,
+                            ContentBody = " <p> FREE WORLDWIDE DELIVERY ON ALL ORDERS</p><br><p>We will dispatch your order as soon as the payment has been authorised.Products are sent via courier service on the same business day for orders placed before 2 pm.After dispatching your order, we will send you your individual order tracking number, and the details of how you can track it.</p>",
+                            ContentHeader = "<p>Formulated using a rich blend of natural plant extracts and essential oils, this creamy Cleansing Milk has been designed to gently remove dirt, make-up traces, excess oil and all other impurities from the skin.  Enriched with Vitamin E, this soothing Cleansing Milk will leave your skin soft, nourished & totally cleansed.</p><br><p>Application:  Apply to cotton ball and then wipe face gently in a circular motion.To complete the cleansing process, apply Flawless Facial Toner.Recommended for frequent use.</p>",
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            IsPromote = true,
+                            IsVegan = true,
+                            Price = 79.99m,
+                            ProductGroupId = 1,
+                            ProductName = "Flawless Cleansing Milk",
+                            Size = "150ml",
+                            Unit = 0
+                        },
+                        new
+                        {
+                            ProductId = 3,
+                            ContentBody = " <p> FREE WORLDWIDE DELIVERY ON ALL ORDERS</p><br><p>We will dispatch your order as soon as the payment has been authorised.Products are sent via courier service on the same business day for orders placed before 2 pm.After dispatching your order, we will send you your individual order tracking number, and the details of how you can track it.</p>",
+                            ContentHeader = "<p>This refreshing Toner contains a gentle blend of natural plant extracts, essential oils and Vitamins A & C.  This Toner will remove any impurities that have remained after cleansing and will tone and refresh the skin to leave it firm and hydrated.</p><br><p><strong>Application:</strong>  After cleansing, apply the Toner to a cotton ball and gently wipe over the face using an upwards motion.Use frequently to keep your face fresh & clean. </p>",
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            IsPromote = true,
+                            IsVegan = true,
+                            Price = 79.99m,
+                            ProductGroupId = 1,
+                            ProductName = "Flawless Facial Toner",
+                            Size = "150ml",
+                            Unit = 0
+                        },
+                        new
+                        {
+                            ProductId = 4,
+                            ContentBody = " <p> FREE WORLDWIDE DELIVERY ON ALL ORDERS</p><br><p>We will dispatch your order as soon as the payment has been authorised. Products are sent via courier service on the same business day for orders placed before 2 pm. After dispatching your order, we will send you your individual order tracking number, and the details of how you can track it.</p>",
+                            ContentHeader = "<p>This gentle, non-abrasive Facial Peel has been formulated from a rich blend of natural plant extracts and essential oils.  Enriched with Vitamins E & C, this Peel will cleanse skin thoroughly to remove dead skin, dirt, excess oil and all other impurities to leave your skin fresh, cleansed and radiant. </p><br><p><strong> Application:</strong> Apply a small amount to dry skin in a circular motion until dirt, dead skin cells & other impurities become visible then rinse well with water and gently pat the face dry.  Recommended for use 1-2 times weekly.</p> ",
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            IsPromote = true,
+                            IsVegan = true,
+                            Price = 159.98m,
+                            ProductGroupId = 1,
+                            ProductName = "Flawless Regenerating Facial Peel",
+                            Size = "50ml",
+                            Unit = 0
+                        },
+                        new
+                        {
+                            ProductId = 5,
+                            ContentBody = " <p> FREE WORLDWIDE DELIVERY ON ALL ORDERS </p><br><p> We will dispatch your order as soon as the payment has been authorised.Products are sent via courier service on the same business day for orders placed before 2 pm.After dispatching your order, we will send you your individual order tracking number, and the details of how you can track it.</p> ",
+                            ContentHeader = "<p>This soothing Cleansing Oil contains a rich blend of active ingredients formulated to both nourish and deep cleanse the skin.  Formulated to remove make-up traces, dirt, excess oil and all other impurities, this Cleansing oil is rich in natural plant extracts and essential oils that are renowned for their moisturising and calming properties such as Calendula, Rose Hip, Argan Oil and Avocado, to ensure that skin is kept hydrated, silky smooth and totally cleansed.</p><br><p><strong> Application:</strong> Using your fingertips massage the oil into the the skin.Leave for 2 minutes and then add a little water and continue to massage the oil into the skin until a lotion is formed, then rinse thoroughly with lukewarm water. Recommended for daily use. To complete the treatment apply Age Control Firming Serum and Age Control Firming Cream.</p> ",
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            IsPromote = true,
+                            IsVegan = true,
+                            Price = 119.99m,
+                            ProductGroupId = 1,
+                            ProductName = "Gold Fusion Cleansing Oil",
+                            Size = "100ml",
+                            Unit = 0
+                        },
+                        new
+                        {
+                            ProductId = 6,
+                            ContentBody = " <p> FREE WORLDWIDE DELIVERY ON ALL ORDERS</p><br><p>We will dispatch your order as soon as the payment has been authorised.Products are sent via courier service on the same business day for orders placed before 2 pm.After dispatching your order, we will send you your individual order tracking number, and the details of how you can track it.</p>",
+                            ContentHeader = "<p>Pure and cleansed skin is the key to reducing the appearance of fine lines and signs of ageing. In this exceptional formula, natural plant extracts leave skin feeling vibrant and refreshed, while a smooth, silky texture gently removes dirt and impurities. The innovative peeling gel is infused with soothing ingredients to comfort skin while providing a powerful cleansing experience.</p><br><p><strong>To Use:</strong>Apply a light layer to clean skin and massage in circular motions.Rinse with lukewarm water.</p>",
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            IsPromote = true,
+                            IsVegan = true,
+                            Price = 159.99m,
+                            ProductGroupId = 1,
+                            ProductName = "Perfecting Facial Peel",
+                            Size = "100 ml",
+                            Unit = 0
+                        },
+                        new
+                        {
+                            ProductId = 7,
+                            ContentBody = " <p> FREE WORLDWIDE DELIVERY ON ALL ORDERS</p><br><p>We will dispatch your order as soon as the payment has been authorised.Products are sent via courier service on the same business day for orders placed before 2 pm.After dispatching your order, we will send you your individual order tracking number, and the details of how you can track it.</p>",
+                            ContentHeader = "<p>Rich in natural ingredients known for their anti-oxidant, anti-aging and moisturising properties, this gentle but effective Eye Cream has been formulated to re-hydrate and moisturise the delicate skin around the eye in order to reduce the appearance of fine lines, wrinkles and dark circles. </p><br><p><strong>Application:</strong> After applying Eye Serum, apply the Eye Cream to the eye area in a gentle, light tapping motion to complete the treatment.Recommended for daily use.</p>",
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            IsPromote = false,
+                            IsVegan = false,
+                            Price = 219.99m,
+                            ProductGroupId = 2,
+                            ProductName = "Age Defence Eye Cream",
+                            Size = "50ml",
+                            Unit = 0
+                        },
+                        new
+                        {
+                            ProductId = 8,
+                            ContentBody = " <p> FREE WORLDWIDE DELIVERY ON ALL ORDERS</p><br><p>We will dispatch your order as soon as the payment has been authorised. Products are sent via courier service on the same business day for orders placed before 2 pm. After dispatching your order, we will send you your individual order tracking number, and the details of how you can track it.</p>",
+                            ContentHeader = "<p>Support skin's natural hydration and youthful glow with an exceptional formula specially designed to fight the appearance of fine lines. Offering skin the most advanced Swiss-created peptides and a rich infusion of collagen and hyaluronic acid, this hydrating skincare solution uses non-embryonic stem cells to help skin absorb moisture quickly and thoroughly. All the benefits of the unique facial cream are able to sink deep into facial tissues for healthy, radiant skin.</p><br><p><strong> Directions:</strong> After cleansing and toning the skin, apply the Day Cream in light upwards strokes.  For maximum effect, apply the Day Cream after applying the Mineral Boost Facial Serum. Recommended for daily use.</p>",
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            IsPromote = true,
+                            IsVegan = true,
+                            Price = 189.99m,
+                            ProductGroupId = 2,
+                            ProductName = "Collagen Infused Day Cream",
+                            Size = "50ml",
+                            Unit = 0
+                        },
+                        new
+                        {
+                            ProductId = 9,
+                            ContentBody = " <p> FREE WORLDWIDE DELIVERY ON ALL ORDERS</p><br><p>We will dispatch your order as soon as the payment has been authorised. Products are sent via courier service on the same business day for orders placed before 2 pm. After dispatching your order, we will send you your individual order tracking number, and the details of how you can track it.</p>",
+                            ContentHeader = "<p>This soothing Skin Remedy Facial Mask contains a complex blend of collagen, natural plant extracts and essential oils combined with Vitamins A, C and E. Rich in ingredients known for their anti-aging, anti-oxidant and moisturising qualities, this nourishing mask, when used regularly, will leave skin soft, supple and totally hydrated.</p><br><p><strong> Directions:</strong> Apply an even layer to face and neck, leave for 8-10 minutes (until dry) and then rinse thoroughly with lukewarm water.  Recommended for use 1-2 times a week.  To complete the treatment, apply Collagen Infused Day Cream.</p> ",
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            IsPromote = false,
+                            IsVegan = false,
+                            Price = 219.99m,
+                            ProductGroupId = 2,
+                            ProductName = "Collagen Restore Skin Remedy Facial Mask",
+                            Size = "50ml",
+                            Unit = 0
+                        },
+                        new
+                        {
+                            ProductId = 10,
+                            ContentBody = " <p> FREE WORLDWIDE DELIVERY ON ALL ORDERS</p><br><p>We will dispatch your order as soon as the payment has been authorised. Products are sent via courier service on the same business day for orders placed before 2 pm. After dispatching your order, we will send you your individual order tracking number, and the details of how you can track it.</p>",
+                            ContentHeader = "<p>Formulated to re-hydrate your skin while you rest, this rich Night Cream contains a complex blend of naturally nourishing plant extracts and oils such as Grape Seed, Olive Oil, Shea Butter, Jojoba, Beeswax and Avocado.  Further enriched with Vitamins A, E, Pro. Vitamin B5 and Collagen, this cream has been designed to restore the natural moisture balance in order to reduce the appearance of fine lines and wrinkles. </p><br><p><strong> Application:</strong> After cleansing and toning the skin, apply the Night Cream in light upwards strokes each evening.  For maximum effect, apply the Mineral Boost Facial Serum before applying the Night Cream. Recommended for daily use. </p>",
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            IsPromote = false,
+                            IsVegan = false,
+                            Price = 189.98m,
+                            ProductGroupId = 2,
+                            ProductName = "Collagen Restore Night Cream",
+                            Size = "50ml",
+                            Unit = 0
+                        },
+                        new
+                        {
+                            ProductId = 11,
+                            ContentBody = " <p> FREE WORLDWIDE DELIVERY ON ALL ORDERS</p><br><p>We will dispatch your order as soon as the payment has been authorised. Products are sent via courier service on the same business day for orders placed before 2 pm. After dispatching your order, we will send you your individual order tracking number, and the details of how you can track it.</p>",
+                            ContentHeader = "<p>This gentle, non-abrasive Facial Peel has been formulated from a rich blend of natural plant extracts and essential oils.  Enriched with Vitamins E & C, this Peel will cleanse skin thoroughly to remove dead skin, dirt, excess oil and all other impurities to leave your skin fresh, cleansed and radiant. </p><br><p><strong> Application:</strong> Apply a small amount to dry skin in a circular motion until dirt, dead skin cells & other impurities become visible then rinse well with water and gently pat the face dry.  Recommended for use 1-2 times weekly.  </p>",
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            IsPromote = true,
+                            IsVegan = true,
+                            Price = 159.98m,
+                            ProductGroupId = 2,
+                            ProductName = "Flawless Regenerating Facial Peel",
+                            Size = "50ml",
+                            Unit = 0
+                        },
+                        new
+                        {
+                            ProductId = 12,
+                            ContentBody = " <p> FREE WORLDWIDE DELIVERY ON ALL ORDERS</p><br><p>We will dispatch your order as soon as the payment has been authorised. Products are sent via courier service on the same business day for orders placed before 2 pm. After dispatching your order, we will send you your individual order tracking number, and the details of how you can track it.</p>",
+                            ContentHeader = "<p>Formulated by combining a rich blend of active ingredients known for their anti-aging, anti-oxidant and moisturising qualities, this Vitamin E enriched Facial Serum has been formulated to firm and condition the skin, in order to reduce the appearance of fine lines and wrinkles.  </p><br><p><strong> Application:</strong> Apply to cleansed skin in a gentle, light tapping motion.  To complete the treatment, apply Collagen Infused Day Cream or Collagen Restore Night Cream.  Recommended for daily use. </p>",
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            IsPromote = false,
+                            IsVegan = false,
+                            Price = 199.99m,
+                            ProductGroupId = 2,
+                            ProductName = "Mineral Boost Facial Serum",
+                            Size = "40ml",
+                            Unit = 0
+                        },
+                        new
+                        {
+                            ProductId = 13,
+                            ContentBody = " <p> FREE WORLDWIDE DELIVERY ON ALL ORDERS</p><br><p>We will dispatch your order as soon as the payment has been authorised. Products are sent via courier service on the same business day for orders placed before 2 pm. After dispatching your order, we will send you your individual order tracking number, and the details of how you can track it.</p>",
+                            ContentHeader = "<p>Natural plant extracts, essential oils and ingredients that are known for their anti-oxidant, anti-aging and moisturising qualities such as Olive Oil and Jojoba have been blended with Vitamin E to create a gentle but effective eye serum that will tighten and firm the delicate area around the eye. This serum works to reduce the appearance of fine lines, wrinkles, dark circles and puffiness around the eyes.  </p><br><p><strong> Application:</strong> Apply to the eye area in a gentle, light tapping motion.  In order to complete the treatment, apply the Age Defence Eye Cream.  Recommended for daily use. </p>",
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            IsPromote = false,
+                            IsVegan = false,
+                            Price = 289.99m,
+                            ProductGroupId = 2,
+                            ProductName = "Moisture Boost Eye Serum",
+                            Size = "40ml",
+                            Unit = 0
+                        },
+                        new
+                        {
+                            ProductId = 14,
+                            ContentBody = " <p> FREE WORLDWIDE DELIVERY ON ALL ORDERS</p><br><p>We will dispatch your order as soon as the payment has been authorised. Products are sent via courier service on the same business day for orders placed before 2 pm. After dispatching your order, we will send you your individual order tracking number, and the details of how you can track it.</p>",
+                            ContentHeader = "<p>Rich in natural ingredients known for their anti-oxidant, anti-aging and moisturising properties, this gentle but effective Eye Cream has been formulated to re-hydrate and moisturise the delicate skin around the eye in order to reduce the appearance of fine lines, wrinkles and dark circles. </p><br><p><strong> Application:</strong> After applying Eye Serum, apply the Eye Cream to the eye area in a gentle, light tapping motion to complete the treatment.  Recommended for daily use.</p>",
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            IsPromote = false,
+                            IsVegan = false,
+                            Price = 219.99m,
+                            ProductGroupId = 3,
+                            ProductName = "Age Defence Eye Cream",
+                            Size = "50ml",
+                            Unit = 0
+                        },
+                        new
+                        {
+                            ProductId = 15,
+                            ContentBody = " <p> FREE WORLDWIDE DELIVERY ON ALL ORDERS</p><br><p>We will dispatch your order as soon as the payment has been authorised. Products are sent via courier service on the same business day for orders placed before 2 pm. After dispatching your order, we will send you your individual order tracking number, and the details of how you can track it.</p>",
+                            ContentHeader = "<p>Using a unique combination of Stem Cells, Retinol and Vitamins E and C, Bonage Laboratories Wrinkle Corrector Solution is a natural, gentle formula that will help to lessen the appearance of typical signs of aging and reveal a firmer, denser and younger looking skin.</p><br><p> The solution stimulates cell renewal in the upper skin layer as well as collagen production in the lower layers of the skin, to promote a flawless surface.</p><br><p>The pioneering technology of the applicator delivers the ideal dosage for your skin and is designed to protect the formula from air and light, so it remains in its purest form releasing the gorgeous, fresh ingredients into the skin.</p><br><p><strong>To use:</strong> Apply a small amount of solution to clean, dry skin using your ring finger.Tap the solution gently to area of concern and let it dry for a few seconds. Do not rub. May be used on its own or as the last step of your skincare regimen.</p>",
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            IsPromote = false,
+                            IsVegan = false,
+                            Price = 799.99m,
+                            ProductGroupId = 3,
+                            ProductName = "Bonage Laboratories Wrinkle Corrector",
+                            Size = "30 ml",
+                            Unit = 0
+                        },
+                        new
+                        {
+                            ProductId = 16,
+                            ContentBody = " <p> FREE WORLDWIDE DELIVERY ON ALL ORDERS</p><br><p>We will dispatch your order as soon as the payment has been authorised. Products are sent via courier service on the same business day for orders placed before 2 pm. After dispatching your order, we will send you your individual order tracking number, and the details of how you can track it.</p>",
+                            ContentHeader = "<p>The Prestige Flash Lift crème gives an instant plumping and smoothing treatment to the skin, filling in fine lines and wrinkles and offering a youthful, healthy glow. Luxuriously blended with antioxidants and skin-restoring vitamins, alongside replenishing hyaluronic acid - this crème is the perfect one-off treat for your skin. Combat the visible signs of ageing, and look and feel your absolute best in just a flash, with this soothing and hydrating boost.</p><br><p><strong> Application:</strong> Apply a very small amount to clean, dry skin using your ring finger.Tap the solution gently to area of concern and let dry for a few seconds.</p>",
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            IsPromote = false,
+                            IsVegan = false,
+                            Price = 579.99m,
+                            ProductGroupId = 3,
+                            ProductName = "Flash Lift crème",
+                            Size = "20 ml",
+                            Unit = 0
+                        },
+                        new
+                        {
+                            ProductId = 17,
+                            ContentBody = " <p> FREE WORLDWIDE DELIVERY ON ALL ORDERS</p><br><p>We will dispatch your order as soon as the payment has been authorised. Products are sent via courier service on the same business day for orders placed before 2 pm. After dispatching your order, we will send you your individual order tracking number, and the details of how you can track it.</p>",
+                            ContentHeader = "<p>This outstanding facelift solution is specially formulated to combat visible signs of aging by combining our multi action innovative lifting formula with link n lift technology for a quick and instant lifting effect. This highly concentrated formula helps recover skins plumpness and freshness, thus achieving supreme age defying results that are visible from the very first application.</p><br><p><strong> Application:</strong> Apply a very small amount to clean, dry skin using your ring finger to areas of concern. Do not rub.</p>",
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            IsPromote = false,
+                            IsVegan = false,
+                            Price = 15000m,
+                            ProductGroupId = 3,
+                            ProductName = "Lift & Sculpt Elixir",
+                            Size = "15 ml",
+                            Unit = 0
+                        },
+                        new
+                        {
+                            ProductId = 18,
+                            ContentBody = " <p> FREE WORLDWIDE DELIVERY ON ALL ORDERS</p><br><p>We will dispatch your order as soon as the payment has been authorised. Products are sent via courier service on the same business day for orders placed before 2 pm. After dispatching your order, we will send you your individual order tracking number, and the details of how you can track it.</p>",
+                            ContentHeader = "<p>Natural plant extracts, essential oils and ingredients that are known for their anti-oxidant, anti-aging and moisturising qualities such as Olive Oil and Jojoba have been blended with Vitamin E to create a gentle but effective eye serum that will tighten and firm the delicate area around the eye. This serum works to reduce the appearance of fine lines, wrinkles, dark circles and puffiness around the eyes. </p><br><p><strong> Application:</strong> Apply to the eye area in a gentle, light tapping motion.  In order to complete the treatment, apply the Age Defence Eye Cream.  Recommended for daily use.</p>",
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            IsPromote = false,
+                            IsVegan = false,
+                            Price = 289.99m,
+                            ProductGroupId = 3,
+                            ProductName = "Moisture Boost Eye Serum",
+                            Size = "40ml",
+                            Unit = 0
+                        },
+                        new
+                        {
+                            ProductId = 19,
+                            ContentBody = " <p> FREE WORLDWIDE DELIVERY ON ALL ORDERS</p><br><p>We will dispatch your order as soon as the payment has been authorised. Products are sent via courier service on the same business day for orders placed before 2 pm. After dispatching your order, we will send you your individual order tracking number, and the details of how you can track it.</p>",
+                            ContentHeader = "<p>This outstanding facelift solution is specially formulated to combat visible signs of aging by combining our multi action innovative lifting formula with link n lift technology for a quick and instant lifting effect. This highly concentrated formula helps recover skins plumpness and freshness, thus achieving supreme age defying results that are visible from the very first application.</p><br><p><strong> Application:</strong> Apply a very small amount to clean, dry skin using your ring finger to areas of concern. Do not rub.</p>",
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            IsPromote = false,
+                            IsVegan = false,
+                            Price = 714.99m,
+                            ProductGroupId = 3,
+                            ProductName = "Multi Action Instant Lift Solution",
+                            Size = "10ml",
+                            Unit = 0
+                        },
+                        new
+                        {
+                            ProductId = 20,
+                            ContentBody = " <p> FREE WORLDWIDE DELIVERY ON ALL ORDERS</p><br><p>We will dispatch your order as soon as the payment has been authorised. Products are sent via courier service on the same business day for orders placed before 2 pm. After dispatching your order, we will send you your individual order tracking number, and the details of how you can track it.</p>",
+                            ContentHeader = "<p>This active cream features a unique formulation with highly effective anti-aging ingredients, specially developed to care for the delicate skin around your eyes. Enriched with Shea Butter, Vitamin B5, Vitamin E, plant extracts and peptides, aiming to reinforce the skin's natural defence mechanisms and strengthen its resistance to premature signs of aging caused by harsh environmental conditions, while maintaining the skin's natural moisture balance.</p><br><p><strong> Application:</strong> Apply to clean skin using your fingertips, massage until fully absorbed.</p>",
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            IsPromote = true,
+                            IsVegan = true,
+                            Price = 363.99m,
+                            ProductGroupId = 3,
+                            ProductName = "Sculpting Eye Cream",
+                            Size = "30ml",
+                            Unit = 0
+                        },
+                        new
+                        {
+                            ProductId = 21,
+                            ContentBody = " <p> FREE WORLDWIDE DELIVERY ON ALL ORDERS</p><br><p>We will dispatch your order as soon as the payment has been authorised. Products are sent via courier service on the same business day for orders placed before 2 pm. After dispatching your order, we will send you your individual order tracking number, and the details of how you can track it.</p>",
+                            ContentHeader = "<p>A unique rich formulation, specially developed to care for the delicate skin around your eyes, designed to visibly reduce the appearance of lines and wrinkles as well as generally improving your complexion. Contain a powerful anti-aging ingredient combination; VOLUFORM™ & SEPILIFT™ DPHP, the “volufirming technology” works to plump and firm skin cells, targeting the fibroblasts to restore skin’s strength and elasticity. The light texture of this eye serum is easily absorbed, helping to promote a younger, firmer appearance.</p><br><p><strong> Application:</strong> Apply a few drops of serum to the eye area. Massage completely into the skin until fully absorbed.</p> ",
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            IsPromote = true,
+                            IsVegan = true,
+                            Price = 344.99m,
+                            ProductGroupId = 3,
+                            ProductName = "Volumizing Eye Serum",
+                            Size = "40ml",
+                            Unit = 0
+                        },
+                        new
+                        {
+                            ProductId = 22,
+                            ContentBody = " <p> FREE WORLDWIDE DELIVERY ON ALL ORDERS</p><br><p>We will dispatch your order as soon as the payment has been authorised. Products are sent via courier service on the same business day for orders placed before 2 pm. After dispatching your order, we will send you your individual order tracking number, and the details of how you can track it.</p>",
+                            ContentHeader = "<p>Repair and restore your skin’s natural flawless beauty with these luxurious, lifting & biodegradable capsules. Blended with vitamin E and antioxidants - and the super power, wrinkle-reducing and firming ingredient retinol - each capsule provides a replenishing boost. Benefitting from added ceramides formulated to boost moisture you can enjoy smoother, more supple skin and feel your radiant best.</p><p><strong> To Use:</strong> Gently twist the neck around twice and squeeze onto fingertips. Smooth over face and neck each night, then follow with a hydrating mask or moisturiser.</p>",
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            IsPromote = true,
+                            IsVegan = true,
+                            Price = 1000m,
+                            ProductGroupId = 4,
+                            ProductName = "Active Repair Beauty Capsules",
+                            Size = "45 Capsules",
+                            Unit = 0
+                        },
+                        new
+                        {
+                            ProductId = 23,
+                            ContentBody = " <p> FREE WORLDWIDE DELIVERY ON ALL ORDERS</p><br><p>We will dispatch your order as soon as the payment has been authorised. Products are sent via courier service on the same business day for orders placed before 2 pm. After dispatching your order, we will send you your individual order tracking number, and the details of how you can track it.</p>",
+                            ContentHeader = "<p>This innovative Firming Cream contains active anti-aging, anti-oxidant and moisturising ingredients such as natural plant extracts, essential oils and Vitamin E.  This cream works to reduce the appearance of fine lines & wrinkles.</p><br><p><strong> Application:  Apply to cleansed skin in a gentle, light tapping motion.  Recommended for daily use.  To complete the treatment, apply Age Control Firming Serum.</strong></p>",
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            IsPromote = false,
+                            IsVegan = false,
+                            Price = 329.99m,
+                            ProductGroupId = 4,
+                            ProductName = "Age Control Firming Cream",
+                            Size = "50ml",
+                            Unit = 0
+                        },
+                        new
+                        {
+                            ProductId = 24,
+                            ContentBody = " <p> FREE WORLDWIDE DELIVERY ON ALL ORDERS</p><br><p>We will dispatch your order as soon as the payment has been authorised. Products are sent via courier service on the same business day for orders placed before 2 pm. After dispatching your order, we will send you your individual order tracking number, and the details of how you can track it.</p>",
+                            ContentHeader = "<p>This innovative anti-aging Firming Serum has been formulated using active anti-aging and anti-oxidant rich ingredients.  Containing nourishing plant extracts and essential oils and enriched with Vitamin E, this Serum works to reduce the appearance of fine lines & wrinkles.</p><br><p><strong> Application:  Apply to cleansed skin in a gentle, light tapping motion.  Recommended for daily use.  To complete the treatment apply Age Control Firming Cream.</strong>  </p>",
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            IsPromote = false,
+                            IsVegan = false,
+                            Price = 329.99m,
+                            ProductGroupId = 4,
+                            ProductName = "Age Control Firming Serum",
+                            Size = "40ml",
+                            Unit = 0
+                        },
+                        new
+                        {
+                            ProductId = 25,
+                            ContentBody = " <p> FREE WORLDWIDE DELIVERY ON ALL ORDERS</p><br><p>We will dispatch your order as soon as the payment has been authorised. Products are sent via courier service on the same business day for orders placed before 2 pm. After dispatching your order, we will send you your individual order tracking number, and the details of how you can track it.</p>",
+                            ContentHeader = "<p>Formulated with a unique blend of active ingredients and natural plant extracts and oils known for their moisturising and revitalizing properties; such as Ginseng, Green Tea and Ginger, this mask has been further enriched with Collagen and Elastin, ingredients that are vital for vibrant and healthy skin.   This Makeover Mask has been designed to provide a lifting and firming effect on the skin in order to reduce the appearance of fine lines and wrinkles and to create a more toned and even skin complexion.</p><br><p><strong> Application: </strong> Apply the mask to cleansed, dry skin.  Make sure no moisturiser, make-up or any other oily residue remains on the skin before applying the mask.  Apply a penny sized amount onto fingertips, gently smoothing over fine lines and wrinkles on face and neck, to achieve a light and even layer.  Keep your face expressionless for one minute, during which time you will feel a tightening sensation then rinse with lukewarm water.  For maximum effect use daily.</p> ",
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            IsPromote = false,
+                            IsVegan = false,
+                            Price = 299.99m,
+                            ProductGroupId = 4,
+                            ProductName = "Express Makeover Mask",
+                            Size = "50ml",
+                            Unit = 0
+                        },
+                        new
+                        {
+                            ProductId = 26,
+                            ContentBody = " <p> FREE WORLDWIDE DELIVERY ON ALL ORDERS</p><br><p>We will dispatch your order as soon as the payment has been authorised. Products are sent via courier service on the same business day for orders placed before 2 pm. After dispatching your order, we will send you your individual order tracking number, and the details of how you can track it.</p>",
+                            ContentHeader = "<p>The Prestige Flash Lift crème gives an instant plumping and smoothing treatment to the skin, filling in fine lines and wrinkles and offering a youthful, healthy glow. Luxuriously blended with antioxidants and skin-restoring vitamins, alongside replenishing hyaluronic acid - this crème is the perfect one-off treat for your skin. Combat the visible signs of ageing, and look and feel your absolute best in just a flash, with this soothing and hydrating boost.</p><br><p><strong> Application: </strong> Apply a very small amount to clean, dry skin using your ring finger.Tap the solution gently to area of concern and let dry for a few seconds.</p>",
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            IsPromote = false,
+                            IsVegan = false,
+                            Price = 579.99m,
+                            ProductGroupId = 4,
+                            ProductName = "Flash Lift crème",
+                            Size = "20 ml",
+                            Unit = 0
+                        },
+                        new
+                        {
+                            ProductId = 27,
+                            ContentBody = " <p> FREE WORLDWIDE DELIVERY ON ALL ORDERS</p><br><p>We will dispatch your order as soon as the payment has been authorised. Products are sent via courier service on the same business day for orders placed before 2 pm. After dispatching your order, we will send you your individual order tracking number, and the details of how you can track it.</p>",
+                            ContentHeader = "<p>This soothing Cleansing Oil contains a rich blend of active ingredients formulated to both nourish and deep cleanse the skin.  Formulated to remove make-up traces, dirt, excess oil and all other impurities, this Cleansing oil is rich in natural plant extracts and essential oils that are renowned for their moisturising and calming properties such as Calendula, Rose Hip, Argan Oil and Avocado, to ensure that skin is kept hydrated, silky smooth and totally cleansed.</p><br><p><strong> Application:</strong> Using your fingertips massage the oil into the the skin.  Leave for 2 minutes and then add a little water and continue to massage the oil into the skin until a lotion is formed, then rinse thoroughly with lukewarm water. Recommended for daily use. To complete the treatment apply Age Control Firming Serum and Age Control Firming Cream.</p>",
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            IsPromote = true,
+                            IsVegan = true,
+                            Price = 119.99m,
+                            ProductGroupId = 4,
+                            ProductName = "Gold Fusion Cleansing Oil",
+                            Size = "100ml",
+                            Unit = 0
+                        },
+                        new
+                        {
+                            ProductId = 28,
+                            ContentBody = " <p> FREE WORLDWIDE DELIVERY ON ALL ORDERS</p><br><p>We will dispatch your order as soon as the payment has been authorised. Products are sent via courier service on the same business day for orders placed before 2 pm. After dispatching your order, we will send you your individual order tracking number, and the details of how you can track it.</p>",
+                            ContentHeader = "<p>Rich in soothing, natural plant extracts and essential oils and enriched with Pro-Vitamin B5 and Vitamin E, this Mask has been formulated by blending mineral-rich Sea Clay with Iron.  The purifying properties of the clay and the magnetic properties of the iron ensure that dirt, dead skin cells and other impurities simply lift away, while the soothing and moisturising properties of the minerals and natural plant extracts ensure that skin is silky soft, smooth and moisturised.</p><br><p><strong> Application:</strong> Using the enclosed spatula, apply a thin layer of the mask on face and neck, avoiding the eye area.  Leave for 60 seconds.  Wrap the magnet in a tissue and in an upwards motion, use the magnet to lift off the mask, after which a thin moisturising residue will be left on the face.  This can be massaged into the skin and left to absorb or if preferred, remove with Flawless Cleansing Milk.  Recommended for use 1-2 times weekly.</p> ",
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            IsPromote = true,
+                            IsVegan = true,
+                            Price = 389.99m,
+                            ProductGroupId = 4,
+                            ProductName = "Purifying Magical Mud Mask",
+                            Size = "50ml",
+                            Unit = 0
+                        },
+                        new
+                        {
+                            ProductId = 29,
+                            ContentBody = " <p> FREE WORLDWIDE DELIVERY ON ALL ORDERS</p><br><p>We will dispatch your order as soon as the payment has been authorised. Products are sent via courier service on the same business day for orders placed before 2 pm. After dispatching your order, we will send you your individual order tracking number, and the details of how you can track it.</p>",
+                            ContentHeader = "<p>Natural ingredients known for their anti-aging, anti-oxidant and moisturising qualities have been combined with Sea Clay to create this self-heating Thermal Mask. The purifying Sea Clay will deep cleanse the skin while the natural plant extracts and essential oils will nourish the skin and the thermal warming effect will stimulate circulation to reduce the appearance of fine lines and wrinkles, leaving skin totally refreshed, hydrated and moisturised.</p><br><p><strong> Application:</strong> Wet the face with lukewarm water and then apply the Thermal Mask avoiding the eye area. Leave for 5 minutes until the heat action has been activated and then rinse thoroughly with lukewarm water. To complete the treatment apply Age Control Firming Serum and then Age Control Firming Cream.  Recommended for use 1-2 times per week.</p>",
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            IsPromote = true,
+                            IsVegan = true,
+                            Price = 379.99m,
+                            ProductGroupId = 4,
+                            ProductName = "Thermal Therapy Facial Mask",
+                            Size = "50ml",
+                            Unit = 0
+                        },
+                        new
+                        {
+                            ProductId = 30,
+                            ContentBody = " <p> FREE WORLDWIDE DELIVERY ON ALL ORDERS</p><br><p>We will dispatch your order as soon as the payment has been authorised. Products are sent via courier service on the same business day for orders placed before 2 pm. After dispatching your order, we will send you your individual order tracking number, and the details of how you can track it.</p>",
+                            ContentHeader = "<p>Working to improve the overall appearance of your skin while focusing on slowing the ageing process and protecting against wrinkles and fine lines, our 75% Hyaluronic Acid Moisture Complex gives your skin the natural firmness and softness that keeps skin looking youthful and fresh. Maintaining moisture, the hyaluronic acid replenishes the skin, making it look and feel supple and smooth, giving you the perfect naturally hydrated glow.</p><br><p><strong> Application:</strong> Apply to clean skin using your fingertips and massage into the face & neck until fully absorbed.</p> ",
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            IsPromote = true,
+                            IsVegan = true,
+                            Price = 859.99m,
+                            ProductGroupId = 5,
+                            ProductName = "75% Hyaluronic Acid Moisture Complex",
+                            Size = "50ml",
+                            Unit = 0
+                        },
+                        new
+                        {
+                            ProductId = 31,
+                            ContentBody = " <p> FREE WORLDWIDE DELIVERY ON ALL ORDERS</p><br><p>We will dispatch your order as soon as the payment has been authorised. Products are sent via courier service on the same business day for orders placed before 2 pm. After dispatching your order, we will send you your individual order tracking number, and the details of how you can track it.</p>",
+                            ContentHeader = "<p>A rich vitamin facial mask, with innovative technology of encapsulated Vit E releasing only while applying the mask. Enriched with Vit B5, Vit C, Jojoba oil and plant extracts; Grape seed, parsley & Aloe Vera. It dramatically reduces the appearance of wrinkles and sagging skin, giving the skin an instantaneous, optimised elastic appearance.  </p><br><p><strong> Application: </strong> Apply a generous layer on clean skin and massage gently until fully absorbed. </p>",
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            IsPromote = true,
+                            IsVegan = true,
+                            Price = 879.98m,
+                            ProductGroupId = 5,
+                            ProductName = "Boosting Vitamin Nectar Face Mask with Vit E C & B",
+                            Size = "50ml",
+                            Unit = 0
+                        },
+                        new
+                        {
+                            ProductId = 32,
+                            ContentBody = " <p> FREE WORLDWIDE DELIVERY ON ALL ORDERS</p><br><p>We will dispatch your order as soon as the payment has been authorised. Products are sent via courier service on the same business day for orders placed before 2 pm. After dispatching your order, we will send you your individual order tracking number, and the details of how you can track it.</p>",
+                            ContentHeader = "<p>Give your skin an overnight treatment with our Evening Emulsion, perfect to focus on the delicate areas of the face. Specifically formulated to concentrate on reducing the signs of ageing, the Hyaluronic acid replenishes your natural moisture levels, giving your skin a supple, more youthful look. Teamed with natural extracts and vitamins, the formula includes a unique combination of peptides, ingredients known for their anti-ageing qualities, which are able to penetrate deep underneath the skin’s surface.</p><br><p><strong> Application:</strong> Apply a few drops of serum to the face following your usual evening cleansing routine. Massage completely into the skin until fully absorbed. </p>",
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            IsPromote = false,
+                            IsVegan = false,
+                            Price = 899.99m,
+                            ProductGroupId = 5,
+                            ProductName = "Line Reducing Hyaluronic Acid + Vit C Evening Emulsion",
+                            Size = "40ml",
+                            Unit = 0
+                        },
+                        new
+                        {
+                            ProductId = 33,
+                            ContentBody = " <p> FREE WORLDWIDE DELIVERY ON ALL ORDERS</p><br><p>We will dispatch your order as soon as the payment has been authorised. Products are sent via courier service on the same business day for orders placed before 2 pm. After dispatching your order, we will send you your individual order tracking number, and the details of how you can track it.</p>",
+                            ContentHeader = "<p>Our repairing Morning Boost formula has been expertly crafted to nourish your skin, giving it the perfect morning boost you need to get through the day with a renewed and healthy complexion. Reduce sun damage and pigmentation with Vitamins B5 and C included in the serum, while Vitamin E works as an antioxidant, reducing free radicals and toxins and giving you additional sun damage protection. Complete with Aloe Vera extract and green tea, the serum helps to calm the skin, the ideal morning preparation for the day ahead.</p><br><p><strong> Application:</strong> Apply just a few drops of the serum to clean skin using your fingertips and massage into the surface until fully absorbed. </p>",
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            IsPromote = true,
+                            IsVegan = true,
+                            Price = 899.99m,
+                            ProductGroupId = 5,
+                            ProductName = "Repairing Hyaluronic Acid + Vit B5 Morning Boost",
+                            Size = "40ml",
+                            Unit = 0
+                        },
+                        new
+                        {
+                            ProductId = 34,
+                            ContentBody = " <p> FREE WORLDWIDE DELIVERY ON ALL ORDERS</p><br><p>We will dispatch your order as soon as the payment has been authorised. Products are sent via courier service on the same business day for orders placed before 2 pm. After dispatching your order, we will send you your individual order tracking number, and the details of how you can track it.</p>",
+                            ContentHeader = "<p>This outstanding facelift solution is specially formulated to combat visible signs of aging by combining our multi action innovative lifting formula with link n lift technology for a quick and instant lifting effect. This highly concentrated formula helps recover skins plumpness and freshness, thus achieving supreme age defying results that are visible from the very first application.</p><br><p><strong> Application:</strong> Apply a very small amount to clean, dry skin using your ring finger to areas of concern. Do not rub.</p>",
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            IsPromote = false,
+                            IsVegan = false,
+                            Price = 714.99m,
+                            ProductGroupId = 6,
+                            ProductName = "Multi Action Instant Lift Solution",
+                            Size = "10ml",
+                            Unit = 0
+                        },
+                        new
+                        {
+                            ProductId = 35,
+                            ContentBody = " <p> FREE WORLDWIDE DELIVERY ON ALL ORDERS</p><br><p>We will dispatch your order as soon as the payment has been authorised. Products are sent via courier service on the same business day for orders placed before 2 pm. After dispatching your order, we will send you your individual order tracking number, and the details of how you can track it.</p>",
+                            ContentHeader = "<p>This active cream features a unique formulation with highly effective anti-aging ingredients, specially developed to care for the delicate skin around your eyes. Enriched with Shea Butter, Vitamin B5, Vitamin E, plant extracts and peptides, aiming to reinforce the skin's natural defence mechanisms and strengthen its resistance to premature signs of aging caused by harsh environmental conditions, while maintaining the skin's natural moisture balance. </p><br><p><strong> Application:</strong> Apply to clean skin using your fingertips, massage until fully absorbed. </p>",
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            IsPromote = true,
+                            IsVegan = true,
+                            Price = 363.99m,
+                            ProductGroupId = 6,
+                            ProductName = "Sculpting Eye Cream",
+                            Size = "30ml",
+                            Unit = 0
+                        },
+                        new
+                        {
+                            ProductId = 36,
+                            ContentBody = " <p> FREE WORLDWIDE DELIVERY ON ALL ORDERS</p><br><p>We will dispatch your order as soon as the payment has been authorised. Products are sent via courier service on the same business day for orders placed before 2 pm. After dispatching your order, we will send you your individual order tracking number, and the details of how you can track it.</p>",
+                            ContentHeader = "<p>A unique rich formulation, specially developed to care for the delicate skin around your eyes, designed to visibly reduce the appearance of lines and wrinkles as well as generally improving your complexion. Contain a powerful anti-aging ingredient combination; VOLUFORM™ & SEPILIFT™ DPHP, the “volufirming technology” works to plump and firm skin cells, targeting the fibroblasts to restore skin’s strength and elasticity. The light texture of this eye serum is easily absorbed, helping to promote a younger, firmer appearance.</p><br><p><strong> Application:</strong> Apply a few drops of serum to the eye area. Massage completely into the skin until fully absorbed.</p> ",
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            IsPromote = true,
+                            IsVegan = true,
+                            Price = 344.99m,
+                            ProductGroupId = 6,
+                            ProductName = "Volumizing Eye Serum",
+                            Size = "40ml",
+                            Unit = 0
+                        },
+                        new
+                        {
+                            ProductId = 37,
+                            ContentBody = " <p> FREE WORLDWIDE DELIVERY ON ALL ORDERS</p><br><p>We will dispatch your order as soon as the payment has been authorised. Products are sent via courier service on the same business day for orders placed before 2 pm. After dispatching your order, we will send you your individual order tracking number, and the details of how you can track it.</p>",
+                            ContentHeader = "<p>This outstanding facelift solution is specially formulated to combat visible signs of aging by combining our multi action innovative lifting formula with link n lift technology for a quick and instant lifting effect. This highly concentrated formula helps recover skins plumpness and freshness, thus achieving supreme age defying results that are visible from the very first application.</p><br><p><strong> Application:</strong> Apply a very small amount to clean, dry skin using your ring finger to areas of concern. Do not rub.</p>",
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            IsPromote = false,
+                            IsVegan = false,
+                            Price = 15000m,
+                            ProductGroupId = 7,
+                            ProductName = "Lift & Sculpt Elixir",
+                            Size = "15 ml",
+                            Unit = 0
+                        },
+                        new
+                        {
+                            ProductId = 38,
+                            ContentBody = " <p> FREE WORLDWIDE DELIVERY ON ALL ORDERS</p><br><p>We will dispatch your order as soon as the payment has been authorised. Products are sent via courier service on the same business day for orders placed before 2 pm. After dispatching your order, we will send you your individual order tracking number, and the details of how you can track it.</p>",
+                            ContentHeader = "<p>Formulated from a rich, creamy blend of natural plant extracts and essential oils such as Shea Butter, Aloe Vera, Jojoba, Coconut, Olive Oil and Chamomile and further enriched with Vitamin E, this softly scented, ultra moisturising Body Butter will bring instant and long-lasting relief to tired, dull and dry skin.</p><br><p><strong> Application:</strong> Apply to entire body in a circular motion until fully absorbed. Recommended for frequent use.</p>",
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            IsPromote = false,
+                            IsVegan = false,
+                            Price = 65.99m,
+                            ProductGroupId = 8,
+                            ProductName = "Hydra Boost Body Butter Allure",
+                            Size = "250ml",
+                            Unit = 0
+                        },
+                        new
+                        {
+                            ProductId = 39,
+                            ContentBody = " <p> FREE WORLDWIDE DELIVERY ON ALL ORDERS</p><br><p>We will dispatch your order as soon as the payment has been authorised. Products are sent via courier service on the same business day for orders placed before 2 pm. After dispatching your order, we will send you your individual order tracking number, and the details of how you can track it.</p>",
+                            ContentHeader = "<p>Indulge your hands with this comprehensive nail collection that includes everything you need to hold on to a beautifully smooth and elegant appearance. The perfect nail file and nail buffer help keep your hands looking and feeling their best, while Bonage Deep Hydration Cuticle Oil and Hand & Nail Lotion offer a targeted moisture boost that helps skin stay fresh and more youthful looking over time. Smooth-looking, shapely nails and radiantly vibrant skin are the keys to hands that look and feel luxuriously pampered throughout a busy day.</p><br><p><strong> Included:</strong> Deep Hydration Cuticle Oil, Hand & Nail Lotion, Nail File, and Nail Buffer.</p><br><p><strong>To Use:</strong> Shape nails using nail file and then smooth and shine nail surfaces with the nail buffer. Apply Bonage Deep Hydration Cuticle Oil to each cuticle, and massage a generous amount of Bonage Hand & Nail Lotion into skin until fully absorbed.</p>",
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            IsPromote = false,
+                            IsVegan = false,
+                            Price = 69.99m,
+                            ProductGroupId = 8,
+                            ProductName = "Professional Nail Kit",
+                            Size = "",
+                            Unit = 0
+                        },
+                        new
+                        {
+                            ProductId = 40,
+                            ContentBody = " <p> FREE WORLDWIDE DELIVERY ON ALL ORDERS</p><br><p>We will dispatch your order as soon as the payment has been authorised. Products are sent via courier service on the same business day for orders placed before 2 pm. After dispatching your order, we will send you your individual order tracking number, and the details of how you can track it.</p>",
+                            ContentHeader = "<p>Formulated from a rich, creamy blend of natural plant extracts and essential oils such as Shea Butter, Aloe Vera, Jojoba, Coconut, Olive Oil and Chamomile and further enriched with Vitamin E, this softly scented, ultra moisturising Body Butter will bring instant and long-lasting relief to tired, dull and dry skin.</p><br><p><strong> Application:</strong> Apply to entire body in a circular motion until fully absorbed. Recommended for frequent use.</p>",
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            IsPromote = false,
+                            IsVegan = false,
+                            Price = 65.99m,
+                            ProductGroupId = 8,
+                            ProductName = "Hydra Boost Body Butter Adore",
+                            Size = "250ml",
+                            Unit = 0
+                        },
+                        new
+                        {
+                            ProductId = 41,
+                            ContentBody = " <p> FREE WORLDWIDE DELIVERY ON ALL ORDERS</p><br><p>We will dispatch your order as soon as the payment has been authorised. Products are sent via courier service on the same business day for orders placed before 2 pm. After dispatching your order, we will send you your individual order tracking number, and the details of how you can track it.</p>",
+                            ContentHeader = "<p>A rich blend of natural plant oils has been combined with rejuvenating sea salts to create this dual action Salt Scrub.  The sea salts will gently exfoliate the skin to remove dirt, excess oil, dead skin cells and all other impurities, while the deeply moistening essential oils will penetrate the skin to provide long-lasting nourishment, leaving skin soft, silky smooth and totally refreshed.</p> <br><p><strong> Application:</strong> Apply to wet or dry skin, gently massage in a circular motion then rinse thoroughly.  Recommended for use 1-2 times per week.</p>",
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            IsPromote = true,
+                            IsVegan = true,
+                            Price = 59.99m,
+                            ProductGroupId = 8,
+                            ProductName = "Dual Action Salt Scrub Allure",
+                            Size = "400gr",
+                            Unit = 0
+                        },
+                        new
+                        {
+                            ProductId = 42,
+                            ContentBody = " <p> FREE WORLDWIDE DELIVERY ON ALL ORDERS</p><br><p>We will dispatch your order as soon as the payment has been authorised. Products are sent via courier service on the same business day for orders placed before 2 pm. After dispatching your order, we will send you your individual order tracking number, and the details of how you can track it.</p>",
+                            ContentHeader = "<p>A rich blend of natural plant oils has been combined with rejuvenating sea salts to create this dual action Salt Scrub.  The sea salts will gently exfoliate the skin to remove dirt, excess oil, dead skin cells and all other impurities, while the deeply moistening essential oils will penetrate the skin to provide long-lasting nourishment, leaving skin soft, silky smooth and totally refreshed.</p> <br><p><strong> Application:</strong> Apply to wet or dry skin, gently massage in a circular motion then rinse thoroughly.  Recommended for use 1-2 times per week.</p>",
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            IsPromote = true,
+                            IsVegan = true,
+                            Price = 59.99m,
+                            ProductGroupId = 8,
+                            ProductName = "Dual Action Salt Scrub Adore",
+                            Size = "400gr",
+                            Unit = 0
+                        },
+                        new
+                        {
+                            ProductId = 43,
+                            ContentBody = " <p> FREE WORLDWIDE DELIVERY ON ALL ORDERS</p><br><p>We will dispatch your order as soon as the payment has been authorised. Products are sent via courier service on the same business day for orders placed before 2 pm. After dispatching your order, we will send you your individual order tracking number, and the details of how you can track it.</p>",
+                            ContentHeader = "<p>This soothing and refreshing Hand & Body Lotion contains a rich blend of natural plant extracts and essential oils known for their moisturising properties such as Olive Oil, Avocado & Aloe Vera Further enriched with Vitamin A, this Lotion will provide long-lasting nourishment to ensure that skin is kept soft, hydrated and silky smooth.</p><br><p><strong> Application:</strong> Apply to entire body until fully absorbed. For maximum effect use daily.</p>",
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            IsPromote = false,
+                            IsVegan = false,
+                            Price = 19.99m,
+                            ProductGroupId = 8,
+                            ProductName = "Moisture Restore Hand & Body Lotion Allure",
+                            Size = "125ml",
+                            Unit = 0
+                        },
+                        new
+                        {
+                            ProductId = 44,
+                            ContentBody = " <p> FREE WORLDWIDE DELIVERY ON ALL ORDERS</p><br><p>We will dispatch your order as soon as the payment has been authorised. Products are sent via courier service on the same business day for orders placed before 2 pm. After dispatching your order, we will send you your individual order tracking number, and the details of how you can track it.</p>",
+                            ContentHeader = "<p>This soothing and refreshing Hand & Body Lotion contains a rich blend of natural plant extracts and essential oils known for their moisturising properties such as Olive Oil, Avocado & Aloe Vera Further enriched with Vitamin A, this Lotion will provide long-lasting nourishment to ensure that skin is kept soft, hydrated and silky smooth.</p><br><p><strong> Application:</strong> Apply to entire body until fully absorbed. For maximum effect use daily.</p>",
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            IsPromote = false,
+                            IsVegan = false,
+                            Price = 19.99m,
+                            ProductGroupId = 8,
+                            ProductName = "Moisture Restore Hand & Body Lotion Adore",
+                            Size = "125ml",
+                            Unit = 0
+                        },
+                        new
+                        {
+                            ProductId = 45,
+                            ContentBody = " <p> FREE WORLDWIDE DELIVERY ON ALL ORDERS</p><br><p>We will dispatch your order as soon as the payment has been authorised. Products are sent via courier service on the same business day for orders placed before 2 pm. After dispatching your order, we will send you your individual order tracking number, and the details of how you can track it.</p>",
+                            ContentHeader = "<p>Containing a rich blend of moisturising plant extracts such as Aloe Vera, Shea Butter and Chamomile, this After Shave Cream has been formulated to calm and moisturise the skin after shaving.  Enriched with Vitamin E, this soothing cream will help to prevent shave rash and will leave skin soft, hydrated and pleasantly scented.</p><br><p><strong> Application:<strong> Apply generously after each shave.</p>",
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            IsPromote = false,
+                            IsVegan = false,
+                            Price = 89.99m,
+                            ProductGroupId = 9,
+                            ProductName = "After Shave Calming Cream",
+                            Size = "125ml",
+                            Unit = 0
+                        },
+                        new
+                        {
+                            ProductId = 46,
+                            ContentBody = " <p> FREE WORLDWIDE DELIVERY ON ALL ORDERS</p><br><p>We will dispatch your order as soon as the payment has been authorised. Products are sent via courier service on the same business day for orders placed before 2 pm. After dispatching your order, we will send you your individual order tracking number, and the details of how you can track it.</p>",
+                            ContentHeader = "<p>This beauty set for homme includes:</p><p> -Mineral Restore Face & Eye Cream</p><p>- After Shave Calming Cream</p>",
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            IsPromote = false,
+                            IsVegan = false,
+                            Price = 179.99m,
+                            ProductGroupId = 9,
+                            ProductName = "Bonage Homme Set",
+                            Size = "",
+                            Unit = 0
+                        },
+                        new
+                        {
+                            ProductId = 47,
+                            ContentBody = " <p> FREE WORLDWIDE DELIVERY ON ALL ORDERS</p><br><p>We will dispatch your order as soon as the payment has been authorised. Products are sent via courier service on the same business day for orders placed before 2 pm. After dispatching your order, we will send you your individual order tracking number, and the details of how you can track it.</p>",
+                            ContentHeader = "<p>This deeply nourishing facial cream has been formulated by blending a rich mix of natural plant extracts and essential oils known for their moisturising and hydrating properties with Vitamins E and C.   When applied to the delicate eye area, this cream will help to reduce the appearance of fine lines, puffiness and wrinkles and when applied to the face, this cream penetrates quickly to keep skin soft, smooth and nourished.</p><br><p><strong> Application:</strong> Apply with fingertips in a circular motion. For best results, apply daily - morning and evening.</p>  ",
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            IsPromote = false,
+                            IsVegan = false,
+                            Price = 119.99m,
+                            ProductGroupId = 9,
+                            ProductName = "Mineral Restore Face & Eye Cream",
+                            Size = "125ml",
+                            Unit = 0
+                        },
+                        new
+                        {
+                            ProductId = 48,
+                            ContentBody = " <p> FREE WORLDWIDE DELIVERY ON ALL ORDERS</p><br><p>We will dispatch your order as soon as the payment has been authorised. Products are sent via courier service on the same business day for orders placed before 2 pm. After dispatching your order, we will send you your individual order tracking number, and the details of how you can track it.</p>",
+                            ContentHeader = "<p>Smooth leather black crossbody bag with a removable strap and zipped inner pocket.Featuring a flap top closer with golden ring detail and a zip closer under the flap for extra security.</p><br><p>Made from premium Italian leather and stamped with our house logo This modern yet elegant bag is perfect for every day and with every outfit.</p>",
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            IsPromote = false,
+                            IsVegan = false,
+                            Price = 219.99m,
+                            ProductGroupId = 10,
+                            ProductName = "D'or Crossbody Bag",
+                            Size = "",
+                            Unit = 0
+                        },
+                        new
+                        {
+                            ProductId = 49,
+                            ContentBody = " <p> FREE WORLDWIDE DELIVERY ON ALL ORDERS</p><br><p>We will dispatch your order as soon as the payment has been authorised. Products are sent via courier service on the same business day for orders placed before 2 pm. After dispatching your order, we will send you your individual order tracking number, and the details of how you can track it.</p>",
+                            ContentHeader = "<p>A beautiful clean lines geometric tote, made from fine smooth Italian leather and stamped with the house logo.It features a removable shoulder strap, small zipped inner pocket and two additional pockets to keep your mobile handy. </p><br><p>This signature statement bag is perfect for any occasion. </p>",
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            IsPromote = false,
+                            IsVegan = false,
+                            Price = 439.99m,
+                            ProductGroupId = 10,
+                            ProductName = "Geometric Large Tote Blanc",
+                            Size = "",
+                            Unit = 0
+                        },
+                        new
+                        {
+                            ProductId = 50,
+                            ContentBody = " <p> FREE WORLDWIDE DELIVERY ON ALL ORDERS</p><br><p>We will dispatch your order as soon as the payment has been authorised. Products are sent via courier service on the same business day for orders placed before 2 pm. After dispatching your order, we will send you your individual order tracking number, and the details of how you can track it.</p>",
+                            ContentHeader = "<p>Limited edition Navy large leather tote with inner detachable zipped pocket to keep your bag organised and your valuables secure and detachable shoulder strap.</p><br><p> Made in our Italian atelier from smooth leather which is stamped with the house logo, this is the perfect bag for the busy organised woman.</p>",
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            IsPromote = false,
+                            IsVegan = false,
+                            Price = 399.99m,
+                            ProductGroupId = 10,
+                            ProductName = "Large Smooth Leather Tote Marine",
+                            Size = "",
+                            Unit = 0
+                        },
+                        new
+                        {
+                            ProductId = 51,
+                            ContentBody = " <p> FREE WORLDWIDE DELIVERY ON ALL ORDERS</p><br><p>We will dispatch your order as soon as the payment has been authorised. Products are sent via courier service on the same business day for orders placed before 2 pm. After dispatching your order, we will send you your individual order tracking number, and the details of how you can track it.</p>",
+                            ContentHeader = "<p>Limited edition Black large leather tote with inner detachable zipped pocket to keep your bag organised and your valuables secure and detachable shoulder strap.</p><br><p> Made in our Italian atelier from smooth leather which is stamped with the house logo, this is the perfect bag for the busy organised woman.</p>",
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            IsPromote = false,
+                            IsVegan = false,
+                            Price = 399.99m,
+                            ProductGroupId = 10,
+                            ProductName = "Large Smooth Leather Tote Noir",
+                            Size = "",
+                            Unit = 0
+                        },
+                        new
+                        {
+                            ProductId = 52,
+                            ContentBody = " <p> FREE WORLDWIDE DELIVERY ON ALL ORDERS</p><br><p>We will dispatch your order as soon as the payment has been authorised. Products are sent via courier service on the same business day for orders placed before 2 pm. After dispatching your order, we will send you your individual order tracking number, and the details of how you can track it.</p>",
+                            ContentHeader = "<p>Limited edition two shade large leather tote with inner detachable zipped pocket to keep your bag organised and your valuables secure and detachable shoulder strap.</p><br><p> Made in our Italian atelier from two colour textured leather which is stamped with the house logo, this is the perfect bag for the busy organised woman.</p>",
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            IsPromote = false,
+                            IsVegan = false,
+                            Price = 419.99m,
+                            ProductGroupId = 10,
+                            ProductName = "Large textured leather Tote Brune",
+                            Size = "",
+                            Unit = 0
+                        },
+                        new
+                        {
+                            ProductId = 53,
+                            ContentBody = " <p> FREE WORLDWIDE DELIVERY ON ALL ORDERS</p><br><p>We will dispatch your order as soon as the payment has been authorised. Products are sent via courier service on the same business day for orders placed before 2 pm. After dispatching your order, we will send you your individual order tracking number, and the details of how you can track it.</p>",
+                            ContentHeader = "<p>Limited edition two shade large leather tote with inner detachable zipped pocket to keep your bag organised and your valuables secure and detachable shoulder strap.</p><br><p> Made in our Italian atelier from two colour textured leather which is stamped with the house logo, this is the perfect bag for the busy organised woman.</p>",
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            IsPromote = false,
+                            IsVegan = false,
+                            Price = 419.99m,
+                            ProductGroupId = 10,
+                            ProductName = "large textured leather tote crème",
+                            Size = "",
+                            Unit = 0
+                        },
+                        new
+                        {
+                            ProductId = 54,
+                            ContentBody = " <p> FREE WORLDWIDE DELIVERY ON ALL ORDERS</p><br><p>We will dispatch your order as soon as the payment has been authorised. Products are sent via courier service on the same business day for orders placed before 2 pm. After dispatching your order, we will send you your individual order tracking number, and the details of how you can track it.</p>",
+                            ContentHeader = "<p>Made from fine Italian soft textured leather, with a detachable strap, an inner zipped pouch to keep your mobile and lipstick close to reach, tassel detail and a magnetic flap closure for extra security. </p><br><p> Stamped with the house logo, this large bag is perfect for carrying all your valuables in style.  </p>",
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            IsPromote = false,
+                            IsVegan = false,
+                            Price = 389.99m,
+                            ProductGroupId = 10,
+                            ProductName = "Maxi Leather Shoulder Bag Sky Blue",
+                            Size = "",
+                            Unit = 0
+                        },
+                        new
+                        {
+                            ProductId = 55,
+                            ContentBody = " <p> FREE WORLDWIDE DELIVERY ON ALL ORDERS</p><br><p>We will dispatch your order as soon as the payment has been authorised. Products are sent via courier service on the same business day for orders placed before 2 pm. After dispatching your order, we will send you your individual order tracking number, and the details of how you can track it.</p>",
+                            ContentHeader = "<p>The Pink Rose backpack is crafted from a premium textured leather and stamped with the house logo, with adjustable shoulder straps, inner zipped pocket, and feminine ruffle detail.</p><br><p> Made in our Italian atelier, this backpack is casual yet chic. </p>",
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            IsPromote = false,
+                            IsVegan = false,
+                            Price = 289.99m,
+                            ProductGroupId = 10,
+                            ProductName = "The Rosé Backpack",
+                            Size = "",
+                            Unit = 0
+                        },
+                        new
+                        {
+                            ProductId = 56,
+                            ContentBody = " <p> FREE WORLDWIDE DELIVERY ON ALL ORDERS</p><br><p>We will dispatch your order as soon as the payment has been authorised. Products are sent via courier service on the same business day for orders placed before 2 pm. After dispatching your order, we will send you your individual order tracking number, and the details of how you can track it.</p>",
+                            ContentHeader = "<p>This Medium tote in Black is the perfect everyday handbag. Constructed in a classic trapeze shape using premium smooth Italian Leather, it features a front flap and tongue closure, with a detachable shoulder strap and inner and outer zipped pockets for easy organisation.</p><br><p> Made in our Italian atelier and stamped with the house logo this stylish bag is a must-have. </p>",
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            IsPromote = false,
+                            IsVegan = false,
+                            Price = 369.99m,
+                            ProductGroupId = 10,
+                            ProductName = "Trapèze Medium Tote Bag Noir",
+                            Size = "",
+                            Unit = 0
+                        },
+                        new
+                        {
+                            ProductId = 57,
+                            ContentBody = " <p> FREE WORLDWIDE DELIVERY ON ALL ORDERS</p><br><p>We will dispatch your order as soon as the payment has been authorised. Products are sent via courier service on the same business day for orders placed before 2 pm. After dispatching your order, we will send you your individual order tracking number, and the details of how you can track it.</p>",
+                            ContentHeader = "<p>This Medium tote in Orange is the perfect everyday handbag. Constructed in a classic trapeze shape using premium smooth Italian Leather, it features a front flap and tongue closure, with a detachable shoulder strap and inner and outer zipped pockets for easy organisation.</p><br><p> Made in our Italian atelier and stamped with the house logo this stylish bag is a must-have. </p>",
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            IsPromote = false,
+                            IsVegan = false,
+                            Price = 369.99m,
+                            ProductGroupId = 10,
+                            ProductName = "Trapèze Medium Tote Bag Orange",
+                            Size = "",
+                            Unit = 0
+                        },
+                        new
+                        {
+                            ProductId = 58,
+                            ContentBody = " <p> FREE WORLDWIDE DELIVERY ON ALL ORDERS</p><br><p>We will dispatch your order as soon as the payment has been authorised. Products are sent via courier service on the same business day for orders placed before 2 pm. After dispatching your order, we will send you your individual order tracking number, and the details of how you can track it.</p>",
+                            ContentHeader = "<p>This beauty set for homme includes:</p><p> -Mineral Restore Face & Eye Cream</p><p>- After Shave Calming Cream</p>",
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            IsPromote = false,
+                            IsVegan = false,
+                            Price = 179.99m,
+                            ProductGroupId = 11,
+                            ProductName = "Bonage Homme Set",
+                            Size = "",
+                            Unit = 0
+                        },
+                        new
+                        {
+                            ProductId = 59,
+                            ContentBody = " <p> FREE WORLDWIDE DELIVERY ON ALL ORDERS</p><br><p>We will dispatch your order as soon as the payment has been authorised. Products are sent via courier service on the same business day for orders placed before 2 pm. After dispatching your order, we will send you your individual order tracking number, and the details of how you can track it.</p>",
+                            ContentHeader = "<p>Indulge your hands with this comprehensive nail collection that includes everything you need to hold on to a beautifully smooth and elegant appearance. The perfect nail file and nail buffer help keep your hands looking and feeling their best, while Bonage Deep Hydration Cuticle Oil and Hand & Nail Lotion offer a targeted moisture boost that helps skin stay fresh and more youthful looking over time. Smooth-looking, shapely nails and radiantly vibrant skin are the keys to hands that look and feel luxuriously pampered throughout a busy day.</p><br><p><strong> Included:</strong> Deep Hydration Cuticle Oil, Hand & Nail Lotion, Nail File, and Nail Buffer.</p><br><p><strong>To Use:</strong> Shape nails using nail file and then smooth and shine nail surfaces with the nail buffer. Apply Bonage Deep Hydration Cuticle Oil to each cuticle, and massage a generous amount of Bonage Hand & Nail Lotion into skin until fully absorbed.</p>",
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            IsPromote = false,
+                            IsVegan = false,
+                            Price = 69.99m,
+                            ProductGroupId = 11,
+                            ProductName = "Professional Nail Kit",
+                            Size = "",
+                            Unit = 0
+                        },
+                        new
+                        {
+                            ProductId = 60,
+                            ContentBody = " <p> FREE WORLDWIDE DELIVERY ON ALL ORDERS</p><br><p>We will dispatch your order as soon as the payment has been authorised. Products are sent via courier service on the same business day for orders placed before 2 pm. After dispatching your order, we will send you your individual order tracking number, and the details of how you can track it.</p>",
+                            ContentHeader = "<p>Vitalift Eye and Neck Device Massager is a  new 2 in 1 ergonomically designed products. Both devices  help to reduce eye and neck lines and firm that skin area using special technology, which combines high speed massage, light therapy along with a heating/cooling system.</p><br><p> The massage heads are especially designed for shoulder, neck, and eyes. Their unique shape can stream the energy from the devices directly into the skin.Uses electrical ions to increase the hyaluronic acid within your skin, which helps to stimulate the fibroblast cells. Reduces the appearance of fine lines and wrinkles.Blue and red LED light therapy can help creams to penetrate deeper layers of your skin. Helps to increase skin elasticity and reduce eye melanoma.The Neck device’s massage head’s heat capacity reaches to 45°C to activate the skin, matching with three IPL acoustic mode in low, medium and high speeds. The 3-colour light (red, blue and green) massage modes can promote blood circulation, stimulate neck acupuncture points, clear the meridians, improve circulation and promote metabolism. It can also promote the discharge of long-accumulated toxic substances & waste, slow skin cell ageing, sculpt and define neck profile, reduce swelling, rapidly eliminate fatigue, and restore the role of physical fitness.Three sonic modes: low speed(blue), medium speed(green), high speed(red), activated after selecting mode.</p> <p>The vibration starts when massage head is in contact with the skin.USB cable charging, safety, and environmental protection.Mini & portable, can be used anywhere any time.</p><p>Blue light</p><p>Blue light is the coldest light, which can promote the synthesis of protein and collagen, can activate the skin, tighten loose skin, and shrink pores. Ideal for oily skin and sensitive skin.</p><br><p>Green light</p><p>Green lifgt can improve the oxygen alternate use function of the cell, promote the skin surface microcirculation, and drain the lymphatic and oedema. Meanwhile it also has the function of calming and balancing skin, while maintaining stability of the skin.</p><br><p>Red light</p><p>Red light can increase cell vitality, accelerate the blood circulation, and promote the growth of fibroblasts, and collagen. It can also have a significant effect in smoothing fine lines, wrinkles, firming skin, colour pigmentation, and fading the scar.</p><br><p>HOW TO USE THE EYE DEVICE:</p><p> Click the on/off button; the product will start to vibrate the moment the device touches your skin;Apply your cream or serum when using the neck device;Select the massage mode and magnetic heat lift according to your personal needs;Softly press the device along your skin; the longer you do the treatment the better the absorption of product.</p>",
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            IsPromote = false,
+                            IsVegan = false,
+                            Price = 2495m,
+                            ProductGroupId = 11,
+                            ProductName = "Deluxe Eye and Neck Beautifying Gift Box",
+                            Size = "",
+                            Unit = 0
+                        },
+                        new
+                        {
+                            ProductId = 61,
+                            ContentBody = " <p> FREE WORLDWIDE DELIVERY ON ALL ORDERS</p><br><p>We will dispatch your order as soon as the payment has been authorised. Products are sent via courier service on the same business day for orders placed before 2 pm. After dispatching your order, we will send you your individual order tracking number, and the details of how you can track it.</p>",
+                            ContentHeader = "<p>Vitalift Face, Eye and Neck Devices are new ergonomically, lightweight devices which can be used anywhere, at any time. Box contains 2 devices, which help to reduce eye, face and neck lines and firm the face area using special technology.</p><br><p> The Face / Eye device has 3 different functions ( warming, cooling, vibrating massage), combined with  2 led light therapy ( Red LED Light and Blue), with 2 different ends- one for the eyes and one for the face.</p><br><p>The Neck device has 3 led light therapy (Red, Blue and Green).</p><br><p>Warming Massage Function uses 42°C  at constant temperature to promote the blood circulation, accelerate metabolism, stimulate neck and face  acupuncture points, eliminates toxins and stimulates the skin to produce more collagen and elastin. This thereby achieving a cosmetic effect such as firmness, wrinkle removal and rejuvenation.</p><br><p>BLUE and RED LED light therapy combined with the heating function and used when applying creams and masks, increases their effectiveness by penetrating deeper layers of your skin, helping to increase skin elasticity and to reduce eye melanoma.</p><br><p>Includes USB cable charge.</p><br><p>HOW TO USE:</p><br><p> Click the on/off button;Apply your cream or serum on your neck or face. The product will start to vibrate the moment the device touches your skin;Select the massage mode and magnetic heat lift according to personal need;Softly press the device along your skin; the longer you do the treatment the better the absorption of product.</p>",
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            IsPromote = false,
+                            IsVegan = false,
+                            Price = 2495m,
+                            ProductGroupId = 11,
+                            ProductName = "Deluxe Face, Eye and Neck Beautifying Gift Box",
+                            Size = "",
+                            Unit = 0
+                        },
+                        new
+                        {
+                            ProductId = 62,
+                            ContentBody = " <p> FREE WORLDWIDE DELIVERY ON ALL ORDERS</p><br><p>We will dispatch your order as soon as the payment has been authorised. Products are sent via courier service on the same business day for orders placed before 2 pm. After dispatching your order, we will send you your individual order tracking number, and the details of how you can track it.</p>",
+                            ContentHeader = "<p>The Ultimate Pamper Collection Set contains:</p><p> -Line Reducing Hyaluronic Acid + Vit.C Evening Emulsion</p><p>- Boosting Vitamin Nectar Face Mask with Vit E C & B</p><p>- 75% Hyaluronic Acid Moisture Complex</p><p>- Repairing Hyaluronic Acid + Vit B5 Morning Boost</p>",
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            IsPromote = false,
+                            IsVegan = false,
+                            Price = 2744.99m,
+                            ProductGroupId = 11,
+                            ProductName = "The Ultimate Pamper Collection",
+                            Size = "",
+                            Unit = 0
+                        },
+                        new
+                        {
+                            ProductId = 63,
+                            ContentBody = " <p> FREE WORLDWIDE DELIVERY ON ALL ORDERS</p><br><p>We will dispatch your order as soon as the payment has been authorised. Products are sent via courier service on the same business day for orders placed before 2 pm. After dispatching your order, we will send you your individual order tracking number, and the details of how you can track it.</p>",
+                            ContentHeader = "<p>Everyday Self Care Collection set contains:</p><p> -Mineral Boost Facial Serum</p><p>- Collagen Infused Day Cream</p><p>- Age Defence Eye Cream</p><p>- Moisture Boost Eye Serum</p>",
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            IsPromote = false,
+                            IsVegan = false,
+                            Price = 674.99m,
+                            ProductGroupId = 11,
+                            ProductName = "Everyday Self Care Collection",
+                            Size = "",
+                            Unit = 0
+                        },
+                        new
+                        {
+                            ProductId = 64,
+                            ContentBody = " <p> FREE WORLDWIDE DELIVERY ON ALL ORDERS</p><br><p>We will dispatch your order as soon as the payment has been authorised. Products are sent via courier service on the same business day for orders placed before 2 pm. After dispatching your order, we will send you your individual order tracking number, and the details of how you can track it.</p>",
+                            ContentHeader = "<p>This Deluxe set includes:</p><p> -Multi Action Instant Lift Solution</p><p>- Sculpting Eye Cream</p><p>- Volumizing Eye Cream</p><p>- AHA & BHA Purifying Mousse</p>",
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            IsPromote = false,
+                            IsVegan = false,
+                            Price = 1022.99m,
+                            ProductGroupId = 11,
+                            ProductName = "Deluxe Rose Gold Collection",
+                            Size = "",
+                            Unit = 0
+                        });
                 });
 
             modelBuilder.Entity("Database.Entitys.TbProductGroup", b =>
@@ -186,9 +2573,6 @@ namespace Database.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ProductGroupId"), 1L, 1);
-
-                    b.Property<int?>("CreateBy")
-                        .HasColumnType("int");
 
                     b.Property<DateTime>("CreateDate")
                         .HasColumnType("datetime2");
@@ -200,15 +2584,91 @@ namespace Database.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("UpdateBy")
-                        .HasColumnType("int");
-
                     b.Property<DateTime?>("UpdateDate")
                         .HasColumnType("datetime2");
 
                     b.HasKey("ProductGroupId");
 
                     b.ToTable("TbProductGroup");
+
+                    b.HasData(
+                        new
+                        {
+                            ProductGroupId = 1,
+                            CreateDate = new DateTime(2023, 12, 28, 16, 42, 54, 330, DateTimeKind.Utc).AddTicks(5817),
+                            IsDeleted = false,
+                            ProductGroupName = "FLAWLESS CLEANSING"
+                        },
+                        new
+                        {
+                            ProductGroupId = 2,
+                            CreateDate = new DateTime(2023, 12, 28, 16, 42, 54, 330, DateTimeKind.Utc).AddTicks(5821),
+                            IsDeleted = false,
+                            ProductGroupName = "CLASSIQUE"
+                        },
+                        new
+                        {
+                            ProductGroupId = 3,
+                            CreateDate = new DateTime(2023, 12, 28, 16, 42, 54, 330, DateTimeKind.Utc).AddTicks(5821),
+                            IsDeleted = false,
+                            ProductGroupName = "EYE CARE"
+                        },
+                        new
+                        {
+                            ProductGroupId = 4,
+                            CreateDate = new DateTime(2023, 12, 28, 16, 42, 54, 330, DateTimeKind.Utc).AddTicks(5822),
+                            IsDeleted = false,
+                            ProductGroupName = "PRESTIGE"
+                        },
+                        new
+                        {
+                            ProductGroupId = 5,
+                            CreateDate = new DateTime(2023, 12, 28, 16, 42, 54, 330, DateTimeKind.Utc).AddTicks(5822),
+                            IsDeleted = false,
+                            ProductGroupName = "LUMIÉRE"
+                        },
+                        new
+                        {
+                            ProductGroupId = 6,
+                            CreateDate = new DateTime(2023, 12, 28, 16, 42, 54, 330, DateTimeKind.Utc).AddTicks(5823),
+                            IsDeleted = false,
+                            ProductGroupName = "RÉVIVE"
+                        },
+                        new
+                        {
+                            ProductGroupId = 7,
+                            CreateDate = new DateTime(2023, 12, 28, 16, 42, 54, 330, DateTimeKind.Utc).AddTicks(5823),
+                            IsDeleted = false,
+                            ProductGroupName = "GENÉSE"
+                        },
+                        new
+                        {
+                            ProductGroupId = 8,
+                            CreateDate = new DateTime(2023, 12, 28, 16, 42, 54, 330, DateTimeKind.Utc).AddTicks(5824),
+                            IsDeleted = false,
+                            ProductGroupName = "BODY CARE"
+                        },
+                        new
+                        {
+                            ProductGroupId = 9,
+                            CreateDate = new DateTime(2023, 12, 28, 16, 42, 54, 330, DateTimeKind.Utc).AddTicks(5824),
+                            IsDeleted = false,
+                            ProductGroupName = "HOMME"
+                        },
+                        new
+                        {
+                            ProductGroupId = 10,
+                            CreateDate = new DateTime(2023, 12, 28, 16, 42, 54, 330, DateTimeKind.Utc).AddTicks(5825),
+                            IsDeleted = false,
+                            ProductGroupName = "LIMITED EDITION HANDBAGS"
+                        },
+                        new
+                        {
+                            ProductGroupId = 11,
+                            CreateDate = new DateTime(2023, 12, 28, 16, 42, 54, 330, DateTimeKind.Utc).AddTicks(5825),
+                            IsDeleted = false,
+                            ProductGroupName = "SETS & GIFTS"
+                        });
                 });
 
             modelBuilder.Entity("Database.Entitys.TbUser", b =>
@@ -218,9 +2678,6 @@ namespace Database.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("UserId"), 1L, 1);
-
-                    b.Property<int?>("CreateBy")
-                        .HasColumnType("int");
 
                     b.Property<DateTime>("CreateDate")
                         .HasColumnType("datetime2");
@@ -240,9 +2697,6 @@ namespace Database.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("UpdateBy")
-                        .HasColumnType("int");
-
                     b.Property<DateTime?>("UpdateDate")
                         .HasColumnType("datetime2");
 
@@ -259,13 +2713,13 @@ namespace Database.Migrations
                 {
                     b.HasOne("Database.Entitys.TbFile", "TbFile")
                         .WithMany("TbFileProducts")
-                        .HasForeignKey("TbFileFileId")
+                        .HasForeignKey("FileId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("Database.Entitys.TbProduct", "TbProduct")
                         .WithMany("TbFileProducts")
-                        .HasForeignKey("TbProductProductId")
+                        .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -278,7 +2732,7 @@ namespace Database.Migrations
                 {
                     b.HasOne("Database.Entitys.TbProductGroup", "TbProductGroup")
                         .WithMany("TbProducts")
-                        .HasForeignKey("TbProductGroupProductGroupId")
+                        .HasForeignKey("ProductGroupId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

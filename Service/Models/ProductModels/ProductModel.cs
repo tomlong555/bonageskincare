@@ -19,6 +19,8 @@ namespace Service.Models.ProductModels
         public string ContentBody { get; set; }
         public int ProductGroupId { get; set; }
         public string ProductGroupName { get; set; }
-        public virtual FileModel Filess { get; set; }
+        public bool IsPromote { get; set; }
+        public bool IsVegan { get; set; }
+        public List<FileModel> Filess { get; set; }
     }
 }

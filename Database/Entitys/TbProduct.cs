@@ -19,12 +19,13 @@ namespace Database.Entitys
         public int Unit { get; set; }
         public string Size { get; set; }
         public string ContentHeader { get; set; }
-        public string ContentBody{ get; set; }
-        public bool IsPromote{ get; set; }
+        public string ContentBody { get; set; }
+        public bool IsPromote { get; set; }
+        public bool IsVegan { get; set; }
 
-        [ForeignKey("ProductGroupId")]
         public int ProductGroupId { get; set; }
 
+        [ForeignKey("ProductGroupId")]
         public virtual TbProductGroup TbProductGroup { get; set; }
         public virtual ICollection<TbFileProduct> TbFileProducts { get; set; }
 

@@ -57,6 +57,7 @@ builder.Services.AddScoped<IProductGroupService, ProductGroupService>();
 builder.Services.AddScoped<IBaseService, BaseService>();
 
 builder.Services.Configure<JwtOptionModel>(builder.Configuration.GetSection(JwtOptionModel.JwtOptionSection));
+builder.Services.Configure<PathOptionModel>(builder.Configuration.GetSection(PathOptionModel.PathSection));
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(option =>

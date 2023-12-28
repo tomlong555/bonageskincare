@@ -2,6 +2,9 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
+using Service.Helpers;
+using Service.Models.BaseModels;
 using Service.Models.ProductGroupModels;
 using Service.Models.ProductModels;
 using Service.Services.Base;
@@ -17,15 +20,19 @@ namespace Service.Services.Product
     {
         private readonly DBContext _dBContext;
         private readonly IBaseService _baseService;
+        private readonly PathOptionModel _pathOptionModel;
 
         public ProductService(
             DBContext dBContext
-           , IBaseService baseService
+            , IBaseService baseService
+            , IOptions<PathOptionModel> pathOptionModel
             )
         {
             _dBContext = dBContext;
             _baseService = baseService;
+            _pathOptionModel = pathOptionModel.Value;
         }
+
         public async Task<ProductModel> GetProduct(int productId)
         {
             var result = new ProductModel();
@@ -43,7 +50,16 @@ namespace Service.Services.Product
                                 ContentHeader = product.ContentHeader,
                                 ContentBody = product.ContentBody,
                                 ProductGroupId = product.ProductGroupId,
-                                ProductGroupName = product.TbProductGroup.ProductGroupName
+                                ProductGroupName = product.TbProductGroup.ProductGroupName,
+                                IsPromote = product.IsPromote,
+                                IsVegan = product.IsVegan,
+                                Filess = product.TbFileProducts
+                                .Where(file => !file.TbFile.IsDeleted)
+                                .Select(file =>
+                                    new FileModel
+                                    {
+                                        FileName = file.TbFile.FileName.ToFilePath(_pathOptionModel.ResoucesPath),
+                                    }).ToList()
                             }).SingleAsync();
 
             return result;
@@ -65,7 +81,16 @@ namespace Service.Services.Product
                                  ContentHeader = product.ContentHeader,
                                  ContentBody = product.ContentBody,
                                  ProductGroupId = product.ProductGroupId,
-                                 ProductGroupName = product.TbProductGroup.ProductGroupName
+                                 ProductGroupName = product.TbProductGroup.ProductGroupName,
+                                 IsPromote = product.IsPromote,
+                                 IsVegan = product.IsVegan,
+                                 Filess = product.TbFileProducts
+                                .Where(file => !file.TbFile.IsDeleted)
+                                .Select(file =>
+                                    new FileModel
+                                    {
+                                        FileName = file.TbFile.FileName.ToFilePath(_pathOptionModel.ResoucesPath),
+                                    }).ToList()
                              }).ToListAsync();
 
             return results;
@@ -88,7 +113,16 @@ namespace Service.Services.Product
                                  ContentHeader = product.ContentHeader,
                                  ContentBody = product.ContentBody,
                                  ProductGroupId = product.ProductGroupId,
-                                 ProductGroupName = product.TbProductGroup.ProductGroupName
+                                 ProductGroupName = product.TbProductGroup.ProductGroupName,
+                                 IsPromote = product.IsPromote,
+                                 IsVegan = product.IsVegan,
+                                 Filess = product.TbFileProducts
+                                .Where(file => !file.TbFile.IsDeleted)
+                                .Select(file =>
+                                    new FileModel
+                                    {
+                                        FileName = file.TbFile.FileName.ToFilePath(_pathOptionModel.ResoucesPath),
+                                    }).ToList()
                              }).ToListAsync();
 
             return results;
@@ -111,7 +145,16 @@ namespace Service.Services.Product
                                  ContentHeader = product.ContentHeader,
                                  ContentBody = product.ContentBody,
                                  ProductGroupId = product.ProductGroupId,
-                                 ProductGroupName = product.TbProductGroup.ProductGroupName
+                                 ProductGroupName = product.TbProductGroup.ProductGroupName,
+                                 IsPromote = product.IsPromote,
+                                 IsVegan = product.IsVegan,
+                                 Filess = product.TbFileProducts
+                                .Where(file => !file.TbFile.IsDeleted)
+                                .Select(file =>
+                                    new FileModel
+                                    {
+                                        FileName = file.TbFile.FileName.ToFilePath(_pathOptionModel.ResoucesPath),
+                                    }).ToList()
                              }).ToListAsync();
 
             return results;
@@ -119,9 +162,6 @@ namespace Service.Services.Product
 
         public async Task<bool> CrateProduct(ProductInputModel input)
         {
-           
-          
-
             var newData = new TbProduct()
             {
                 ProductName = input.ProductName,
@@ -131,7 +171,6 @@ namespace Service.Services.Product
                 ContentHeader = input.ContentHeader,
                 ContentBody = input.ContentBody,
                 ProductGroupId = input.ProductGroupId,
-                CreateBy = 1,
                 CreateDate = DateTime.UtcNow,
             };
 
@@ -148,13 +187,12 @@ namespace Service.Services.Product
             var productData = new TbProduct();
 
             productData = await (from product in _dBContext.TbProduct
-                            where product.ProductId == productId
-                            && !product.IsDeleted
-                            select product).SingleAsync();
+                                 where product.ProductId == productId
+                                 && !product.IsDeleted
+                                 select product).SingleAsync();
 
             productData.IsDeleted = true;
             productData.CreateDate = DateTime.UtcNow;
-            productData.CreateBy = 1;
 
             await _dBContext.SaveChangesAsync();
 
@@ -175,16 +213,15 @@ namespace Service.Services.Product
             productData.Unit = input.Unit;
             productData.Size = input.Size;
             productData.ContentHeader = input.ContentHeader;
-            productData.ContentBody  = input.ContentBody;
+            productData.ContentBody = input.ContentBody;
             productData.UpdateDate = DateTime.UtcNow;
-            productData.UpdateBy = 1;
 
             await _dBContext.SaveChangesAsync();
 
             return true;
         }
 
-        public async Task<string> CrateProductFile( List<IFormFile> input)
+        public async Task<string> CrateProductFile(List<IFormFile> input)
         {
             var result = "";
             foreach (var image in input)

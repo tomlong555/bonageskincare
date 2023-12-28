@@ -14,13 +14,14 @@ namespace Database.Entitys
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int FileProductId { get; set; }
 
-        [ForeignKey("FileId")]
         public int FileId { get; set; }
 
-        [ForeignKey("ProductId")]
         public int ProductId { get; set; }
 
+        [ForeignKey("FileId")]
         public virtual TbFile TbFile { get; set; }
+
+        [ForeignKey("ProductId")]
         public virtual TbProduct TbProduct { get; set; }
     }
 }

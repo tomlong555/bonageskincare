@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Service.Models.ProductModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +11,6 @@ namespace Service.Models.ProductGroupModels
     {
         public int ProductGroupId { get; set; }
         public string ProductGroupName { get; set; }
-        public List<string> Products { get; set; }
+        public List<ProductModel> Products { get; set; }
     }
 }
