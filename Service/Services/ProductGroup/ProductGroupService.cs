@@ -36,6 +36,7 @@ namespace Service.Services.ProductGroup
                             {
                                 ProductGroupId = productGroup.ProductGroupId,
                                 ProductGroupName = productGroup.ProductGroupName,
+                                ProductGroupDescription = productGroup.ProductGroupDescription,
                                 Products = productGroup.TbProducts
                                 .Where(product => !product.IsDeleted)
                                 .Select(product =>

@@ -7,7 +7,7 @@ using Service.Services.Product;
 namespace WebAPI.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class AuthenController : ControllerBase
     {
         private readonly IAuthenService _authenService;

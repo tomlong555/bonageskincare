@@ -31,6 +31,15 @@ builder.Services.AddDbContext<DBContext>(options =>
 builder.Services.AddControllers();
 
 var jwtOptions = builder.Configuration.GetSection(JwtOptionModel.JwtOptionSection).Get<JwtOptionModel>();
+var allowOrigin = builder.Configuration.GetSection(AllowedOptionModel.AllowedSection).Get<AllowedOptionModel>();
+
+builder.Services.AddCors(options => options
+    .AddPolicy("CorsPolicy",
+        builder => 
+            builder
+                .WithOrigins(allowOrigin.Origins)
+                .AllowAnyHeader()
+                .AllowAnyMethod()));
 
 builder.Services.AddAuthentication(options =>
 {
@@ -111,6 +120,7 @@ app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseAuthorization();
 
+app.UseCors("CorsPolicy");
 app.MapControllers();
 
 app.UseStaticFiles();

@@ -11,6 +11,7 @@ namespace Service.Models.ProductGroupModels
     {
         public int ProductGroupId { get; set; }
         public string ProductGroupName { get; set; }
+        public string ProductGroupDescription { get; set; }
         public List<ProductModel> Products { get; set; }
     }
 }

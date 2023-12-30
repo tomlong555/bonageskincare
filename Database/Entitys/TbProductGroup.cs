@@ -15,6 +15,7 @@ namespace Database.Entitys
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ProductGroupId { get; set; }
         public string ProductGroupName { get; set; }
+        public string ProductGroupDescription { get; set; }
         public virtual ICollection<TbProduct> TbProducts { get; set; }
     }
 }

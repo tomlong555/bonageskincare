@@ -7,7 +7,7 @@ using Service.Services.ProductGroup;
 namespace WebAPI.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class ProductGroupController : ControllerBase
     {
         private readonly IProductGroupService _productGroupService;

@@ -2580,6 +2580,10 @@ namespace Database.Migrations
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
+                    b.Property<string>("ProductGroupDescription")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("ProductGroupName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -2595,78 +2599,89 @@ namespace Database.Migrations
                         new
                         {
                             ProductGroupId = 1,
-                            CreateDate = new DateTime(2023, 12, 28, 16, 42, 54, 330, DateTimeKind.Utc).AddTicks(5817),
+                            CreateDate = new DateTime(2023, 12, 30, 13, 4, 18, 712, DateTimeKind.Utc).AddTicks(9602),
                             IsDeleted = false,
+                            ProductGroupDescription = "<p>Soothe, tone and clear away impurities with our Flawless Cleansing range-designed to cleanse skin deeply, while still leaving it fully hydrated and silky smooth. Feel refreshed, clean and radiant with a range of products that remove oils, make up, dirt and dead skin. Experience truly purifying results through rich, nourishing ingredients that help you fall back in love with bare-faced beauty.</p>",
                             ProductGroupName = "FLAWLESS CLEANSING"
                         },
                         new
                         {
                             ProductGroupId = 2,
-                            CreateDate = new DateTime(2023, 12, 28, 16, 42, 54, 330, DateTimeKind.Utc).AddTicks(5821),
+                            CreateDate = new DateTime(2023, 12, 30, 13, 4, 18, 712, DateTimeKind.Utc).AddTicks(9604),
                             IsDeleted = false,
+                            ProductGroupDescription = "<p>The Classique collection of creams and masks has been formulated using an array of powerful ingredients to help target the signs of ageing, including matrixyl 3000-a solution that visibly reduces wrinkles and improves skin elasticity. The line features not only vitamins and luscious plant extracts, but also collagen, which works to restore the skin’s natural youthful complexion. Users will look and feel classically, effortlessly radiant.</p>",
                             ProductGroupName = "CLASSIQUE"
                         },
                         new
                         {
                             ProductGroupId = 3,
-                            CreateDate = new DateTime(2023, 12, 28, 16, 42, 54, 330, DateTimeKind.Utc).AddTicks(5821),
+                            CreateDate = new DateTime(2023, 12, 30, 13, 4, 18, 712, DateTimeKind.Utc).AddTicks(9605),
                             IsDeleted = false,
+                            ProductGroupDescription = "<p>The skin around the eyes is much thinner and less oily than the rest of our face, this is the reason it needs extra care and attention. Our innovative eye care collection is specially formulated for the delicate eye area to keep the eyes as beautiful as they are supposed to be.</p>",
                             ProductGroupName = "EYE CARE"
                         },
                         new
                         {
                             ProductGroupId = 4,
-                            CreateDate = new DateTime(2023, 12, 28, 16, 42, 54, 330, DateTimeKind.Utc).AddTicks(5822),
+                            CreateDate = new DateTime(2023, 12, 30, 13, 4, 18, 712, DateTimeKind.Utc).AddTicks(9606),
                             IsDeleted = false,
+                            ProductGroupDescription = "<p>Rich in innovative ingredients that soothe and nourish the skin, the Prestige collection features age-controlling products that reduce the visibility of lines and wrinkles. Prestige masks and serums leave the skin feeling totally refreshed, hydrated and moisturised-perfect for a luxurious spa-like home treatment. Enjoy vibrant, youthful-looking skin with total ease.</p>",
                             ProductGroupName = "PRESTIGE"
                         },
                         new
                         {
                             ProductGroupId = 5,
-                            CreateDate = new DateTime(2023, 12, 28, 16, 42, 54, 330, DateTimeKind.Utc).AddTicks(5822),
+                            CreateDate = new DateTime(2023, 12, 30, 13, 4, 18, 712, DateTimeKind.Utc).AddTicks(9606),
                             IsDeleted = false,
+                            ProductGroupDescription = "<p>A luxurious line of smoothing, hydrating and lifting treatments, Lumiere contains active ingredients that specifically target the visible signs of ageing. Hyaluronic acid, the powerful rehydrator, has been blended with matrixyl 3000, the age-defying solution that visibly improves skin tone, elasticity and structure. Lumiere also supplies the skin with natural vitamin combinations, helping to promote a younger and firmer appearance.</p>",
                             ProductGroupName = "LUMIÉRE"
                         },
                         new
                         {
                             ProductGroupId = 6,
-                            CreateDate = new DateTime(2023, 12, 28, 16, 42, 54, 330, DateTimeKind.Utc).AddTicks(5823),
+                            CreateDate = new DateTime(2023, 12, 30, 13, 4, 18, 712, DateTimeKind.Utc).AddTicks(9607),
                             IsDeleted = false,
+                            ProductGroupDescription = "<p>The Revive collection combines the latest innovations in eye care technology with active, anti-ageing ingredients that work gently on the delicate eye area. Among its plumping and hydrating ingredients, Revive contains VOLUFORM, the natural alternative for lipofilling. VOLUFORM works through multiple layers of the skin to fill lines and wrinkles and leave skin looking youthful and radiant.</p>",
                             ProductGroupName = "RÉVIVE"
                         },
                         new
                         {
                             ProductGroupId = 7,
-                            CreateDate = new DateTime(2023, 12, 28, 16, 42, 54, 330, DateTimeKind.Utc).AddTicks(5823),
+                            CreateDate = new DateTime(2023, 12, 30, 13, 4, 18, 712, DateTimeKind.Utc).AddTicks(9608),
                             IsDeleted = false,
+                            ProductGroupDescription = "",
                             ProductGroupName = "GENÉSE"
                         },
                         new
                         {
                             ProductGroupId = 8,
-                            CreateDate = new DateTime(2023, 12, 28, 16, 42, 54, 330, DateTimeKind.Utc).AddTicks(5824),
+                            CreateDate = new DateTime(2023, 12, 30, 13, 4, 18, 712, DateTimeKind.Utc).AddTicks(9609),
                             IsDeleted = false,
+                            ProductGroupDescription = "<p>Bonage offers your whole body the sumptuous feeling of complete cleanliness and natural nourishment. Enhance the skin's natural glow and leave it feeling soft, smooth, and pure all day long.</p>",
                             ProductGroupName = "BODY CARE"
                         },
                         new
                         {
                             ProductGroupId = 9,
-                            CreateDate = new DateTime(2023, 12, 28, 16, 42, 54, 330, DateTimeKind.Utc).AddTicks(5824),
+                            CreateDate = new DateTime(2023, 12, 30, 13, 4, 18, 712, DateTimeKind.Utc).AddTicks(9609),
                             IsDeleted = false,
+                            ProductGroupDescription = "<p>Specially created for men, Bonage HOMME is designed to support skin's natural health and hydration. Powerful active ingredients combine with state-of-the-art technology for unique formulas with maximum results.</p>",
                             ProductGroupName = "HOMME"
                         },
                         new
                         {
                             ProductGroupId = 10,
-                            CreateDate = new DateTime(2023, 12, 28, 16, 42, 54, 330, DateTimeKind.Utc).AddTicks(5825),
+                            CreateDate = new DateTime(2023, 12, 30, 13, 4, 18, 712, DateTimeKind.Utc).AddTicks(9610),
                             IsDeleted = false,
+                            ProductGroupDescription = "<p>Stand out with Bonage’s beautifully hand crafted, leather bags collection. Designed with the busy women in mind, our leather bags are made to be worn day, night and anywhere in between thanks to the functional details of each handbag. All our handbags are 100% Italian made, inspired by the latest fashion trends and crafted to perfection.</p>",
                             ProductGroupName = "LIMITED EDITION HANDBAGS"
                         },
                         new
                         {
                             ProductGroupId = 11,
-                            CreateDate = new DateTime(2023, 12, 28, 16, 42, 54, 330, DateTimeKind.Utc).AddTicks(5825),
+                            CreateDate = new DateTime(2023, 12, 30, 13, 4, 18, 712, DateTimeKind.Utc).AddTicks(9611),
                             IsDeleted = false,
+                            ProductGroupDescription = "",
                             ProductGroupName = "SETS & GIFTS"
                         });
                 });
