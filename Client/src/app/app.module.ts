@@ -8,12 +8,12 @@ import { InterceptService } from './core/services/intercept.service';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     HttpClientModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [
     InterceptService,

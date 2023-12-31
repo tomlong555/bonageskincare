@@ -19,8 +19,8 @@ export class AppComponent {
   }
   
   async ngOnInit(){
-   await firstValueFrom(this._productGroupService
-      .apiProductGroupProductGroupIdGet({productGroupId:1}))
-      .then(res => console.log(res));
+  //  await firstValueFrom(this._productGroupService
+  //     .apiProductGroupProductGroupIdGet({productGroupId:1}))
+  //     .then(res => console.log(res));
   }
 }
