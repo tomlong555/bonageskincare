@@ -4,6 +4,7 @@ using Database.Entitys;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Database.Migrations
 {
     [DbContext(typeof(DBContext))]
-    partial class DBContextModelSnapshot : ModelSnapshot
+    [Migration("20231231172752_delFileProd")]
+    partial class delFileProd
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -888,778 +890,6 @@ namespace Database.Migrations
                     b.HasIndex("ProductId");
 
                     b.ToTable("TbFileProduct");
-
-                    b.HasData(
-                        new
-                        {
-                            FileProductId = 1,
-                            FileId = 1,
-                            IsProduct = true,
-                            ProductId = 1
-                        },
-                        new
-                        {
-                            FileProductId = 2,
-                            FileId = 2,
-                            IsProduct = true,
-                            ProductId = 2
-                        },
-                        new
-                        {
-                            FileProductId = 3,
-                            FileId = 3,
-                            IsProduct = false,
-                            ProductId = 2
-                        },
-                        new
-                        {
-                            FileProductId = 4,
-                            FileId = 4,
-                            IsProduct = true,
-                            ProductId = 3
-                        },
-                        new
-                        {
-                            FileProductId = 5,
-                            FileId = 5,
-                            IsProduct = false,
-                            ProductId = 3
-                        },
-                        new
-                        {
-                            FileProductId = 6,
-                            FileId = 6,
-                            IsProduct = true,
-                            ProductId = 4
-                        },
-                        new
-                        {
-                            FileProductId = 7,
-                            FileId = 7,
-                            IsProduct = false,
-                            ProductId = 4
-                        },
-                        new
-                        {
-                            FileProductId = 8,
-                            FileId = 8,
-                            IsProduct = true,
-                            ProductId = 5
-                        },
-                        new
-                        {
-                            FileProductId = 9,
-                            FileId = 9,
-                            IsProduct = true,
-                            ProductId = 6
-                        },
-                        new
-                        {
-                            FileProductId = 10,
-                            FileId = 10,
-                            IsProduct = false,
-                            ProductId = 6
-                        },
-                        new
-                        {
-                            FileProductId = 11,
-                            FileId = 11,
-                            IsProduct = true,
-                            ProductId = 7
-                        },
-                        new
-                        {
-                            FileProductId = 12,
-                            FileId = 12,
-                            IsProduct = false,
-                            ProductId = 7
-                        },
-                        new
-                        {
-                            FileProductId = 13,
-                            FileId = 13,
-                            IsProduct = true,
-                            ProductId = 8
-                        },
-                        new
-                        {
-                            FileProductId = 14,
-                            FileId = 14,
-                            IsProduct = false,
-                            ProductId = 8
-                        },
-                        new
-                        {
-                            FileProductId = 15,
-                            FileId = 15,
-                            IsProduct = true,
-                            ProductId = 9
-                        },
-                        new
-                        {
-                            FileProductId = 16,
-                            FileId = 16,
-                            IsProduct = false,
-                            ProductId = 9
-                        },
-                        new
-                        {
-                            FileProductId = 17,
-                            FileId = 17,
-                            IsProduct = true,
-                            ProductId = 10
-                        },
-                        new
-                        {
-                            FileProductId = 18,
-                            FileId = 18,
-                            IsProduct = false,
-                            ProductId = 10
-                        },
-                        new
-                        {
-                            FileProductId = 19,
-                            FileId = 19,
-                            IsProduct = true,
-                            ProductId = 11
-                        },
-                        new
-                        {
-                            FileProductId = 20,
-                            FileId = 20,
-                            IsProduct = false,
-                            ProductId = 11
-                        },
-                        new
-                        {
-                            FileProductId = 21,
-                            FileId = 21,
-                            IsProduct = true,
-                            ProductId = 12
-                        },
-                        new
-                        {
-                            FileProductId = 22,
-                            FileId = 22,
-                            IsProduct = false,
-                            ProductId = 12
-                        },
-                        new
-                        {
-                            FileProductId = 23,
-                            FileId = 23,
-                            IsProduct = true,
-                            ProductId = 13
-                        },
-                        new
-                        {
-                            FileProductId = 24,
-                            FileId = 24,
-                            IsProduct = false,
-                            ProductId = 13
-                        },
-                        new
-                        {
-                            FileProductId = 25,
-                            FileId = 25,
-                            IsProduct = true,
-                            ProductId = 14
-                        },
-                        new
-                        {
-                            FileProductId = 26,
-                            FileId = 26,
-                            IsProduct = false,
-                            ProductId = 14
-                        },
-                        new
-                        {
-                            FileProductId = 27,
-                            FileId = 27,
-                            IsProduct = true,
-                            ProductId = 15
-                        },
-                        new
-                        {
-                            FileProductId = 28,
-                            FileId = 28,
-                            IsProduct = false,
-                            ProductId = 15
-                        },
-                        new
-                        {
-                            FileProductId = 29,
-                            FileId = 29,
-                            IsProduct = true,
-                            ProductId = 16
-                        },
-                        new
-                        {
-                            FileProductId = 30,
-                            FileId = 30,
-                            IsProduct = false,
-                            ProductId = 16
-                        },
-                        new
-                        {
-                            FileProductId = 31,
-                            FileId = 31,
-                            IsProduct = false,
-                            ProductId = 16
-                        },
-                        new
-                        {
-                            FileProductId = 32,
-                            FileId = 32,
-                            IsProduct = true,
-                            ProductId = 17
-                        },
-                        new
-                        {
-                            FileProductId = 33,
-                            FileId = 33,
-                            IsProduct = false,
-                            ProductId = 17
-                        },
-                        new
-                        {
-                            FileProductId = 34,
-                            FileId = 34,
-                            IsProduct = false,
-                            ProductId = 17
-                        },
-                        new
-                        {
-                            FileProductId = 35,
-                            FileId = 35,
-                            IsProduct = true,
-                            ProductId = 18
-                        },
-                        new
-                        {
-                            FileProductId = 36,
-                            FileId = 36,
-                            IsProduct = false,
-                            ProductId = 18
-                        },
-                        new
-                        {
-                            FileProductId = 37,
-                            FileId = 37,
-                            IsProduct = true,
-                            ProductId = 19
-                        },
-                        new
-                        {
-                            FileProductId = 38,
-                            FileId = 38,
-                            IsProduct = false,
-                            ProductId = 19
-                        },
-                        new
-                        {
-                            FileProductId = 39,
-                            FileId = 39,
-                            IsProduct = false,
-                            ProductId = 19
-                        },
-                        new
-                        {
-                            FileProductId = 40,
-                            FileId = 40,
-                            IsProduct = true,
-                            ProductId = 20
-                        },
-                        new
-                        {
-                            FileProductId = 41,
-                            FileId = 41,
-                            IsProduct = false,
-                            ProductId = 20
-                        },
-                        new
-                        {
-                            FileProductId = 42,
-                            FileId = 42,
-                            IsProduct = true,
-                            ProductId = 21
-                        },
-                        new
-                        {
-                            FileProductId = 43,
-                            FileId = 43,
-                            IsProduct = false,
-                            ProductId = 21
-                        },
-                        new
-                        {
-                            FileProductId = 44,
-                            FileId = 44,
-                            IsProduct = true,
-                            ProductId = 22
-                        },
-                        new
-                        {
-                            FileProductId = 45,
-                            FileId = 45,
-                            IsProduct = false,
-                            ProductId = 22
-                        },
-                        new
-                        {
-                            FileProductId = 46,
-                            FileId = 46,
-                            IsProduct = false,
-                            ProductId = 22
-                        },
-                        new
-                        {
-                            FileProductId = 47,
-                            FileId = 47,
-                            IsProduct = false,
-                            ProductId = 22
-                        },
-                        new
-                        {
-                            FileProductId = 48,
-                            FileId = 48,
-                            IsProduct = false,
-                            ProductId = 22
-                        },
-                        new
-                        {
-                            FileProductId = 49,
-                            FileId = 49,
-                            IsProduct = true,
-                            ProductId = 23
-                        },
-                        new
-                        {
-                            FileProductId = 50,
-                            FileId = 50,
-                            IsProduct = false,
-                            ProductId = 23
-                        },
-                        new
-                        {
-                            FileProductId = 51,
-                            FileId = 51,
-                            IsProduct = true,
-                            ProductId = 24
-                        },
-                        new
-                        {
-                            FileProductId = 52,
-                            FileId = 52,
-                            IsProduct = false,
-                            ProductId = 24
-                        },
-                        new
-                        {
-                            FileProductId = 53,
-                            FileId = 53,
-                            IsProduct = true,
-                            ProductId = 25
-                        },
-                        new
-                        {
-                            FileProductId = 54,
-                            FileId = 54,
-                            IsProduct = false,
-                            ProductId = 25
-                        },
-                        new
-                        {
-                            FileProductId = 55,
-                            FileId = 55,
-                            IsProduct = true,
-                            ProductId = 26
-                        },
-                        new
-                        {
-                            FileProductId = 56,
-                            FileId = 56,
-                            IsProduct = false,
-                            ProductId = 26
-                        },
-                        new
-                        {
-                            FileProductId = 57,
-                            FileId = 57,
-                            IsProduct = false,
-                            ProductId = 26
-                        },
-                        new
-                        {
-                            FileProductId = 58,
-                            FileId = 58,
-                            IsProduct = true,
-                            ProductId = 27
-                        },
-                        new
-                        {
-                            FileProductId = 59,
-                            FileId = 59,
-                            IsProduct = true,
-                            ProductId = 28
-                        },
-                        new
-                        {
-                            FileProductId = 60,
-                            FileId = 60,
-                            IsProduct = false,
-                            ProductId = 28
-                        },
-                        new
-                        {
-                            FileProductId = 61,
-                            FileId = 61,
-                            IsProduct = true,
-                            ProductId = 29
-                        },
-                        new
-                        {
-                            FileProductId = 62,
-                            FileId = 62,
-                            IsProduct = false,
-                            ProductId = 29
-                        },
-                        new
-                        {
-                            FileProductId = 63,
-                            FileId = 63,
-                            IsProduct = true,
-                            ProductId = 30
-                        },
-                        new
-                        {
-                            FileProductId = 64,
-                            FileId = 64,
-                            IsProduct = false,
-                            ProductId = 30
-                        },
-                        new
-                        {
-                            FileProductId = 65,
-                            FileId = 65,
-                            IsProduct = true,
-                            ProductId = 31
-                        },
-                        new
-                        {
-                            FileProductId = 66,
-                            FileId = 66,
-                            IsProduct = false,
-                            ProductId = 31
-                        },
-                        new
-                        {
-                            FileProductId = 67,
-                            FileId = 67,
-                            IsProduct = true,
-                            ProductId = 32
-                        },
-                        new
-                        {
-                            FileProductId = 68,
-                            FileId = 68,
-                            IsProduct = false,
-                            ProductId = 32
-                        },
-                        new
-                        {
-                            FileProductId = 69,
-                            FileId = 69,
-                            IsProduct = true,
-                            ProductId = 33
-                        },
-                        new
-                        {
-                            FileProductId = 70,
-                            FileId = 70,
-                            IsProduct = false,
-                            ProductId = 33
-                        },
-                        new
-                        {
-                            FileProductId = 71,
-                            FileId = 71,
-                            IsProduct = true,
-                            ProductId = 34
-                        },
-                        new
-                        {
-                            FileProductId = 72,
-                            FileId = 72,
-                            IsProduct = false,
-                            ProductId = 34
-                        },
-                        new
-                        {
-                            FileProductId = 73,
-                            FileId = 73,
-                            IsProduct = false,
-                            ProductId = 34
-                        },
-                        new
-                        {
-                            FileProductId = 74,
-                            FileId = 74,
-                            IsProduct = true,
-                            ProductId = 35
-                        },
-                        new
-                        {
-                            FileProductId = 75,
-                            FileId = 75,
-                            IsProduct = false,
-                            ProductId = 35
-                        },
-                        new
-                        {
-                            FileProductId = 76,
-                            FileId = 76,
-                            IsProduct = true,
-                            ProductId = 36
-                        },
-                        new
-                        {
-                            FileProductId = 77,
-                            FileId = 77,
-                            IsProduct = false,
-                            ProductId = 36
-                        },
-                        new
-                        {
-                            FileProductId = 78,
-                            FileId = 78,
-                            IsProduct = true,
-                            ProductId = 37
-                        },
-                        new
-                        {
-                            FileProductId = 79,
-                            FileId = 79,
-                            IsProduct = false,
-                            ProductId = 37
-                        },
-                        new
-                        {
-                            FileProductId = 80,
-                            FileId = 80,
-                            IsProduct = false,
-                            ProductId = 37
-                        },
-                        new
-                        {
-                            FileProductId = 81,
-                            FileId = 81,
-                            IsProduct = true,
-                            ProductId = 38
-                        },
-                        new
-                        {
-                            FileProductId = 82,
-                            FileId = 82,
-                            IsProduct = true,
-                            ProductId = 39
-                        },
-                        new
-                        {
-                            FileProductId = 83,
-                            FileId = 83,
-                            IsProduct = true,
-                            ProductId = 40
-                        },
-                        new
-                        {
-                            FileProductId = 84,
-                            FileId = 84,
-                            IsProduct = true,
-                            ProductId = 41
-                        },
-                        new
-                        {
-                            FileProductId = 85,
-                            FileId = 85,
-                            IsProduct = true,
-                            ProductId = 42
-                        },
-                        new
-                        {
-                            FileProductId = 86,
-                            FileId = 86,
-                            IsProduct = true,
-                            ProductId = 43
-                        },
-                        new
-                        {
-                            FileProductId = 87,
-                            FileId = 87,
-                            IsProduct = true,
-                            ProductId = 44
-                        },
-                        new
-                        {
-                            FileProductId = 88,
-                            FileId = 88,
-                            IsProduct = true,
-                            ProductId = 45
-                        },
-                        new
-                        {
-                            FileProductId = 89,
-                            FileId = 89,
-                            IsProduct = true,
-                            ProductId = 46
-                        },
-                        new
-                        {
-                            FileProductId = 90,
-                            FileId = 90,
-                            IsProduct = true,
-                            ProductId = 47
-                        },
-                        new
-                        {
-                            FileProductId = 91,
-                            FileId = 91,
-                            IsProduct = true,
-                            ProductId = 48
-                        },
-                        new
-                        {
-                            FileProductId = 92,
-                            FileId = 92,
-                            IsProduct = true,
-                            ProductId = 49
-                        },
-                        new
-                        {
-                            FileProductId = 93,
-                            FileId = 93,
-                            IsProduct = true,
-                            ProductId = 50
-                        },
-                        new
-                        {
-                            FileProductId = 94,
-                            FileId = 94,
-                            IsProduct = true,
-                            ProductId = 51
-                        },
-                        new
-                        {
-                            FileProductId = 95,
-                            FileId = 95,
-                            IsProduct = true,
-                            ProductId = 52
-                        },
-                        new
-                        {
-                            FileProductId = 96,
-                            FileId = 96,
-                            IsProduct = true,
-                            ProductId = 53
-                        },
-                        new
-                        {
-                            FileProductId = 97,
-                            FileId = 97,
-                            IsProduct = true,
-                            ProductId = 54
-                        },
-                        new
-                        {
-                            FileProductId = 98,
-                            FileId = 98,
-                            IsProduct = true,
-                            ProductId = 55
-                        },
-                        new
-                        {
-                            FileProductId = 99,
-                            FileId = 99,
-                            IsProduct = true,
-                            ProductId = 56
-                        },
-                        new
-                        {
-                            FileProductId = 100,
-                            FileId = 100,
-                            IsProduct = true,
-                            ProductId = 57
-                        },
-                        new
-                        {
-                            FileProductId = 101,
-                            FileId = 101,
-                            IsProduct = true,
-                            ProductId = 58
-                        },
-                        new
-                        {
-                            FileProductId = 102,
-                            FileId = 102,
-                            IsProduct = true,
-                            ProductId = 59
-                        },
-                        new
-                        {
-                            FileProductId = 103,
-                            FileId = 103,
-                            IsProduct = true,
-                            ProductId = 60
-                        },
-                        new
-                        {
-                            FileProductId = 104,
-                            FileId = 104,
-                            IsProduct = false,
-                            ProductId = 60
-                        },
-                        new
-                        {
-                            FileProductId = 105,
-                            FileId = 105,
-                            IsProduct = true,
-                            ProductId = 61
-                        },
-                        new
-                        {
-                            FileProductId = 106,
-                            FileId = 106,
-                            IsProduct = false,
-                            ProductId = 61
-                        },
-                        new
-                        {
-                            FileProductId = 107,
-                            FileId = 107,
-                            IsProduct = false,
-                            ProductId = 61
-                        },
-                        new
-                        {
-                            FileProductId = 108,
-                            FileId = 108,
-                            IsProduct = true,
-                            ProductId = 62
-                        },
-                        new
-                        {
-                            FileProductId = 109,
-                            FileId = 109,
-                            IsProduct = true,
-                            ProductId = 63
-                        },
-                        new
-                        {
-                            FileProductId = 110,
-                            FileId = 110,
-                            IsProduct = true,
-                            ProductId = 64
-                        });
                 });
 
             modelBuilder.Entity("Database.Entitys.TbProduct", b =>
@@ -2712,7 +1942,7 @@ namespace Database.Migrations
                         new
                         {
                             ProductGroupId = 1,
-                            CreateDate = new DateTime(2023, 12, 31, 17, 28, 18, 253, DateTimeKind.Utc).AddTicks(3173),
+                            CreateDate = new DateTime(2023, 12, 31, 17, 27, 51, 425, DateTimeKind.Utc).AddTicks(9923),
                             IsDeleted = false,
                             ProductGroupDescription = "<p>Soothe, tone and clear away impurities with our Flawless Cleansing range-designed to cleanse skin deeply, while still leaving it fully hydrated and silky smooth. Feel refreshed, clean and radiant with a range of products that remove oils, make up, dirt and dead skin. Experience truly purifying results through rich, nourishing ingredients that help you fall back in love with bare-faced beauty.</p>",
                             ProductGroupName = "FLAWLESS CLEANSING"
@@ -2720,7 +1950,7 @@ namespace Database.Migrations
                         new
                         {
                             ProductGroupId = 2,
-                            CreateDate = new DateTime(2023, 12, 31, 17, 28, 18, 253, DateTimeKind.Utc).AddTicks(3177),
+                            CreateDate = new DateTime(2023, 12, 31, 17, 27, 51, 425, DateTimeKind.Utc).AddTicks(9925),
                             IsDeleted = false,
                             ProductGroupDescription = "<p>The Classique collection of creams and masks has been formulated using an array of powerful ingredients to help target the signs of ageing, including matrixyl 3000-a solution that visibly reduces wrinkles and improves skin elasticity. The line features not only vitamins and luscious plant extracts, but also collagen, which works to restore the skin’s natural youthful complexion. Users will look and feel classically, effortlessly radiant.</p>",
                             ProductGroupName = "CLASSIQUE"
@@ -2728,7 +1958,7 @@ namespace Database.Migrations
                         new
                         {
                             ProductGroupId = 3,
-                            CreateDate = new DateTime(2023, 12, 31, 17, 28, 18, 253, DateTimeKind.Utc).AddTicks(3178),
+                            CreateDate = new DateTime(2023, 12, 31, 17, 27, 51, 425, DateTimeKind.Utc).AddTicks(9926),
                             IsDeleted = false,
                             ProductGroupDescription = "<p>The skin around the eyes is much thinner and less oily than the rest of our face, this is the reason it needs extra care and attention. Our innovative eye care collection is specially formulated for the delicate eye area to keep the eyes as beautiful as they are supposed to be.</p>",
                             ProductGroupName = "EYE CARE"
@@ -2736,7 +1966,7 @@ namespace Database.Migrations
                         new
                         {
                             ProductGroupId = 4,
-                            CreateDate = new DateTime(2023, 12, 31, 17, 28, 18, 253, DateTimeKind.Utc).AddTicks(3179),
+                            CreateDate = new DateTime(2023, 12, 31, 17, 27, 51, 425, DateTimeKind.Utc).AddTicks(9926),
                             IsDeleted = false,
                             ProductGroupDescription = "<p>Rich in innovative ingredients that soothe and nourish the skin, the Prestige collection features age-controlling products that reduce the visibility of lines and wrinkles. Prestige masks and serums leave the skin feeling totally refreshed, hydrated and moisturised-perfect for a luxurious spa-like home treatment. Enjoy vibrant, youthful-looking skin with total ease.</p>",
                             ProductGroupName = "PRESTIGE"
@@ -2744,7 +1974,7 @@ namespace Database.Migrations
                         new
                         {
                             ProductGroupId = 5,
-                            CreateDate = new DateTime(2023, 12, 31, 17, 28, 18, 253, DateTimeKind.Utc).AddTicks(3179),
+                            CreateDate = new DateTime(2023, 12, 31, 17, 27, 51, 425, DateTimeKind.Utc).AddTicks(9927),
                             IsDeleted = false,
                             ProductGroupDescription = "<p>A luxurious line of smoothing, hydrating and lifting treatments, Lumiere contains active ingredients that specifically target the visible signs of ageing. Hyaluronic acid, the powerful rehydrator, has been blended with matrixyl 3000, the age-defying solution that visibly improves skin tone, elasticity and structure. Lumiere also supplies the skin with natural vitamin combinations, helping to promote a younger and firmer appearance.</p>",
                             ProductGroupName = "LUMIÉRE"
@@ -2752,7 +1982,7 @@ namespace Database.Migrations
                         new
                         {
                             ProductGroupId = 6,
-                            CreateDate = new DateTime(2023, 12, 31, 17, 28, 18, 253, DateTimeKind.Utc).AddTicks(3219),
+                            CreateDate = new DateTime(2023, 12, 31, 17, 27, 51, 425, DateTimeKind.Utc).AddTicks(9928),
                             IsDeleted = false,
                             ProductGroupDescription = "<p>The Revive collection combines the latest innovations in eye care technology with active, anti-ageing ingredients that work gently on the delicate eye area. Among its plumping and hydrating ingredients, Revive contains VOLUFORM, the natural alternative for lipofilling. VOLUFORM works through multiple layers of the skin to fill lines and wrinkles and leave skin looking youthful and radiant.</p>",
                             ProductGroupName = "RÉVIVE"
@@ -2760,7 +1990,7 @@ namespace Database.Migrations
                         new
                         {
                             ProductGroupId = 7,
-                            CreateDate = new DateTime(2023, 12, 31, 17, 28, 18, 253, DateTimeKind.Utc).AddTicks(3219),
+                            CreateDate = new DateTime(2023, 12, 31, 17, 27, 51, 425, DateTimeKind.Utc).AddTicks(9928),
                             IsDeleted = false,
                             ProductGroupDescription = "",
                             ProductGroupName = "GENÉSE"
@@ -2768,7 +1998,7 @@ namespace Database.Migrations
                         new
                         {
                             ProductGroupId = 8,
-                            CreateDate = new DateTime(2023, 12, 31, 17, 28, 18, 253, DateTimeKind.Utc).AddTicks(3220),
+                            CreateDate = new DateTime(2023, 12, 31, 17, 27, 51, 425, DateTimeKind.Utc).AddTicks(9929),
                             IsDeleted = false,
                             ProductGroupDescription = "<p>Bonage offers your whole body the sumptuous feeling of complete cleanliness and natural nourishment. Enhance the skin's natural glow and leave it feeling soft, smooth, and pure all day long.</p>",
                             ProductGroupName = "BODY CARE"
@@ -2776,7 +2006,7 @@ namespace Database.Migrations
                         new
                         {
                             ProductGroupId = 9,
-                            CreateDate = new DateTime(2023, 12, 31, 17, 28, 18, 253, DateTimeKind.Utc).AddTicks(3221),
+                            CreateDate = new DateTime(2023, 12, 31, 17, 27, 51, 425, DateTimeKind.Utc).AddTicks(9929),
                             IsDeleted = false,
                             ProductGroupDescription = "<p>Specially created for men, Bonage HOMME is designed to support skin's natural health and hydration. Powerful active ingredients combine with state-of-the-art technology for unique formulas with maximum results.</p>",
                             ProductGroupName = "HOMME"
@@ -2784,7 +2014,7 @@ namespace Database.Migrations
                         new
                         {
                             ProductGroupId = 10,
-                            CreateDate = new DateTime(2023, 12, 31, 17, 28, 18, 253, DateTimeKind.Utc).AddTicks(3221),
+                            CreateDate = new DateTime(2023, 12, 31, 17, 27, 51, 425, DateTimeKind.Utc).AddTicks(9930),
                             IsDeleted = false,
                             ProductGroupDescription = "<p>Stand out with Bonage’s beautifully hand crafted, leather bags collection. Designed with the busy women in mind, our leather bags are made to be worn day, night and anywhere in between thanks to the functional details of each handbag. All our handbags are 100% Italian made, inspired by the latest fashion trends and crafted to perfection.</p>",
                             ProductGroupName = "LIMITED EDITION HANDBAGS"
@@ -2792,7 +2022,7 @@ namespace Database.Migrations
                         new
                         {
                             ProductGroupId = 11,
-                            CreateDate = new DateTime(2023, 12, 31, 17, 28, 18, 253, DateTimeKind.Utc).AddTicks(3223),
+                            CreateDate = new DateTime(2023, 12, 31, 17, 27, 51, 425, DateTimeKind.Utc).AddTicks(9931),
                             IsDeleted = false,
                             ProductGroupDescription = "",
                             ProductGroupName = "SETS & GIFTS"
