@@ -17,6 +17,7 @@ namespace Database.Entitys
         public int FileId { get; set; }
 
         public int ProductId { get; set; }
+        public bool IsProduct { get; set; }
 
         [ForeignKey("FileId")]
         public virtual TbFile TbFile { get; set; }

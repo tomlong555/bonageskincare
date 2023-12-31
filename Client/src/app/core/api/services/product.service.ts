@@ -9,38 +9,39 @@ import { BaseService } from '../base-service';
 import { ApiConfiguration } from '../api-configuration';
 import { StrictHttpResponse } from '../strict-http-response';
 
-import { productFilesPost } from '../fn/product/product-files-post';
-import { ProductFilesPost$Params } from '../fn/product/product-files-post';
-import { productFilesPost$Plain } from '../fn/product/product-files-post-plain';
-import { ProductFilesPost$Plain$Params } from '../fn/product/product-files-post-plain';
-import { productListGet } from '../fn/product/product-list-get';
-import { ProductListGet$Params } from '../fn/product/product-list-get';
-import { productListGet$Plain } from '../fn/product/product-list-get-plain';
-import { ProductListGet$Plain$Params } from '../fn/product/product-list-get-plain';
-import { productListProductGroupIdGet } from '../fn/product/product-list-product-group-id-get';
-import { ProductListProductGroupIdGet$Params } from '../fn/product/product-list-product-group-id-get';
-import { productListProductGroupIdGet$Plain } from '../fn/product/product-list-product-group-id-get-plain';
-import { ProductListProductGroupIdGet$Plain$Params } from '../fn/product/product-list-product-group-id-get-plain';
-import { productListPromoteGet } from '../fn/product/product-list-promote-get';
-import { ProductListPromoteGet$Params } from '../fn/product/product-list-promote-get';
-import { productListPromoteGet$Plain } from '../fn/product/product-list-promote-get-plain';
-import { ProductListPromoteGet$Plain$Params } from '../fn/product/product-list-promote-get-plain';
-import { productPost } from '../fn/product/product-post';
-import { ProductPost$Params } from '../fn/product/product-post';
-import { productPost$Plain } from '../fn/product/product-post-plain';
-import { ProductPost$Plain$Params } from '../fn/product/product-post-plain';
-import { productProductIdDelete } from '../fn/product/product-product-id-delete';
-import { ProductProductIdDelete$Params } from '../fn/product/product-product-id-delete';
-import { productProductIdDelete$Plain } from '../fn/product/product-product-id-delete-plain';
-import { ProductProductIdDelete$Plain$Params } from '../fn/product/product-product-id-delete-plain';
-import { productProductIdGet } from '../fn/product/product-product-id-get';
-import { ProductProductIdGet$Params } from '../fn/product/product-product-id-get';
-import { productProductIdGet$Plain } from '../fn/product/product-product-id-get-plain';
-import { ProductProductIdGet$Plain$Params } from '../fn/product/product-product-id-get-plain';
-import { productProductIdPut } from '../fn/product/product-product-id-put';
-import { ProductProductIdPut$Params } from '../fn/product/product-product-id-put';
-import { productProductIdPut$Plain } from '../fn/product/product-product-id-put-plain';
-import { ProductProductIdPut$Plain$Params } from '../fn/product/product-product-id-put-plain';
+import { apiProductFilesPost } from '../fn/product/api-product-files-post';
+import { ApiProductFilesPost$Params } from '../fn/product/api-product-files-post';
+import { apiProductFilesPost$Plain } from '../fn/product/api-product-files-post-plain';
+import { ApiProductFilesPost$Plain$Params } from '../fn/product/api-product-files-post-plain';
+import { apiProductListGet } from '../fn/product/api-product-list-get';
+import { ApiProductListGet$Params } from '../fn/product/api-product-list-get';
+import { apiProductListGet$Plain } from '../fn/product/api-product-list-get-plain';
+import { ApiProductListGet$Plain$Params } from '../fn/product/api-product-list-get-plain';
+import { apiProductListProductGroupIdGet } from '../fn/product/api-product-list-product-group-id-get';
+import { ApiProductListProductGroupIdGet$Params } from '../fn/product/api-product-list-product-group-id-get';
+import { apiProductListProductGroupIdGet$Plain } from '../fn/product/api-product-list-product-group-id-get-plain';
+import { ApiProductListProductGroupIdGet$Plain$Params } from '../fn/product/api-product-list-product-group-id-get-plain';
+import { apiProductListPromoteGet } from '../fn/product/api-product-list-promote-get';
+import { ApiProductListPromoteGet$Params } from '../fn/product/api-product-list-promote-get';
+import { apiProductListPromoteGet$Plain } from '../fn/product/api-product-list-promote-get-plain';
+import { ApiProductListPromoteGet$Plain$Params } from '../fn/product/api-product-list-promote-get-plain';
+import { apiProductPost } from '../fn/product/api-product-post';
+import { ApiProductPost$Params } from '../fn/product/api-product-post';
+import { apiProductPost$Plain } from '../fn/product/api-product-post-plain';
+import { ApiProductPost$Plain$Params } from '../fn/product/api-product-post-plain';
+import { apiProductProductIdDelete } from '../fn/product/api-product-product-id-delete';
+import { ApiProductProductIdDelete$Params } from '../fn/product/api-product-product-id-delete';
+import { apiProductProductIdDelete$Plain } from '../fn/product/api-product-product-id-delete-plain';
+import { ApiProductProductIdDelete$Plain$Params } from '../fn/product/api-product-product-id-delete-plain';
+import { apiProductProductIdGet } from '../fn/product/api-product-product-id-get';
+import { ApiProductProductIdGet$Params } from '../fn/product/api-product-product-id-get';
+import { apiProductProductIdGet$Plain } from '../fn/product/api-product-product-id-get-plain';
+import { ApiProductProductIdGet$Plain$Params } from '../fn/product/api-product-product-id-get-plain';
+import { apiProductProductIdPut } from '../fn/product/api-product-product-id-put';
+import { ApiProductProductIdPut$Params } from '../fn/product/api-product-product-id-put';
+import { apiProductProductIdPut$Plain } from '../fn/product/api-product-product-id-put-plain';
+import { ApiProductProductIdPut$Plain$Params } from '../fn/product/api-product-product-id-put-plain';
+import { ProductModel } from '../models/product-model';
 
 @Injectable({ providedIn: 'root' })
 export class ProductService extends BaseService {
@@ -48,378 +49,378 @@ export class ProductService extends BaseService {
     super(config, http);
   }
 
-  /** Path part for operation `productProductIdGet()` */
-  static readonly ProductProductIdGetPath = '/Product/{productId}';
+  /** Path part for operation `apiProductProductIdGet()` */
+  static readonly ApiProductProductIdGetPath = '/api/Product/{productId}';
 
   /**
    * This method provides access to the full `HttpResponse`, allowing access to response headers.
-   * To access only the response body, use `productProductIdGet$Plain()` instead.
+   * To access only the response body, use `apiProductProductIdGet$Plain()` instead.
    *
    * This method doesn't expect any request body.
    */
-  productProductIdGet$Plain$Response(params: ProductProductIdGet$Plain$Params, context?: HttpContext): Observable<StrictHttpResponse<boolean>> {
-    return productProductIdGet$Plain(this.http, this.rootUrl, params, context);
+  apiProductProductIdGet$Plain$Response(params: ApiProductProductIdGet$Plain$Params, context?: HttpContext): Observable<StrictHttpResponse<ProductModel>> {
+    return apiProductProductIdGet$Plain(this.http, this.rootUrl, params, context);
   }
 
   /**
    * This method provides access only to the response body.
-   * To access the full response (for headers, for example), `productProductIdGet$Plain$Response()` instead.
+   * To access the full response (for headers, for example), `apiProductProductIdGet$Plain$Response()` instead.
    *
    * This method doesn't expect any request body.
    */
-  productProductIdGet$Plain(params: ProductProductIdGet$Plain$Params, context?: HttpContext): Observable<boolean> {
-    return this.productProductIdGet$Plain$Response(params, context).pipe(
-      map((r: StrictHttpResponse<boolean>): boolean => r.body)
+  apiProductProductIdGet$Plain(params: ApiProductProductIdGet$Plain$Params, context?: HttpContext): Observable<ProductModel> {
+    return this.apiProductProductIdGet$Plain$Response(params, context).pipe(
+      map((r: StrictHttpResponse<ProductModel>): ProductModel => r.body)
     );
   }
 
   /**
    * This method provides access to the full `HttpResponse`, allowing access to response headers.
-   * To access only the response body, use `productProductIdGet()` instead.
+   * To access only the response body, use `apiProductProductIdGet()` instead.
    *
    * This method doesn't expect any request body.
    */
-  productProductIdGet$Response(params: ProductProductIdGet$Params, context?: HttpContext): Observable<StrictHttpResponse<boolean>> {
-    return productProductIdGet(this.http, this.rootUrl, params, context);
+  apiProductProductIdGet$Response(params: ApiProductProductIdGet$Params, context?: HttpContext): Observable<StrictHttpResponse<ProductModel>> {
+    return apiProductProductIdGet(this.http, this.rootUrl, params, context);
   }
 
   /**
    * This method provides access only to the response body.
-   * To access the full response (for headers, for example), `productProductIdGet$Response()` instead.
+   * To access the full response (for headers, for example), `apiProductProductIdGet$Response()` instead.
    *
    * This method doesn't expect any request body.
    */
-  productProductIdGet(params: ProductProductIdGet$Params, context?: HttpContext): Observable<boolean> {
-    return this.productProductIdGet$Response(params, context).pipe(
-      map((r: StrictHttpResponse<boolean>): boolean => r.body)
+  apiProductProductIdGet(params: ApiProductProductIdGet$Params, context?: HttpContext): Observable<ProductModel> {
+    return this.apiProductProductIdGet$Response(params, context).pipe(
+      map((r: StrictHttpResponse<ProductModel>): ProductModel => r.body)
     );
   }
 
-  /** Path part for operation `productProductIdPut()` */
-  static readonly ProductProductIdPutPath = '/Product/{productId}';
+  /** Path part for operation `apiProductProductIdPut()` */
+  static readonly ApiProductProductIdPutPath = '/api/Product/{productId}';
 
   /**
    * This method provides access to the full `HttpResponse`, allowing access to response headers.
-   * To access only the response body, use `productProductIdPut$Plain()` instead.
+   * To access only the response body, use `apiProductProductIdPut$Plain()` instead.
    *
    * This method sends `application/*+json` and handles request body of type `application/*+json`.
    */
-  productProductIdPut$Plain$Response(params: ProductProductIdPut$Plain$Params, context?: HttpContext): Observable<StrictHttpResponse<boolean>> {
-    return productProductIdPut$Plain(this.http, this.rootUrl, params, context);
+  apiProductProductIdPut$Plain$Response(params: ApiProductProductIdPut$Plain$Params, context?: HttpContext): Observable<StrictHttpResponse<boolean>> {
+    return apiProductProductIdPut$Plain(this.http, this.rootUrl, params, context);
   }
 
   /**
    * This method provides access only to the response body.
-   * To access the full response (for headers, for example), `productProductIdPut$Plain$Response()` instead.
+   * To access the full response (for headers, for example), `apiProductProductIdPut$Plain$Response()` instead.
    *
    * This method sends `application/*+json` and handles request body of type `application/*+json`.
    */
-  productProductIdPut$Plain(params: ProductProductIdPut$Plain$Params, context?: HttpContext): Observable<boolean> {
-    return this.productProductIdPut$Plain$Response(params, context).pipe(
+  apiProductProductIdPut$Plain(params: ApiProductProductIdPut$Plain$Params, context?: HttpContext): Observable<boolean> {
+    return this.apiProductProductIdPut$Plain$Response(params, context).pipe(
       map((r: StrictHttpResponse<boolean>): boolean => r.body)
     );
   }
 
   /**
    * This method provides access to the full `HttpResponse`, allowing access to response headers.
-   * To access only the response body, use `productProductIdPut()` instead.
+   * To access only the response body, use `apiProductProductIdPut()` instead.
    *
    * This method sends `application/*+json` and handles request body of type `application/*+json`.
    */
-  productProductIdPut$Response(params: ProductProductIdPut$Params, context?: HttpContext): Observable<StrictHttpResponse<boolean>> {
-    return productProductIdPut(this.http, this.rootUrl, params, context);
+  apiProductProductIdPut$Response(params: ApiProductProductIdPut$Params, context?: HttpContext): Observable<StrictHttpResponse<boolean>> {
+    return apiProductProductIdPut(this.http, this.rootUrl, params, context);
   }
 
   /**
    * This method provides access only to the response body.
-   * To access the full response (for headers, for example), `productProductIdPut$Response()` instead.
+   * To access the full response (for headers, for example), `apiProductProductIdPut$Response()` instead.
    *
    * This method sends `application/*+json` and handles request body of type `application/*+json`.
    */
-  productProductIdPut(params: ProductProductIdPut$Params, context?: HttpContext): Observable<boolean> {
-    return this.productProductIdPut$Response(params, context).pipe(
+  apiProductProductIdPut(params: ApiProductProductIdPut$Params, context?: HttpContext): Observable<boolean> {
+    return this.apiProductProductIdPut$Response(params, context).pipe(
       map((r: StrictHttpResponse<boolean>): boolean => r.body)
     );
   }
 
-  /** Path part for operation `productProductIdDelete()` */
-  static readonly ProductProductIdDeletePath = '/Product/{productId}';
+  /** Path part for operation `apiProductProductIdDelete()` */
+  static readonly ApiProductProductIdDeletePath = '/api/Product/{productId}';
 
   /**
    * This method provides access to the full `HttpResponse`, allowing access to response headers.
-   * To access only the response body, use `productProductIdDelete$Plain()` instead.
+   * To access only the response body, use `apiProductProductIdDelete$Plain()` instead.
    *
    * This method doesn't expect any request body.
    */
-  productProductIdDelete$Plain$Response(params: ProductProductIdDelete$Plain$Params, context?: HttpContext): Observable<StrictHttpResponse<boolean>> {
-    return productProductIdDelete$Plain(this.http, this.rootUrl, params, context);
+  apiProductProductIdDelete$Plain$Response(params: ApiProductProductIdDelete$Plain$Params, context?: HttpContext): Observable<StrictHttpResponse<boolean>> {
+    return apiProductProductIdDelete$Plain(this.http, this.rootUrl, params, context);
   }
 
   /**
    * This method provides access only to the response body.
-   * To access the full response (for headers, for example), `productProductIdDelete$Plain$Response()` instead.
+   * To access the full response (for headers, for example), `apiProductProductIdDelete$Plain$Response()` instead.
    *
    * This method doesn't expect any request body.
    */
-  productProductIdDelete$Plain(params: ProductProductIdDelete$Plain$Params, context?: HttpContext): Observable<boolean> {
-    return this.productProductIdDelete$Plain$Response(params, context).pipe(
+  apiProductProductIdDelete$Plain(params: ApiProductProductIdDelete$Plain$Params, context?: HttpContext): Observable<boolean> {
+    return this.apiProductProductIdDelete$Plain$Response(params, context).pipe(
       map((r: StrictHttpResponse<boolean>): boolean => r.body)
     );
   }
 
   /**
    * This method provides access to the full `HttpResponse`, allowing access to response headers.
-   * To access only the response body, use `productProductIdDelete()` instead.
+   * To access only the response body, use `apiProductProductIdDelete()` instead.
    *
    * This method doesn't expect any request body.
    */
-  productProductIdDelete$Response(params: ProductProductIdDelete$Params, context?: HttpContext): Observable<StrictHttpResponse<boolean>> {
-    return productProductIdDelete(this.http, this.rootUrl, params, context);
+  apiProductProductIdDelete$Response(params: ApiProductProductIdDelete$Params, context?: HttpContext): Observable<StrictHttpResponse<boolean>> {
+    return apiProductProductIdDelete(this.http, this.rootUrl, params, context);
   }
 
   /**
    * This method provides access only to the response body.
-   * To access the full response (for headers, for example), `productProductIdDelete$Response()` instead.
+   * To access the full response (for headers, for example), `apiProductProductIdDelete$Response()` instead.
    *
    * This method doesn't expect any request body.
    */
-  productProductIdDelete(params: ProductProductIdDelete$Params, context?: HttpContext): Observable<boolean> {
-    return this.productProductIdDelete$Response(params, context).pipe(
+  apiProductProductIdDelete(params: ApiProductProductIdDelete$Params, context?: HttpContext): Observable<boolean> {
+    return this.apiProductProductIdDelete$Response(params, context).pipe(
       map((r: StrictHttpResponse<boolean>): boolean => r.body)
     );
   }
 
-  /** Path part for operation `productListGet()` */
-  static readonly ProductListGetPath = '/Product/list';
+  /** Path part for operation `apiProductListGet()` */
+  static readonly ApiProductListGetPath = '/api/Product/list';
 
   /**
    * This method provides access to the full `HttpResponse`, allowing access to response headers.
-   * To access only the response body, use `productListGet$Plain()` instead.
+   * To access only the response body, use `apiProductListGet$Plain()` instead.
    *
    * This method doesn't expect any request body.
    */
-  productListGet$Plain$Response(params?: ProductListGet$Plain$Params, context?: HttpContext): Observable<StrictHttpResponse<boolean>> {
-    return productListGet$Plain(this.http, this.rootUrl, params, context);
+  apiProductListGet$Plain$Response(params?: ApiProductListGet$Plain$Params, context?: HttpContext): Observable<StrictHttpResponse<Array<ProductModel>>> {
+    return apiProductListGet$Plain(this.http, this.rootUrl, params, context);
   }
 
   /**
    * This method provides access only to the response body.
-   * To access the full response (for headers, for example), `productListGet$Plain$Response()` instead.
+   * To access the full response (for headers, for example), `apiProductListGet$Plain$Response()` instead.
    *
    * This method doesn't expect any request body.
    */
-  productListGet$Plain(params?: ProductListGet$Plain$Params, context?: HttpContext): Observable<boolean> {
-    return this.productListGet$Plain$Response(params, context).pipe(
-      map((r: StrictHttpResponse<boolean>): boolean => r.body)
+  apiProductListGet$Plain(params?: ApiProductListGet$Plain$Params, context?: HttpContext): Observable<Array<ProductModel>> {
+    return this.apiProductListGet$Plain$Response(params, context).pipe(
+      map((r: StrictHttpResponse<Array<ProductModel>>): Array<ProductModel> => r.body)
     );
   }
 
   /**
    * This method provides access to the full `HttpResponse`, allowing access to response headers.
-   * To access only the response body, use `productListGet()` instead.
+   * To access only the response body, use `apiProductListGet()` instead.
    *
    * This method doesn't expect any request body.
    */
-  productListGet$Response(params?: ProductListGet$Params, context?: HttpContext): Observable<StrictHttpResponse<boolean>> {
-    return productListGet(this.http, this.rootUrl, params, context);
+  apiProductListGet$Response(params?: ApiProductListGet$Params, context?: HttpContext): Observable<StrictHttpResponse<Array<ProductModel>>> {
+    return apiProductListGet(this.http, this.rootUrl, params, context);
   }
 
   /**
    * This method provides access only to the response body.
-   * To access the full response (for headers, for example), `productListGet$Response()` instead.
+   * To access the full response (for headers, for example), `apiProductListGet$Response()` instead.
    *
    * This method doesn't expect any request body.
    */
-  productListGet(params?: ProductListGet$Params, context?: HttpContext): Observable<boolean> {
-    return this.productListGet$Response(params, context).pipe(
-      map((r: StrictHttpResponse<boolean>): boolean => r.body)
+  apiProductListGet(params?: ApiProductListGet$Params, context?: HttpContext): Observable<Array<ProductModel>> {
+    return this.apiProductListGet$Response(params, context).pipe(
+      map((r: StrictHttpResponse<Array<ProductModel>>): Array<ProductModel> => r.body)
     );
   }
 
-  /** Path part for operation `productListPromoteGet()` */
-  static readonly ProductListPromoteGetPath = '/Product/list/promote';
+  /** Path part for operation `apiProductListPromoteGet()` */
+  static readonly ApiProductListPromoteGetPath = '/api/Product/list/promote';
 
   /**
    * This method provides access to the full `HttpResponse`, allowing access to response headers.
-   * To access only the response body, use `productListPromoteGet$Plain()` instead.
+   * To access only the response body, use `apiProductListPromoteGet$Plain()` instead.
    *
    * This method doesn't expect any request body.
    */
-  productListPromoteGet$Plain$Response(params?: ProductListPromoteGet$Plain$Params, context?: HttpContext): Observable<StrictHttpResponse<boolean>> {
-    return productListPromoteGet$Plain(this.http, this.rootUrl, params, context);
+  apiProductListPromoteGet$Plain$Response(params?: ApiProductListPromoteGet$Plain$Params, context?: HttpContext): Observable<StrictHttpResponse<Array<ProductModel>>> {
+    return apiProductListPromoteGet$Plain(this.http, this.rootUrl, params, context);
   }
 
   /**
    * This method provides access only to the response body.
-   * To access the full response (for headers, for example), `productListPromoteGet$Plain$Response()` instead.
+   * To access the full response (for headers, for example), `apiProductListPromoteGet$Plain$Response()` instead.
    *
    * This method doesn't expect any request body.
    */
-  productListPromoteGet$Plain(params?: ProductListPromoteGet$Plain$Params, context?: HttpContext): Observable<boolean> {
-    return this.productListPromoteGet$Plain$Response(params, context).pipe(
-      map((r: StrictHttpResponse<boolean>): boolean => r.body)
+  apiProductListPromoteGet$Plain(params?: ApiProductListPromoteGet$Plain$Params, context?: HttpContext): Observable<Array<ProductModel>> {
+    return this.apiProductListPromoteGet$Plain$Response(params, context).pipe(
+      map((r: StrictHttpResponse<Array<ProductModel>>): Array<ProductModel> => r.body)
     );
   }
 
   /**
    * This method provides access to the full `HttpResponse`, allowing access to response headers.
-   * To access only the response body, use `productListPromoteGet()` instead.
+   * To access only the response body, use `apiProductListPromoteGet()` instead.
    *
    * This method doesn't expect any request body.
    */
-  productListPromoteGet$Response(params?: ProductListPromoteGet$Params, context?: HttpContext): Observable<StrictHttpResponse<boolean>> {
-    return productListPromoteGet(this.http, this.rootUrl, params, context);
+  apiProductListPromoteGet$Response(params?: ApiProductListPromoteGet$Params, context?: HttpContext): Observable<StrictHttpResponse<Array<ProductModel>>> {
+    return apiProductListPromoteGet(this.http, this.rootUrl, params, context);
   }
 
   /**
    * This method provides access only to the response body.
-   * To access the full response (for headers, for example), `productListPromoteGet$Response()` instead.
+   * To access the full response (for headers, for example), `apiProductListPromoteGet$Response()` instead.
    *
    * This method doesn't expect any request body.
    */
-  productListPromoteGet(params?: ProductListPromoteGet$Params, context?: HttpContext): Observable<boolean> {
-    return this.productListPromoteGet$Response(params, context).pipe(
-      map((r: StrictHttpResponse<boolean>): boolean => r.body)
+  apiProductListPromoteGet(params?: ApiProductListPromoteGet$Params, context?: HttpContext): Observable<Array<ProductModel>> {
+    return this.apiProductListPromoteGet$Response(params, context).pipe(
+      map((r: StrictHttpResponse<Array<ProductModel>>): Array<ProductModel> => r.body)
     );
   }
 
-  /** Path part for operation `productListProductGroupIdGet()` */
-  static readonly ProductListProductGroupIdGetPath = '/Product/list/{productGroupId}';
+  /** Path part for operation `apiProductListProductGroupIdGet()` */
+  static readonly ApiProductListProductGroupIdGetPath = '/api/Product/list/{productGroupId}';
 
   /**
    * This method provides access to the full `HttpResponse`, allowing access to response headers.
-   * To access only the response body, use `productListProductGroupIdGet$Plain()` instead.
+   * To access only the response body, use `apiProductListProductGroupIdGet$Plain()` instead.
    *
    * This method doesn't expect any request body.
    */
-  productListProductGroupIdGet$Plain$Response(params: ProductListProductGroupIdGet$Plain$Params, context?: HttpContext): Observable<StrictHttpResponse<boolean>> {
-    return productListProductGroupIdGet$Plain(this.http, this.rootUrl, params, context);
+  apiProductListProductGroupIdGet$Plain$Response(params: ApiProductListProductGroupIdGet$Plain$Params, context?: HttpContext): Observable<StrictHttpResponse<Array<ProductModel>>> {
+    return apiProductListProductGroupIdGet$Plain(this.http, this.rootUrl, params, context);
   }
 
   /**
    * This method provides access only to the response body.
-   * To access the full response (for headers, for example), `productListProductGroupIdGet$Plain$Response()` instead.
+   * To access the full response (for headers, for example), `apiProductListProductGroupIdGet$Plain$Response()` instead.
    *
    * This method doesn't expect any request body.
    */
-  productListProductGroupIdGet$Plain(params: ProductListProductGroupIdGet$Plain$Params, context?: HttpContext): Observable<boolean> {
-    return this.productListProductGroupIdGet$Plain$Response(params, context).pipe(
-      map((r: StrictHttpResponse<boolean>): boolean => r.body)
+  apiProductListProductGroupIdGet$Plain(params: ApiProductListProductGroupIdGet$Plain$Params, context?: HttpContext): Observable<Array<ProductModel>> {
+    return this.apiProductListProductGroupIdGet$Plain$Response(params, context).pipe(
+      map((r: StrictHttpResponse<Array<ProductModel>>): Array<ProductModel> => r.body)
     );
   }
 
   /**
    * This method provides access to the full `HttpResponse`, allowing access to response headers.
-   * To access only the response body, use `productListProductGroupIdGet()` instead.
+   * To access only the response body, use `apiProductListProductGroupIdGet()` instead.
    *
    * This method doesn't expect any request body.
    */
-  productListProductGroupIdGet$Response(params: ProductListProductGroupIdGet$Params, context?: HttpContext): Observable<StrictHttpResponse<boolean>> {
-    return productListProductGroupIdGet(this.http, this.rootUrl, params, context);
+  apiProductListProductGroupIdGet$Response(params: ApiProductListProductGroupIdGet$Params, context?: HttpContext): Observable<StrictHttpResponse<Array<ProductModel>>> {
+    return apiProductListProductGroupIdGet(this.http, this.rootUrl, params, context);
   }
 
   /**
    * This method provides access only to the response body.
-   * To access the full response (for headers, for example), `productListProductGroupIdGet$Response()` instead.
+   * To access the full response (for headers, for example), `apiProductListProductGroupIdGet$Response()` instead.
    *
    * This method doesn't expect any request body.
    */
-  productListProductGroupIdGet(params: ProductListProductGroupIdGet$Params, context?: HttpContext): Observable<boolean> {
-    return this.productListProductGroupIdGet$Response(params, context).pipe(
-      map((r: StrictHttpResponse<boolean>): boolean => r.body)
+  apiProductListProductGroupIdGet(params: ApiProductListProductGroupIdGet$Params, context?: HttpContext): Observable<Array<ProductModel>> {
+    return this.apiProductListProductGroupIdGet$Response(params, context).pipe(
+      map((r: StrictHttpResponse<Array<ProductModel>>): Array<ProductModel> => r.body)
     );
   }
 
-  /** Path part for operation `productPost()` */
-  static readonly ProductPostPath = '/Product';
+  /** Path part for operation `apiProductPost()` */
+  static readonly ApiProductPostPath = '/api/Product';
 
   /**
    * This method provides access to the full `HttpResponse`, allowing access to response headers.
-   * To access only the response body, use `productPost$Plain()` instead.
+   * To access only the response body, use `apiProductPost$Plain()` instead.
    *
    * This method sends `application/*+json` and handles request body of type `application/*+json`.
    */
-  productPost$Plain$Response(params?: ProductPost$Plain$Params, context?: HttpContext): Observable<StrictHttpResponse<boolean>> {
-    return productPost$Plain(this.http, this.rootUrl, params, context);
+  apiProductPost$Plain$Response(params?: ApiProductPost$Plain$Params, context?: HttpContext): Observable<StrictHttpResponse<boolean>> {
+    return apiProductPost$Plain(this.http, this.rootUrl, params, context);
   }
 
   /**
    * This method provides access only to the response body.
-   * To access the full response (for headers, for example), `productPost$Plain$Response()` instead.
+   * To access the full response (for headers, for example), `apiProductPost$Plain$Response()` instead.
    *
    * This method sends `application/*+json` and handles request body of type `application/*+json`.
    */
-  productPost$Plain(params?: ProductPost$Plain$Params, context?: HttpContext): Observable<boolean> {
-    return this.productPost$Plain$Response(params, context).pipe(
+  apiProductPost$Plain(params?: ApiProductPost$Plain$Params, context?: HttpContext): Observable<boolean> {
+    return this.apiProductPost$Plain$Response(params, context).pipe(
       map((r: StrictHttpResponse<boolean>): boolean => r.body)
     );
   }
 
   /**
    * This method provides access to the full `HttpResponse`, allowing access to response headers.
-   * To access only the response body, use `productPost()` instead.
+   * To access only the response body, use `apiProductPost()` instead.
    *
    * This method sends `application/*+json` and handles request body of type `application/*+json`.
    */
-  productPost$Response(params?: ProductPost$Params, context?: HttpContext): Observable<StrictHttpResponse<boolean>> {
-    return productPost(this.http, this.rootUrl, params, context);
+  apiProductPost$Response(params?: ApiProductPost$Params, context?: HttpContext): Observable<StrictHttpResponse<boolean>> {
+    return apiProductPost(this.http, this.rootUrl, params, context);
   }
 
   /**
    * This method provides access only to the response body.
-   * To access the full response (for headers, for example), `productPost$Response()` instead.
+   * To access the full response (for headers, for example), `apiProductPost$Response()` instead.
    *
    * This method sends `application/*+json` and handles request body of type `application/*+json`.
    */
-  productPost(params?: ProductPost$Params, context?: HttpContext): Observable<boolean> {
-    return this.productPost$Response(params, context).pipe(
+  apiProductPost(params?: ApiProductPost$Params, context?: HttpContext): Observable<boolean> {
+    return this.apiProductPost$Response(params, context).pipe(
       map((r: StrictHttpResponse<boolean>): boolean => r.body)
     );
   }
 
-  /** Path part for operation `productFilesPost()` */
-  static readonly ProductFilesPostPath = '/Product/files';
+  /** Path part for operation `apiProductFilesPost()` */
+  static readonly ApiProductFilesPostPath = '/api/Product/files';
 
   /**
    * This method provides access to the full `HttpResponse`, allowing access to response headers.
-   * To access only the response body, use `productFilesPost$Plain()` instead.
+   * To access only the response body, use `apiProductFilesPost$Plain()` instead.
    *
    * This method sends `multipart/form-data` and handles request body of type `multipart/form-data`.
    */
-  productFilesPost$Plain$Response(params?: ProductFilesPost$Plain$Params, context?: HttpContext): Observable<StrictHttpResponse<boolean>> {
-    return productFilesPost$Plain(this.http, this.rootUrl, params, context);
+  apiProductFilesPost$Plain$Response(params?: ApiProductFilesPost$Plain$Params, context?: HttpContext): Observable<StrictHttpResponse<boolean>> {
+    return apiProductFilesPost$Plain(this.http, this.rootUrl, params, context);
   }
 
   /**
    * This method provides access only to the response body.
-   * To access the full response (for headers, for example), `productFilesPost$Plain$Response()` instead.
+   * To access the full response (for headers, for example), `apiProductFilesPost$Plain$Response()` instead.
    *
    * This method sends `multipart/form-data` and handles request body of type `multipart/form-data`.
    */
-  productFilesPost$Plain(params?: ProductFilesPost$Plain$Params, context?: HttpContext): Observable<boolean> {
-    return this.productFilesPost$Plain$Response(params, context).pipe(
+  apiProductFilesPost$Plain(params?: ApiProductFilesPost$Plain$Params, context?: HttpContext): Observable<boolean> {
+    return this.apiProductFilesPost$Plain$Response(params, context).pipe(
       map((r: StrictHttpResponse<boolean>): boolean => r.body)
     );
   }
 
   /**
    * This method provides access to the full `HttpResponse`, allowing access to response headers.
-   * To access only the response body, use `productFilesPost()` instead.
+   * To access only the response body, use `apiProductFilesPost()` instead.
    *
    * This method sends `multipart/form-data` and handles request body of type `multipart/form-data`.
    */
-  productFilesPost$Response(params?: ProductFilesPost$Params, context?: HttpContext): Observable<StrictHttpResponse<boolean>> {
-    return productFilesPost(this.http, this.rootUrl, params, context);
+  apiProductFilesPost$Response(params?: ApiProductFilesPost$Params, context?: HttpContext): Observable<StrictHttpResponse<boolean>> {
+    return apiProductFilesPost(this.http, this.rootUrl, params, context);
   }
 
   /**
    * This method provides access only to the response body.
-   * To access the full response (for headers, for example), `productFilesPost$Response()` instead.
+   * To access the full response (for headers, for example), `apiProductFilesPost$Response()` instead.
    *
    * This method sends `multipart/form-data` and handles request body of type `multipart/form-data`.
    */
-  productFilesPost(params?: ProductFilesPost$Params, context?: HttpContext): Observable<boolean> {
-    return this.productFilesPost$Response(params, context).pipe(
+  apiProductFilesPost(params?: ApiProductFilesPost$Params, context?: HttpContext): Observable<boolean> {
+    return this.apiProductFilesPost$Response(params, context).pipe(
       map((r: StrictHttpResponse<boolean>): boolean => r.body)
     );
   }

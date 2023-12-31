@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Service.Models.AuthenModels;
 using Service.Models.ProductModels;
 using Service.Services.Authen;
@@ -19,6 +20,7 @@ namespace WebAPI.Controllers
         }
 
         [HttpPost]
+        [AllowAnonymous]
         public async Task<ActionResult<string>> Login([FromBody] UserLoginModel input)
         {
             var result = await _authenService.Login(input);

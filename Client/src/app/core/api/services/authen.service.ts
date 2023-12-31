@@ -9,10 +9,10 @@ import { BaseService } from '../base-service';
 import { ApiConfiguration } from '../api-configuration';
 import { StrictHttpResponse } from '../strict-http-response';
 
-import { authenPost } from '../fn/authen/authen-post';
-import { AuthenPost$Params } from '../fn/authen/authen-post';
-import { authenPost$Plain } from '../fn/authen/authen-post-plain';
-import { AuthenPost$Plain$Params } from '../fn/authen/authen-post-plain';
+import { apiAuthenPost } from '../fn/authen/api-authen-post';
+import { ApiAuthenPost$Params } from '../fn/authen/api-authen-post';
+import { apiAuthenPost$Plain } from '../fn/authen/api-authen-post-plain';
+import { ApiAuthenPost$Plain$Params } from '../fn/authen/api-authen-post-plain';
 
 @Injectable({ providedIn: 'root' })
 export class AuthenService extends BaseService {
@@ -20,49 +20,49 @@ export class AuthenService extends BaseService {
     super(config, http);
   }
 
-  /** Path part for operation `authenPost()` */
-  static readonly AuthenPostPath = '/Authen';
+  /** Path part for operation `apiAuthenPost()` */
+  static readonly ApiAuthenPostPath = '/api/Authen';
 
   /**
    * This method provides access to the full `HttpResponse`, allowing access to response headers.
-   * To access only the response body, use `authenPost$Plain()` instead.
+   * To access only the response body, use `apiAuthenPost$Plain()` instead.
    *
    * This method sends `application/*+json` and handles request body of type `application/*+json`.
    */
-  authenPost$Plain$Response(params?: AuthenPost$Plain$Params, context?: HttpContext): Observable<StrictHttpResponse<string>> {
-    return authenPost$Plain(this.http, this.rootUrl, params, context);
+  apiAuthenPost$Plain$Response(params?: ApiAuthenPost$Plain$Params, context?: HttpContext): Observable<StrictHttpResponse<string>> {
+    return apiAuthenPost$Plain(this.http, this.rootUrl, params, context);
   }
 
   /**
    * This method provides access only to the response body.
-   * To access the full response (for headers, for example), `authenPost$Plain$Response()` instead.
+   * To access the full response (for headers, for example), `apiAuthenPost$Plain$Response()` instead.
    *
    * This method sends `application/*+json` and handles request body of type `application/*+json`.
    */
-  authenPost$Plain(params?: AuthenPost$Plain$Params, context?: HttpContext): Observable<string> {
-    return this.authenPost$Plain$Response(params, context).pipe(
+  apiAuthenPost$Plain(params?: ApiAuthenPost$Plain$Params, context?: HttpContext): Observable<string> {
+    return this.apiAuthenPost$Plain$Response(params, context).pipe(
       map((r: StrictHttpResponse<string>): string => r.body)
     );
   }
 
   /**
    * This method provides access to the full `HttpResponse`, allowing access to response headers.
-   * To access only the response body, use `authenPost()` instead.
+   * To access only the response body, use `apiAuthenPost()` instead.
    *
    * This method sends `application/*+json` and handles request body of type `application/*+json`.
    */
-  authenPost$Response(params?: AuthenPost$Params, context?: HttpContext): Observable<StrictHttpResponse<string>> {
-    return authenPost(this.http, this.rootUrl, params, context);
+  apiAuthenPost$Response(params?: ApiAuthenPost$Params, context?: HttpContext): Observable<StrictHttpResponse<string>> {
+    return apiAuthenPost(this.http, this.rootUrl, params, context);
   }
 
   /**
    * This method provides access only to the response body.
-   * To access the full response (for headers, for example), `authenPost$Response()` instead.
+   * To access the full response (for headers, for example), `apiAuthenPost$Response()` instead.
    *
    * This method sends `application/*+json` and handles request body of type `application/*+json`.
    */
-  authenPost(params?: AuthenPost$Params, context?: HttpContext): Observable<string> {
-    return this.authenPost$Response(params, context).pipe(
+  apiAuthenPost(params?: ApiAuthenPost$Params, context?: HttpContext): Observable<string> {
+    return this.apiAuthenPost$Response(params, context).pipe(
       map((r: StrictHttpResponse<string>): string => r.body)
     );
   }

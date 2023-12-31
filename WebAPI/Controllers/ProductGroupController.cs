@@ -20,14 +20,18 @@ namespace WebAPI.Controllers
         }
 
         [HttpGet("{productGroupId}")]
-        public async Task<ActionResult<bool>> GetProductGroup(int productGroupId)
+        [AllowAnonymous]
+        [ProducesResponseType(typeof(ProductGroupModel), StatusCodes.Status200OK)]
+        public async Task<ActionResult<ProductGroupModel>> GetProductGroup(int productGroupId)
         {
             var result = await _productGroupService.GetProductGroup(productGroupId);
             return Ok(result);
         }
 
         [HttpGet("list")]
-        public async Task<ActionResult<bool>> GetProductGroups()
+        [AllowAnonymous]
+        [ProducesResponseType(typeof(List<ProductGroupModel>), StatusCodes.Status200OK)]
+        public async Task<ActionResult<List<ProductGroupModel>>> GetProductGroups()
         {
             var result = await _productGroupService.GetProductGroups();
             return Ok(result);

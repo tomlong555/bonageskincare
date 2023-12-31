@@ -50,7 +50,8 @@ namespace Service.Services.ProductGroup
                                         .Select(file =>
                                             new FileModel
                                             {
-                                                FileName = file.TbFile.FileName.ToFilePath(_pathOptionModel.ResoucesPath)
+                                                FileName = file.TbFile.FileName.ToFilePath(_pathOptionModel.ResoucesPath),
+                                                IsProduct = file.IsProduct,
                                             }).ToList(),
                                     }).ToList()
                             }).SingleAsync();

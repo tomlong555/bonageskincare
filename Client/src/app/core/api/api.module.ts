@@ -7,7 +7,6 @@ import { ApiConfiguration, ApiConfigurationParams } from './api-configuration';
 import { AuthenService } from './services/authen.service';
 import { ProductService } from './services/product.service';
 import { ProductGroupService } from './services/product-group.service';
-import { WeatherForecastService } from './services/weather-forecast.service';
 
 /**
  * Module that provides all services and configuration.
@@ -20,7 +19,6 @@ import { WeatherForecastService } from './services/weather-forecast.service';
     AuthenService,
     ProductService,
     ProductGroupService,
-    WeatherForecastService,
     ApiConfiguration
   ],
 })

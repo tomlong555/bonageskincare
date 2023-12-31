@@ -29,6 +29,7 @@ import { apiProductGroupProductGroupIdPut } from '../fn/product-group/api-produc
 import { ApiProductGroupProductGroupIdPut$Params } from '../fn/product-group/api-product-group-product-group-id-put';
 import { apiProductGroupProductGroupIdPut$Plain } from '../fn/product-group/api-product-group-product-group-id-put-plain';
 import { ApiProductGroupProductGroupIdPut$Plain$Params } from '../fn/product-group/api-product-group-product-group-id-put-plain';
+import { ProductGroupModel } from '../models/product-group-model';
 
 @Injectable({ providedIn: 'root' })
 export class ProductGroupService extends BaseService {
@@ -45,7 +46,7 @@ export class ProductGroupService extends BaseService {
    *
    * This method doesn't expect any request body.
    */
-  apiProductGroupProductGroupIdGet$Plain$Response(params: ApiProductGroupProductGroupIdGet$Plain$Params, context?: HttpContext): Observable<StrictHttpResponse<boolean>> {
+  apiProductGroupProductGroupIdGet$Plain$Response(params: ApiProductGroupProductGroupIdGet$Plain$Params, context?: HttpContext): Observable<StrictHttpResponse<ProductGroupModel>> {
     return apiProductGroupProductGroupIdGet$Plain(this.http, this.rootUrl, params, context);
   }
 
@@ -55,9 +56,9 @@ export class ProductGroupService extends BaseService {
    *
    * This method doesn't expect any request body.
    */
-  apiProductGroupProductGroupIdGet$Plain(params: ApiProductGroupProductGroupIdGet$Plain$Params, context?: HttpContext): Observable<boolean> {
+  apiProductGroupProductGroupIdGet$Plain(params: ApiProductGroupProductGroupIdGet$Plain$Params, context?: HttpContext): Observable<ProductGroupModel> {
     return this.apiProductGroupProductGroupIdGet$Plain$Response(params, context).pipe(
-      map((r: StrictHttpResponse<boolean>): boolean => r.body)
+      map((r: StrictHttpResponse<ProductGroupModel>): ProductGroupModel => r.body)
     );
   }
 
@@ -67,7 +68,7 @@ export class ProductGroupService extends BaseService {
    *
    * This method doesn't expect any request body.
    */
-  apiProductGroupProductGroupIdGet$Response(params: ApiProductGroupProductGroupIdGet$Params, context?: HttpContext): Observable<StrictHttpResponse<boolean>> {
+  apiProductGroupProductGroupIdGet$Response(params: ApiProductGroupProductGroupIdGet$Params, context?: HttpContext): Observable<StrictHttpResponse<ProductGroupModel>> {
     return apiProductGroupProductGroupIdGet(this.http, this.rootUrl, params, context);
   }
 
@@ -77,9 +78,9 @@ export class ProductGroupService extends BaseService {
    *
    * This method doesn't expect any request body.
    */
-  apiProductGroupProductGroupIdGet(params: ApiProductGroupProductGroupIdGet$Params, context?: HttpContext): Observable<boolean> {
+  apiProductGroupProductGroupIdGet(params: ApiProductGroupProductGroupIdGet$Params, context?: HttpContext): Observable<ProductGroupModel> {
     return this.apiProductGroupProductGroupIdGet$Response(params, context).pipe(
-      map((r: StrictHttpResponse<boolean>): boolean => r.body)
+      map((r: StrictHttpResponse<ProductGroupModel>): ProductGroupModel => r.body)
     );
   }
 
@@ -186,7 +187,7 @@ export class ProductGroupService extends BaseService {
    *
    * This method doesn't expect any request body.
    */
-  apiProductGroupListGet$Plain$Response(params?: ApiProductGroupListGet$Plain$Params, context?: HttpContext): Observable<StrictHttpResponse<boolean>> {
+  apiProductGroupListGet$Plain$Response(params?: ApiProductGroupListGet$Plain$Params, context?: HttpContext): Observable<StrictHttpResponse<Array<ProductGroupModel>>> {
     return apiProductGroupListGet$Plain(this.http, this.rootUrl, params, context);
   }
 
@@ -196,9 +197,9 @@ export class ProductGroupService extends BaseService {
    *
    * This method doesn't expect any request body.
    */
-  apiProductGroupListGet$Plain(params?: ApiProductGroupListGet$Plain$Params, context?: HttpContext): Observable<boolean> {
+  apiProductGroupListGet$Plain(params?: ApiProductGroupListGet$Plain$Params, context?: HttpContext): Observable<Array<ProductGroupModel>> {
     return this.apiProductGroupListGet$Plain$Response(params, context).pipe(
-      map((r: StrictHttpResponse<boolean>): boolean => r.body)
+      map((r: StrictHttpResponse<Array<ProductGroupModel>>): Array<ProductGroupModel> => r.body)
     );
   }
 
@@ -208,7 +209,7 @@ export class ProductGroupService extends BaseService {
    *
    * This method doesn't expect any request body.
    */
-  apiProductGroupListGet$Response(params?: ApiProductGroupListGet$Params, context?: HttpContext): Observable<StrictHttpResponse<boolean>> {
+  apiProductGroupListGet$Response(params?: ApiProductGroupListGet$Params, context?: HttpContext): Observable<StrictHttpResponse<Array<ProductGroupModel>>> {
     return apiProductGroupListGet(this.http, this.rootUrl, params, context);
   }
 
@@ -218,9 +219,9 @@ export class ProductGroupService extends BaseService {
    *
    * This method doesn't expect any request body.
    */
-  apiProductGroupListGet(params?: ApiProductGroupListGet$Params, context?: HttpContext): Observable<boolean> {
+  apiProductGroupListGet(params?: ApiProductGroupListGet$Params, context?: HttpContext): Observable<Array<ProductGroupModel>> {
     return this.apiProductGroupListGet$Response(params, context).pipe(
-      map((r: StrictHttpResponse<boolean>): boolean => r.body)
+      map((r: StrictHttpResponse<Array<ProductGroupModel>>): Array<ProductGroupModel> => r.body)
     );
   }
 

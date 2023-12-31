@@ -59,6 +59,7 @@ namespace Service.Services.Product
                                     new FileModel
                                     {
                                         FileName = file.TbFile.FileName.ToFilePath(_pathOptionModel.ResoucesPath),
+                                        IsProduct = file.IsProduct,
                                     }).ToList()
                             }).SingleAsync();
 
@@ -90,6 +91,7 @@ namespace Service.Services.Product
                                     new FileModel
                                     {
                                         FileName = file.TbFile.FileName.ToFilePath(_pathOptionModel.ResoucesPath),
+                                        IsProduct = file.IsProduct,
                                     }).ToList()
                              }).ToListAsync();
 
@@ -122,6 +124,7 @@ namespace Service.Services.Product
                                     new FileModel
                                     {
                                         FileName = file.TbFile.FileName.ToFilePath(_pathOptionModel.ResoucesPath),
+                                        IsProduct = file.IsProduct,
                                     }).ToList()
                              }).ToListAsync();
 
@@ -154,6 +157,7 @@ namespace Service.Services.Product
                                     new FileModel
                                     {
                                         FileName = file.TbFile.FileName.ToFilePath(_pathOptionModel.ResoucesPath),
+                                        IsProduct = file.IsProduct,
                                     }).ToList()
                              }).ToListAsync();
 

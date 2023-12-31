@@ -10,6 +10,7 @@ namespace Service.Models.BaseModels
     {
         public int FileId { get; set; }
         public string FileName { get; set; }
+        public bool IsProduct { get; set; }
 
     }
 }

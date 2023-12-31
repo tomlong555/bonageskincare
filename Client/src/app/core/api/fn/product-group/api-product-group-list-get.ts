@@ -6,11 +6,12 @@ import { filter, map } from 'rxjs/operators';
 import { StrictHttpResponse } from '../../strict-http-response';
 import { RequestBuilder } from '../../request-builder';
 
+import { ProductGroupModel } from '../../models/product-group-model';
 
 export interface ApiProductGroupListGet$Params {
 }
 
-export function apiProductGroupListGet(http: HttpClient, rootUrl: string, params?: ApiProductGroupListGet$Params, context?: HttpContext): Observable<StrictHttpResponse<boolean>> {
+export function apiProductGroupListGet(http: HttpClient, rootUrl: string, params?: ApiProductGroupListGet$Params, context?: HttpContext): Observable<StrictHttpResponse<Array<ProductGroupModel>>> {
   const rb = new RequestBuilder(rootUrl, apiProductGroupListGet.PATH, 'get');
   if (params) {
   }
@@ -20,7 +21,7 @@ export function apiProductGroupListGet(http: HttpClient, rootUrl: string, params
   ).pipe(
     filter((r: any): r is HttpResponse<any> => r instanceof HttpResponse),
     map((r: HttpResponse<any>) => {
-      return (r as HttpResponse<any>).clone({ body: String((r as HttpResponse<any>).body) === 'true' }) as StrictHttpResponse<boolean>;
+      return r as StrictHttpResponse<Array<ProductGroupModel>>;
     })
   );
 }

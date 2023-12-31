@@ -6,12 +6,13 @@ import { filter, map } from 'rxjs/operators';
 import { StrictHttpResponse } from '../../strict-http-response';
 import { RequestBuilder } from '../../request-builder';
 
+import { ProductGroupModel } from '../../models/product-group-model';
 
 export interface ApiProductGroupProductGroupIdGet$Plain$Params {
   productGroupId: number;
 }
 
-export function apiProductGroupProductGroupIdGet$Plain(http: HttpClient, rootUrl: string, params: ApiProductGroupProductGroupIdGet$Plain$Params, context?: HttpContext): Observable<StrictHttpResponse<boolean>> {
+export function apiProductGroupProductGroupIdGet$Plain(http: HttpClient, rootUrl: string, params: ApiProductGroupProductGroupIdGet$Plain$Params, context?: HttpContext): Observable<StrictHttpResponse<ProductGroupModel>> {
   const rb = new RequestBuilder(rootUrl, apiProductGroupProductGroupIdGet$Plain.PATH, 'get');
   if (params) {
     rb.path('productGroupId', params.productGroupId, {});
@@ -22,7 +23,7 @@ export function apiProductGroupProductGroupIdGet$Plain(http: HttpClient, rootUrl
   ).pipe(
     filter((r: any): r is HttpResponse<any> => r instanceof HttpResponse),
     map((r: HttpResponse<any>) => {
-      return (r as HttpResponse<any>).clone({ body: String((r as HttpResponse<any>).body) === 'true' }) as StrictHttpResponse<boolean>;
+      return r as StrictHttpResponse<ProductGroupModel>;
     })
   );
 }
