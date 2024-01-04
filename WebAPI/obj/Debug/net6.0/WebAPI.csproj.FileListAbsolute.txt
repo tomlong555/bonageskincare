@@ -72,3 +72,4 @@ C:\work\bonageskincare\WebAPI\obj\Debug\net6.0\ref\WebAPI.dll
 C:\work\bonageskincare\WebAPI\bin\Debug\net6.0\Humanizer.dll
 C:\work\bonageskincare\WebAPI\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
 C:\work\bonageskincare\WebAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\work\bonageskincare\WebAPI\bin\Debug\net6.0\appsettings.Uat.json
