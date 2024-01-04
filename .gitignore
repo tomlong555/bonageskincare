@@ -14,3 +14,4 @@
 /Service/obj/Debug/net6.0
 /WebAPI/appsettings.Development.json
 /WebAPI/appsettings.Uat.json
+/WebAPI/appsettings.Staging.json
