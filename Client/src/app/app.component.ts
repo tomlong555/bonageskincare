@@ -1,6 +1,7 @@
 import { Subject, firstValueFrom, takeUntil } from 'rxjs';
 import { ProductGroupService } from './core/api/services/product-group.service';
 import { Component } from '@angular/core';
+import { ProductService } from './core/api/services';
 
 @Component({
   selector: 'app-root',
@@ -13,14 +14,14 @@ export class AppComponent {
   private unsubscribe$: Subject<void> = new Subject();
 
   constructor(
-    private _productGroupService : ProductGroupService
+    private _productGroupService : ProductService
     ){
 
   }
   
   async ngOnInit(){
   //  await firstValueFrom(this._productGroupService
-  //     .apiProductGroupProductGroupIdGet({productGroupId:1}))
+  //     .())
   //     .then(res => console.log(res));
   }
 }
