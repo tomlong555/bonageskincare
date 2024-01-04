@@ -1,0 +1,15 @@
+C:\work\bonageskincare\Database\bin\Release\net6.0\Database.deps.json
+C:\work\bonageskincare\Database\bin\Release\net6.0\Database.runtimeconfig.json
+C:\work\bonageskincare\Database\bin\Release\net6.0\Database.dll
+C:\work\bonageskincare\Database\bin\Release\net6.0\Database.pdb
+C:\work\bonageskincare\Database\obj\Release\net6.0\Database.csproj.AssemblyReference.cache
+C:\work\bonageskincare\Database\obj\Release\net6.0\Database.GeneratedMSBuildEditorConfig.editorconfig
+C:\work\bonageskincare\Database\obj\Release\net6.0\Database.AssemblyInfoInputs.cache
+C:\work\bonageskincare\Database\obj\Release\net6.0\Database.AssemblyInfo.cs
+C:\work\bonageskincare\Database\obj\Release\net6.0\Database.csproj.CoreCompileInputs.cache
+C:\work\bonageskincare\Database\obj\Release\net6.0\Database.sourcelink.json
+C:\work\bonageskincare\Database\obj\Release\net6.0\Database.dll
+C:\work\bonageskincare\Database\obj\Release\net6.0\refint\Database.dll
+C:\work\bonageskincare\Database\obj\Release\net6.0\Database.pdb
+C:\work\bonageskincare\Database\obj\Release\net6.0\Database.genruntimeconfig.cache
+C:\work\bonageskincare\Database\obj\Release\net6.0\ref\Database.dll

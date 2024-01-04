@@ -1,0 +1,16 @@
+C:\work\bonageskincare\Service\bin\Release\net6.0\Service.deps.json
+C:\work\bonageskincare\Service\bin\Release\net6.0\Service.dll
+C:\work\bonageskincare\Service\bin\Release\net6.0\Service.pdb
+C:\work\bonageskincare\Service\bin\Release\net6.0\Database.dll
+C:\work\bonageskincare\Service\bin\Release\net6.0\Database.pdb
+C:\work\bonageskincare\Service\obj\Release\net6.0\Service.csproj.AssemblyReference.cache
+C:\work\bonageskincare\Service\obj\Release\net6.0\Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\work\bonageskincare\Service\obj\Release\net6.0\Service.AssemblyInfoInputs.cache
+C:\work\bonageskincare\Service\obj\Release\net6.0\Service.AssemblyInfo.cs
+C:\work\bonageskincare\Service\obj\Release\net6.0\Service.csproj.CoreCompileInputs.cache
+C:\work\bonageskincare\Service\obj\Release\net6.0\Service.sourcelink.json
+C:\work\bonageskincare\Service\obj\Release\net6.0\Service.csproj.CopyComplete
+C:\work\bonageskincare\Service\obj\Release\net6.0\Service.dll
+C:\work\bonageskincare\Service\obj\Release\net6.0\refint\Service.dll
+C:\work\bonageskincare\Service\obj\Release\net6.0\Service.pdb
+C:\work\bonageskincare\Service\obj\Release\net6.0\ref\Service.dll
