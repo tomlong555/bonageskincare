@@ -72,4 +72,4 @@ C:\work\bonageskincare\WebAPI\obj\Release\net6.0\refint\WebAPI.dll
 C:\work\bonageskincare\WebAPI\obj\Release\net6.0\WebAPI.pdb
 C:\work\bonageskincare\WebAPI\obj\Release\net6.0\WebAPI.genruntimeconfig.cache
 C:\work\bonageskincare\WebAPI\obj\Release\net6.0\ref\WebAPI.dll
-C:\work\bonageskincare\WebAPI\bin\Release\net6.0\appsettings.Uat.json
+C:\work\bonageskincare\WebAPI\bin\Release\net6.0\appsettings.Staging.json

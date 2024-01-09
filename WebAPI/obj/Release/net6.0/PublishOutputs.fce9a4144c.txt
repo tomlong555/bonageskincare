@@ -1,7 +1,7 @@
 C:\work\bonageskincare\WebAPI\obj\Release\net6.0\PubTmp\Out\WebAPI.exe
 C:\work\bonageskincare\WebAPI\obj\Release\net6.0\PubTmp\Out\appsettings.Development.json
 C:\work\bonageskincare\WebAPI\obj\Release\net6.0\PubTmp\Out\appsettings.json
-C:\work\bonageskincare\WebAPI\obj\Release\net6.0\PubTmp\Out\appsettings.Uat.json
+C:\work\bonageskincare\WebAPI\obj\Release\net6.0\PubTmp\Out\appsettings.Staging.json
 C:\work\bonageskincare\WebAPI\obj\Release\net6.0\PubTmp\Out\WebAPI.dll
 C:\work\bonageskincare\WebAPI\obj\Release\net6.0\PubTmp\Out\WebAPI.runtimeconfig.json
 C:\work\bonageskincare\WebAPI\obj\Release\net6.0\PubTmp\Out\WebAPI.pdb
